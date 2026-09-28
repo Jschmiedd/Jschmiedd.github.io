@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TALKTRUE FPV — FPV drone performance simulator: top speed, thrust, flight time</title>
+<meta name="description" content="Free FPV calculator: top speed, thrust, flight time and 0-100 km/h of your FPV drone, calibrated on real GPS flights. 400+ real components, prototype frames and Quad Speeder in 3D, STL/DXF import.">
+<meta name="keywords" content="FPV calculator, FPV drone simulator, FPV drone top speed, drone flight time calculator, motor propeller thrust, eCalc alternative, FPV speeder, racing drone">
+<link rel="canonical" href="https://jschmiedd.github.io/en/">
+<link rel="alternate" hreflang="fr" href="https://jschmiedd.github.io/">
+<link rel="alternate" hreflang="en" href="https://jschmiedd.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://jschmiedd.github.io/">
+<meta name="theme-color" content="#06080b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TALKTRUE FPV">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="TALKTRUE FPV — FPV performance simulator">
+<meta property="og:description" content="Top speed, thrust, flight time and 0-100 km/h of your FPV drone, calibrated on real GPS flights. Prototype frames and Quad Speeder in 3D.">
+<meta property="og:url" content="https://jschmiedd.github.io/en/">
+<meta property="og:image" content="https://jschmiedd.github.io/assets/og_en.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TALKTRUE FPV — Performance Simulator V4",
+  "applicationCategory": "EngineeringApplication",
+  "operatingSystem": "Web",
+  "url": "https://talktrue-simulateur-performences-v4.streamlit.app/",
+  "inLanguage": "en",
+  "description": "Performance calculator for FPV drones: top speed, thrust, flight time, acceleration, safety alerts, prototype frames and Quad Speeder in 3D, STL and DXF import.",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+  "image": "https://jschmiedd.github.io/assets/og_en.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is the TALKTRUE FPV simulator free?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. Thrust, speed, flight time, acceleration and safety alerts are free, with no sign-up. Premium adds prototype frames, the Quad Speeder, 3D views, STL/DXF import, GPS calibration and the online garage."}},
+    {"@type": "Question", "name": "How accurate are the calculated speeds?",
+     "acceptedAnswer": {"@type": "Answer", "text": "The model is calibrated on a real GPS-measured flight (TOWA 5-inch, 121 km/h) and accounts for the drone tilt, air density and the real battery size. With Premium you can recalibrate it on your own GPS measurement."}},
+    {"@type": "Question", "name": "How is it different from eCalc?",
+     "acceptedAnswer": {"@type": "Answer", "text": "eCalc is a reference for pure calculation. TALKTRUE FPV is a build platform: real market components with prices and shop links, side-by-side comparison in a garage, dimensioned sketches, 3D models and import of your CAD files."}},
+    {"@type": "Question", "name": "Can I import my drone from SolidWorks or Fusion 360?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes, with Premium: an STL file for the 3D view and the exact frontal area at every tilt, or a DXF drawing (front or top view) whose silhouette is measured automatically."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="marque" href="./" aria-label="TALKTRUE FPV, home">
+      <video autoplay loop muted playsinline poster="../assets/logo_sphere_poster.jpg" aria-hidden="true">
+        <source src="../assets/logo_sphere.webm" type="video/webm"><source src="../assets/logo_sphere.mp4" type="video/mp4">
+      </video>
+      TALKTRUE FPV
+    </a>
+    <nav class="menu" aria-label="Sections">
+      <a href="#fonctions">Features</a>
+      <a href="#premium">Premium</a>
+      <a href="#calage">Accuracy</a>
+      <a href="#terrain">Field</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="langue" href="../" hreflang="fr" lang="fr">FR</a>
+    <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">Launch the simulator</a>
+  </div>
+</header>
+
+<main>
+<section class="heros">
+  <div class="conteneur grille">
+    <div>
+      <span class="sur">FPV performance simulator · V4</span>
+      <h1>Design your FPV drone. <span class="neon">Know its speed</span> before you build it.</h1>
+      <p class="accroche">Thrust, top speed, flight time and 0 → 100 km/h, computed with real market
+        components and calibrated on a real GPS flight. From 3-inch quads to X8 cinelifters and
+        streamlined Quad Speeders, in 2D and 3D.</p>
+      <div class="actions">
+        <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Launch the simulator — free</a>
+        <a class="bouton secondaire" href="#premium">Discover Premium</a>
+      </div>
+      <div class="chiffres">
+        <div><b>400+</b><span>real components</span></div>
+        <div><b>121 km/h</b><span>GPS-calibrated speed</span></div>
+        <div><b>3D</b><span>models &amp; CAD import</span></div>
+      </div>
+    </div>
+    <div class="sphere">
+      <video autoplay loop muted playsinline poster="../assets/logo_sphere_poster.jpg" aria-label="Rotating TALK TRUE FPV logo">
+        <source src="../assets/logo_sphere.webm" type="video/webm"><source src="../assets/logo_sphere.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section id="fonctions" class="alterne">
+  <div class="conteneur">
+    <span class="sur">Free, no sign-up</span>
+    <h2>Everything you need to choose right</h2>
+    <p class="intro">Pick your motors, props, frame, battery and electronics: performance updates live,
+      with prices and shop links for every part.</p>
+    <div class="cartes">
+      <div class="carte"><div class="icone">🚀</div><h3>Realistic top speed</h3><p>Thrust that drops with airspeed, drag that depends on tilt, today's air density: no unrealistic "theoretical" speed.</p></div>
+      <div class="carte"><div class="icone">🔋</div><h3>Flight time by flying style</h3><p>Cinematic, freestyle or full throttle, with a discharge curve for each chemistry (LiPo, LiHV, Li-ion).</p></div>
+      <div class="carte"><div class="icone">⚡</div><h3>Safety alerts</h3><p>Motors vs ESC, connector, prop size, voltage: incompatibilities are flagged before you buy.</p></div>
+      <div class="carte"><div class="icone">⏱️</div><h3>0 → 100 km/h</h3><p>Theoretical horizontal and vertical acceleration, to compare how punchy each build is.</p></div>
+      <div class="carte"><div class="icone">🛒</div><h3>Parts list &amp; cost</h3><p>Complete shopping list, prices in EUR or USD, shop links, PDF / CSV export.</p></div>
+      <div class="carte"><div class="icone">🗄️</div><h3>Build garage</h3><p>Save and compare your builds side by side to find the best trade-off.</p></div>
+    </div>
+    <div class="fonction" style="margin-top:64px">
+      <div>
+        <h3>An interface built for pilots</h3>
+        <ul>
+          <li><b>Quick filters</b> by frame size, frame type, brand, KV, prop pitch, cell count, capacity…</li>
+          <li><b>Your choices are remembered</b> across the guide and wiki pages.</li>
+          <li><b>Today's conditions</b>: altitude, temperature, humidity and weather pressure (QNH).</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="../assets/guide/01_apercu.webp" width="1200" height="1150" loading="lazy" alt="TALKTRUE FPV simulator interface: component selection and diagnostics"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="premium">
+  <div class="conteneur">
+    <span class="sur">Premium</span>
+    <h2>From calculator to <span class="or">design workshop</span></h2>
+    <p class="intro">Draw your own frame or speed drone, see it in 3D, import your CAD files and
+      calibrate the model on your real measurements.</p>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">Prototype frame</span>
+        <h3>Your frame, drawn to scale</h3>
+        <ul>
+          <li><b>5 layouts</b>: X, Dead Cat, Squished X, Stretch X, H-Frame, as a quad or coaxial X8.</li>
+          <li><b>Dimensioned sketch</b> redrawn on every change, top and front views.</li>
+          <li><b>Battery placement</b>: flat, on edge, sideways, on top or underneath.</li>
+        </ul>
+      </div>
+      <div>
+        <figure class="visuel sombre"><img src="../assets/guide/05_prototype_x.webp" loading="lazy" alt="FPV prototype frame geometry with dimensioned sketch"></figure>
+        <div class="trio">
+          <figure class="visuel sombre"><img src="../assets/guide/06_proto_deadcat.webp" loading="lazy" alt="Dead Cat frame sketch"><figcaption>Dead Cat</figcaption></figure>
+          <figure class="visuel sombre"><img src="../assets/guide/07_proto_hframe.webp" loading="lazy" alt="H-Frame sketch"><figcaption>H-Frame</figcaption></figure>
+          <figure class="visuel sombre"><img src="../assets/guide/08_proto_stretch.webp" loading="lazy" alt="Stretch X frame sketch"><figcaption>Stretch X</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">3D view</span>
+        <h3>A live, tiltable 3D model</h3>
+        <ul>
+          <li><b>Plates, 8 standoffs, stack, camera, VTX</b>, motors, props and battery generated from your dimensions.</li>
+          <li><b>3 layouts</b>: Standard Sandwich, Bottom Mount Arms, Top Mount Arms.</li>
+          <li><b>Exact frontal area</b> seen by the airflow, at any tilt angle.</li>
+        </ul>
+      </div>
+      <figure class="visuel sombre"><img src="../assets/guide/rendu_proto.webp" width="1200" height="900" loading="lazy" alt="3D model of an FPV drone tilted 35 degrees with its frontal area"></figure>
+    </div>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">Quad Speeder</span>
+        <h3>The speed drone, pusher or tractor</h3>
+        <ul>
+          <li><b>Teardrop fuselage</b> at 90° to the arm plane, drag coefficient from its fineness ratio (Hoerner).</li>
+          <li><b>Pusher</b> (SPEEDER V2 style) or <b>tractor</b> on nacelles (Blackbird style, the speed world record holder).</li>
+          <li><b>Arm position</b> adjustable from nose to tail, battery inside the fuselage or on top.</li>
+        </ul>
+      </div>
+      <div class="duo">
+        <figure class="visuel sombre"><img src="../assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Pusher FPV Quad Speeder in 3D"><figcaption>Pusher</figcaption></figure>
+        <figure class="visuel sombre"><img src="../assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Tractor FPV Quad Speeder on nacelles in 3D"><figcaption>Tractor (nacelles)</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">CAD import</span>
+        <h3>Your SolidWorks, Fusion 360 or Onshape files</h3>
+        <ul>
+          <li><b>STL</b>: 3D view and real silhouette measured at every tilt, usable for drag.</li>
+          <li><b>DXF</b>: the silhouette of a drawing is rebuilt from all its lines.</li>
+          <li>Battery and motors added automatically if your model doesn't include them.</li>
+        </ul>
+      </div>
+      <div class="duo">
+        <figure class="visuel"><img src="../assets/guide/14_import_stl.webp" loading="lazy" alt="FPV drone STL import and frontal area curve"><figcaption>STL import</figcaption></figure>
+        <figure class="visuel"><img src="../assets/guide/16_dxf_silhouette.webp" loading="lazy" alt="FPV frame silhouette rebuilt from a DXF"><figcaption>DXF silhouette</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">GPS calibration &amp; online garage</span>
+        <h3>Your measurement becomes the reference</h3>
+        <ul>
+          <li><b>GPS calibration</b>: enter your measured speed, the model adjusts and keeps it for your other builds.</li>
+          <li><b>Online garage</b>: 10 builds saved automatically, on all your devices.</li>
+          <li><b>Remembered access code</b>: nothing to retype between visits.</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="../assets/guide/04_recalage_gps.webp" loading="lazy" alt="Calibrating the calculated speed on a GPS measurement"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="alterne">
+  <div class="conteneur">
+    <span class="sur">3 steps</span>
+    <h2>How it works</h2>
+    <div class="etapes">
+      <div class="etape"><h3>Pick your parts</h3><p>Motors, props, frames, batteries, electronics: 400+ real references, with filters.</p></div>
+      <div class="etape"><h3>Read your performance</h3><p>Speed, flight time, thrust, acceleration and alerts update on every change.</p></div>
+      <div class="etape"><h3>Compare &amp; buy</h3><p>Save your builds, compare them, export the shopping list with links.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="calage">
+  <div class="conteneur calage">
+    <div>
+      <span class="sur">Accuracy</span>
+      <h2>Calibrated on a real flight, not a brochure</h2>
+      <p class="intro" style="margin-bottom:0">The aerodynamic model is fitted on a full-throttle flight measured by GPS, then
+        checked on a second flight. It accounts for the drone's real tilt, the thrust drop with
+        airspeed, air density and the battery size. Every formula is documented.</p>
+      <button class="yt" type="button" data-id="ztDsRqPz8Mc" aria-label="Play the video of the 121 and 126 km/h flights"
+        style="background-image:url('https://i.ytimg.com/vi/ztDsRqPz8Mc/hqdefault.jpg')">
+        <span class="lecture" aria-hidden="true">▶</span><span class="yt-legende">Video: the 121 and 126 km/h calibration flights</span>
+      </button>
+    </div>
+    <div class="mesure">
+      <div class="grand">121 km/h</div>
+      <p style="color:var(--doux)">Reference flight measured by GPS</p>
+      <table>
+        <tr><td>Frame</td><td>TOWA 5″ freestyle, 539 g</td></tr>
+        <tr><td>Motors / props</td><td>XING-E 2207 2450KV · Ethix S5</td></tr>
+        <tr><td>Battery</td><td>3S 1550 mAh</td></tr>
+        <tr><td>Conditions</td><td>1,046 m · 0 °C · 35°</td></tr>
+        <tr><td>2nd check flight</td><td>126 km/h · 436 m · 10 °C</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="terrain">
+  <div class="conteneur">
+    <span class="sur">In the field</span>
+    <h2>Drones that actually fly</h2>
+    <p class="intro">The measurements used to calibrate the simulator, and what the same TOWA 5″ does once lightened and tuned.</p>
+    <div class="terrain">
+      <figure class="carte-photo large"><img src="../assets/terrain/towa_5pouces.webp" width="864" height="647" loading="lazy" alt="TOWA 5-inch freestyle FPV drone on a path"><figcaption><b>TOWA 5″</b> · the calibration build, 16 g lighter</figcaption></figure>
+      <figure class="carte-photo"><img src="../assets/terrain/towa_osd_145.webp" width="864" height="560" loading="lazy" alt="OSD stats: max speed 145 km/h"><figcaption><b class="neon">145 km/h</b> · max speed from the OSD after tuning</figcaption></figure>
+      <figure class="carte-photo"><img src="../assets/terrain/towa_blackbox_145.webp" style="object-position:right top" width="1080" height="675" loading="lazy" alt="Betaflight blackbox: GPS speed 40.5 metres per second"><figcaption><b>40,5 m/s × 3,6 = 145,8 km/h</b> · confirmed by the blackbox (GPS speed)</figcaption></figure>
+      <figure class="carte-photo"><img src="../assets/terrain/towa_neige.webp" width="1080" height="735" loading="lazy" alt="TOWA 5-inch FPV drone on snow"><figcaption>Winter tests: 3D-printed PET arm guards, <i>“PET holds up”</i></figcaption></figure>
+      <figure class="carte-photo"><img src="../assets/terrain/towa_osd_186.webp" width="1080" height="810" loading="lazy" alt="OSD stats: max speed 186 km/h"><figcaption><b class="neon">186 km/h</b> · with a tailwind (ground speed, not a reference measurement)</figcaption></figure>
+      <figure class="carte-photo"><video autoplay loop muted playsinline poster="../assets/terrain/decollage_3pouces.jpg" aria-label="3-inch FPV drone take-off"><source src="../assets/terrain/decollage_3pouces.webm" type="video/webm"><source src="../assets/terrain/decollage_3pouces.mp4" type="video/mp4"></video><figcaption><b>TOWA 3″</b> · full-throttle take-off</figcaption></figure>
+    </div>
+    <p class="note">The simulator is calibrated on the 121 and 126 km/h reference flights (stock build, no wind). 145 km/h was reached after weight savings and Betaflight tuning; 186 km/h with a tailwind.</p>
+  </div>
+</section>
+
+<section class="alterne">
+  <div class="conteneur">
+    <span class="sur">Plans</span>
+    <h2>Free or Premium</h2>
+    <div class="offres">
+      <div class="offre">
+        <h3>Free</h3><div class="prix">Free</div>
+        <ul>
+          <li>Thrust, speed, flight time, 0 → 100 km/h</li>
+          <li>Drag based on tilt and battery</li>
+          <li>Safety alerts and shopping list</li>
+          <li>Garage with 3 builds</li>
+        </ul>
+      </div>
+      <div class="offre premium">
+        <h3 class="or">Premium</h3><div class="prix">Invite-only testers</div>
+        <ul>
+          <li>Prototype frame, 5 layouts + sketch + 3D</li>
+          <li>Quad Speeder pusher / tractor + 3D</li>
+          <li>STL and DXF import</li>
+          <li>Calibration on your GPS measurement</li>
+          <li>Online garage with 10 builds</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="conteneur">
+    <span class="sur">FAQ</span>
+    <h2>Frequently asked questions</h2>
+    <details><summary>Is the simulator free?</summary><p>Yes. Thrust, speed, flight time, acceleration and safety alerts are free, with no sign-up. Premium adds prototype frames, the Quad Speeder, 3D views, STL/DXF import, GPS calibration and the online garage.</p></details>
+    <details><summary>How accurate are the calculated speeds?</summary><p>The model is calibrated on a real GPS-measured flight (121 km/h) and accounts for tilt, air density and the real battery size. With Premium you can recalibrate it on your own GPS measurement.</p></details>
+    <details><summary>How is it different from eCalc?</summary><p>eCalc is a reference for pure calculation. TALKTRUE FPV is a build platform: real components with prices and shop links, side-by-side comparison in a garage, dimensioned sketches, 3D models and import of your CAD files.</p></details>
+    <details><summary>Can I import my drone from SolidWorks or Fusion 360?</summary><p>Yes, with Premium: an STL file for the 3D view and the exact frontal area at every tilt, or a DXF drawing whose silhouette is measured automatically.</p></details>
+    <details><summary>How do I get Premium access?</summary><p>Premium is currently reserved for invited testers. You can support development with a donation on Ko-fi.</p></details>
+  </div>
+</section>
+
+<section class="appel">
+  <div class="conteneur">
+    <h2>Ready to see what your drone is really made of?</h2>
+    <p>No sign-up. Pick your parts, read your speed.</p>
+    <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Launch the simulator</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="conteneur">
+    <span>© 2026 TALKTRUE FPV — Performance Simulator V4</span>
+    <nav aria-label="Links">
+      <a href="https://talktrue-simulateur-performences-v4.streamlit.app/">Simulator</a>
+      <a href="https://ko-fi.com/talktruefpvcalculv4">Support the project (Ko-fi)</a>
+      <a href="../" hreflang="fr">Français</a>
+    </nav>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.yt').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.id + '?autoplay=1&rel=0';
+    f.title = b.getAttribute('aria-label'); f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+    b.replaceWith(f); f.className = 'yt yt-actif';
+  });
+});
+</script>
+</body>
+</html>
