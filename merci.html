@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merci, Fondateur ! — TALKTRUE FPV</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#06080b">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .merci { min-height: 100vh; display: grid; place-items: center; padding: 48px 0; text-align: center; }
+  .merci .sphere { width: min(220px, 60vw); margin: 0 auto 28px; }
+  .merci h1 { font-size: clamp(2rem, 5vw, 3rem); }
+  .merci .intro { margin: 0 auto 32px; }
+  .etapes-merci { display: grid; gap: 14px; max-width: 620px; margin: 0 auto 34px; text-align: left; }
+  .etapes-merci div { background: var(--carte); border: 1px solid var(--bord); border-radius: 14px; padding: 16px 18px; color: var(--doux); }
+  .etapes-merci b { color: var(--texte); }
+  .merci .actions { justify-content: center; }
+</style>
+</head>
+<body>
+<main class="merci">
+  <div class="conteneur">
+    <div class="sphere">
+      <video autoplay loop muted playsinline poster="assets/logo_sphere_poster.jpg" aria-label="Logo TALK TRUE FPV">
+        <source src="assets/logo_sphere.webm" type="video/webm"><source src="assets/logo_sphere.mp4" type="video/mp4">
+      </video>
+    </div>
+    <span class="sur">Accès Fondateur</span>
+    <h1>Merci, tu fais partie des <span class="neon">Fondateurs</span> !</h1>
+    <p class="intro">Ton soutien fait avancer le simulateur TALKTRUE FPV. Voici la suite.</p>
+    <div class="etapes-merci">
+      <div>📩 <b>Ton code Premium personnel arrive par e-mail sous 24 h</b>, à l'adresse utilisée pour ton paiement. Pense à vérifier tes spams et l'onglet « Promotions ».</div>
+      <div>🔑 <b>Pour l'activer</b> : ouvre le simulateur, colle le code dans « Code d'accès Premium » (barre latérale), valide avec Entrée. Il reste mémorisé sur ton appareil.</div>
+      <div>🗄️ <b>Ton garage est sauvegardé en ligne</b> avec ton code : tu retrouves tes configurations sur tous tes appareils.</div>
+      <div>❓ <b>Une question, pas de code après 24 h ?</b> Écris à <a href="mailto:talktruefpv@gmail.com">talktruefpv@gmail.com</a> ou sur Instagram <a href="https://www.instagram.com/talktruefpv/">@talktruefpv</a>.</div>
+    </div>
+    <div class="actions">
+      <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Ouvrir le simulateur</a>
+      <a class="bouton secondaire" href="https://talktrue-simulateur-performences-v4.streamlit.app/Guide_Premium">⭐ Guide Premium</a>
+    </div>
+  </div>
+</main>
+</body>
+</html>
