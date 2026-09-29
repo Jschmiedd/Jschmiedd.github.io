@@ -182,3 +182,4 @@ iframe.yt-actif { width: min(300px, 100%); aspect-ratio: 9 / 16; height: auto; b
 .titre-etapes { margin: -40px 0 14px; }
 .etapes-dxf { display: grid; grid-template-columns: 1fr 0.75fr 1.25fr; gap: 16px; align-items: start; margin-bottom: 84px; }
 @media (max-width: 900px) { .etapes-dxf { grid-template-columns: 1fr; } .titre-etapes { margin-top: 0; } }
+.carte-photo.avec-son { position: relative; }
