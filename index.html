@@ -226,10 +226,16 @@
           <li>Fichiers gardés en mémoire, batterie et moteurs ajoutés si ton modèle ne les contient pas.</li>
         </ul>
       </div>
-      <div class="duo">
-        <figure class="visuel"><img src="assets/guide/14_import_stl.webp" loading="lazy" alt="Import d'un fichier STL de drone FPV et courbe de surface frontale"><figcaption>Import STL</figcaption></figure>
-        <figure class="visuel"><img src="assets/guide/16_dxf_silhouette.webp" loading="lazy" alt="Silhouette d'un châssis FPV reconstituée depuis un DXF"><figcaption>Silhouette DXF</figcaption></figure>
+      <div>
+        <figure class="visuel"><img src="assets/dxf/stl_v2v.webp" loading="lazy" alt="Import STL du Speeder V2V : vues de contrôle dessus, face et côté"><figcaption>Ton STL (ici le Speeder V2V) : orientation contrôlée sur 3 vues, attitude de vol convertie</figcaption></figure>
       </div>
+    </div>
+
+    <h3 class="titre-etapes">Des plans DXF au modèle 3D, en 3 étapes</h3>
+    <div class="etapes-dxf">
+      <figure class="visuel"><img src="assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Tableau des plans DXF chargés : vue de dessus, vue de face, volume 3D"><figcaption>1 · Tes plans DXF</figcaption></figure>
+      <figure class="visuel sombre"><img src="assets/dxf/2_esquisse.webp" width="349" height="398" loading="lazy" alt="Esquisse cotée remplacée par les plans DXF de dessus et de face d'un TOWA 5 pouces"><figcaption>2 · Ils remplacent l'esquisse, mêmes cotes</figcaption></figure>
+      <figure class="visuel"><img src="assets/dxf/3_volume.webp" width="850" height="570" loading="lazy" alt="Volume 3D d'un drone FPV reconstruit à partir de ses plans DXF"><figcaption>3 · Le volume 3D reconstruit</figcaption></figure>
     </div>
 
     <div class="fonction">
@@ -268,7 +274,7 @@
       </div>
       <figure class="visuel"><video autoplay loop muted playsinline poster="assets/soufflerie/combinee.jpg"
         aria-label="Soufflerie virtuelle : Speeder V2V dans le vent, écoulement et jets des hélices"><source src="assets/soufflerie/combinee.webm" type="video/webm"><source src="assets/soufflerie/combinee.mp4" type="video/mp4"></video>
-        <figcaption>Speeder V2V 3″ (STL) à 165 km/h : l'air autour du drone et le jet des hélices</figcaption></figure>
+        <figcaption>Speeder V2V 3″ (STL) à 90°, fuselage dans le vent : l'air autour du drone et le jet des hélices</figcaption></figure>
     </div>
     <div class="fonction inverse">
       <div>
@@ -332,6 +338,7 @@
     <h2>Des drones qui volent vraiment</h2>
     <p class="intro">Les mesures qui ont servi à caler le simulateur, et ce que donne le même TOWA 5″ une fois allégé et réglé.</p>
     <div class="terrain">
+      <figure class="carte-photo haute"><video id="launch" autoplay loop muted playsinline poster="assets/terrain/launch_control.jpg" aria-label="Launch control d'un drone FPV"><source src="assets/terrain/launch_control.webm" type="video/webm"><source src="assets/terrain/launch_control.mp4" type="video/mp4"></video><button class="son" type="button" onclick="const v=document.getElementById('launch');v.muted=!v.muted;v.play();this.textContent=v.muted?'🔊 Son':'🔇';">🔊 Son</button><figcaption><b>Launch control</b> · départ depuis la caisse, vue FPV et blackbox</figcaption></figure>
       <figure class="carte-photo large"><img src="assets/terrain/towa_5pouces.webp" width="864" height="647" loading="lazy" alt="Drone FPV TOWA 5 pouces freestyle sur un chemin"><figcaption><b>TOWA 5″</b> · la configuration de calage, allégée de 16 g</figcaption></figure>
       <figure class="carte-photo"><img src="assets/terrain/towa_osd_145.webp" width="864" height="560" loading="lazy" alt="Statistiques OSD : vitesse max 145 km/h"><figcaption><b class="neon">145 km/h</b> · vitesse max relevée à l'OSD après optimisation</figcaption></figure>
       <figure class="carte-photo"><img src="assets/terrain/towa_blackbox_145.webp" style="object-position:right top" width="1080" height="675" loading="lazy" alt="Blackbox Betaflight : vitesse GPS 40,5 mètres par seconde"><figcaption><b>40,5 m/s × 3,6 = 145,8 km/h</b> · confirmé par la blackbox (vitesse GPS)</figcaption></figure>

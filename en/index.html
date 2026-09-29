@@ -226,10 +226,16 @@
           <li>Files kept in memory; battery and motors added if your model doesn't include them.</li>
         </ul>
       </div>
-      <div class="duo">
-        <figure class="visuel"><img src="../assets/guide/14_import_stl.webp" loading="lazy" alt="FPV drone STL import and frontal area curve"><figcaption>STL import</figcaption></figure>
-        <figure class="visuel"><img src="../assets/guide/16_dxf_silhouette.webp" loading="lazy" alt="FPV frame silhouette rebuilt from a DXF"><figcaption>DXF silhouette</figcaption></figure>
+      <div>
+        <figure class="visuel"><img src="../assets/dxf/stl_v2v.webp" loading="lazy" alt="STL import of the Speeder V2V: top, front and side check views"><figcaption>Your STL (here the Speeder V2V): orientation checked on 3 views, flight attitude converted</figcaption></figure>
       </div>
+    </div>
+
+    <h3 class="titre-etapes">From DXF drawings to a 3D model, in 3 steps</h3>
+    <div class="etapes-dxf">
+      <figure class="visuel"><img src="../assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Table of loaded DXF drawings: top view, front view, 3D volume"><figcaption>1 · Your DXF drawings</figcaption></figure>
+      <figure class="visuel sombre"><img src="../assets/dxf/2_esquisse.webp" width="349" height="398" loading="lazy" alt="Dimensioned sketch replaced by the top and front DXF drawings of a TOWA 5-inch"><figcaption>2 · They replace the sketch, same dimensions</figcaption></figure>
+      <figure class="visuel"><img src="../assets/dxf/3_volume.webp" width="850" height="570" loading="lazy" alt="3D volume of an FPV drone rebuilt from its DXF drawings"><figcaption>3 · The rebuilt 3D volume</figcaption></figure>
     </div>
 
     <div class="fonction">
@@ -268,7 +274,7 @@
       </div>
       <figure class="visuel"><video autoplay loop muted playsinline poster="../assets/soufflerie/combinee.jpg"
         aria-label="Virtual wind tunnel: Speeder V2V in the wind, airflow and propeller jets"><source src="../assets/soufflerie/combinee.webm" type="video/webm"><source src="../assets/soufflerie/combinee.mp4" type="video/mp4"></video>
-        <figcaption>Speeder V2V 3″ (STL) at 165 km/h: airflow around the drone and propeller jets</figcaption></figure>
+        <figcaption>Speeder V2V 3″ (STL) at 90°, fuselage into the wind: airflow around the drone and propeller jets</figcaption></figure>
     </div>
     <div class="fonction inverse">
       <div>
@@ -331,6 +337,7 @@
     <h2>Drones that actually fly</h2>
     <p class="intro">The measurements used to calibrate the simulator, and what the same TOWA 5″ does once lightened and tuned.</p>
     <div class="terrain">
+      <figure class="carte-photo haute"><video id="launch" autoplay loop muted playsinline poster="../assets/terrain/launch_control.jpg" aria-label="Launch control d'un drone FPV"><source src="../assets/terrain/launch_control.webm" type="video/webm"><source src="../assets/terrain/launch_control.mp4" type="video/mp4"></video><button class="son" type="button" onclick="const v=document.getElementById('launch');v.muted=!v.muted;v.play();this.textContent=v.muted?'🔊 Sound':'🔇';">🔊 Sound</button><figcaption><b>Launch control</b> · take-off from the box, FPV view and blackbox</figcaption></figure>
       <figure class="carte-photo large"><img src="../assets/terrain/towa_5pouces.webp" width="864" height="647" loading="lazy" alt="TOWA 5-inch freestyle FPV drone on a path"><figcaption><b>TOWA 5″</b> · the calibration build, 16 g lighter</figcaption></figure>
       <figure class="carte-photo"><img src="../assets/terrain/towa_osd_145.webp" width="864" height="560" loading="lazy" alt="OSD stats: max speed 145 km/h"><figcaption><b class="neon">145 km/h</b> · max speed from the OSD after tuning</figcaption></figure>
       <figure class="carte-photo"><img src="../assets/terrain/towa_blackbox_145.webp" style="object-position:right top" width="1080" height="675" loading="lazy" alt="Betaflight blackbox: GPS speed 40.5 metres per second"><figcaption><b>40,5 m/s × 3,6 = 145,8 km/h</b> · confirmed by the blackbox (GPS speed)</figcaption></figure>
