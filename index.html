@@ -65,7 +65,9 @@
     {"@type": "Question", "name": "Quelle différence avec eCalc ?",
      "acceptedAnswer": {"@type": "Answer", "text": "eCalc est une référence pour le calcul pur. TALKTRUE FPV est une plateforme de configuration : composants réels du marché avec prix et liens d'achat, comparaison dans un garage, esquisses cotées, maquettes 3D et import de tes plans de CAO."}},
     {"@type": "Question", "name": "Puis-je importer mon drone depuis SolidWorks ou Fusion 360 ?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Oui, en Premium : un fichier STL pour la vue 3D et la surface frontale exacte à chaque inclinaison, ou un plan DXF (vue de face ou de dessus) dont la silhouette est mesurée automatiquement."}}
+     "acceptedAnswer": {"@type": "Answer", "text": "Oui, en Premium : un fichier STL pour la vue 3D et la surface frontale exacte à chaque inclinaison, ou tes plans DXF (vue de dessus, de face, de côté) qui remplacent l'esquisse cotée et reconstituent le volume 3D du drone."}},
+    {"@type": "Question", "name": "Qu'est-ce que la soufflerie virtuelle ?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Un banc de traînée en Premium : ton drone (maquette, STL ou plans DXF) est placé dans le vent à la vitesse visée. Il donne l'inclinaison d'équilibre, la traînée, la puissance absorbée par l'air, la poussée nécessaire, et anime l'écoulement autour du drone ainsi que les jets de ses hélices. Mêmes formules que la vitesse max, calées sur des vols GPS : ce n'est pas un calcul CFD."}}
   ]
 }
 </script>
@@ -83,8 +85,10 @@
     <nav class="menu" aria-label="Sections">
       <a href="#fonctions">Fonctions</a>
       <a href="#premium">Premium</a>
+      <a href="#soufflerie">Soufflerie</a>
       <a href="#calage">Précision</a>
       <a href="#terrain">Terrain</a>
+      <a href="#ateliers">Atelier</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a class="langue" href="en/" hreflang="en" lang="en">EN</a>
@@ -108,7 +112,7 @@
       <div class="chiffres">
         <div><b>1 000+</b><span>composants réels</span></div>
         <div><b>121 km/h</b><span>vitesse calée au GPS</span></div>
-        <div><b>3D</b><span>maquettes &amp; import CAO</span></div>
+        <div><b>3D</b><span>soufflerie &amp; import CAO</span></div>
       </div>
     </div>
     <div class="sphere">
@@ -195,11 +199,19 @@
           <li><b>Fuselage goutte d'eau</b> à 90° du plan des bras, Cx calculé depuis sa finesse (Hoerner).</li>
           <li><b>Propulsif</b> (type SPEEDER V2) ou <b>tractif</b> sur nacelles (type Blackbird, record du monde de vitesse).</li>
           <li><b>Position des bras</b> réglable du nez à la queue, batterie dans le fuselage ou dessus.</li>
+          <li><b>Ton Speeder en STL</b>, exporté comme un avion : l'app le remet dans son attitude de vol à 90° et
+            repère elle-même ses moteurs et son entraxe.</li>
         </ul>
       </div>
-      <div class="duo">
-        <figure class="visuel sombre"><img src="assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV propulsif en 3D"><figcaption>Propulsif</figcaption></figure>
-        <figure class="visuel sombre"><img src="assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV tractif sur nacelles en 3D"><figcaption>Tractif (nacelles)</figcaption></figure>
+      <div>
+        <div class="duo">
+          <figure class="visuel sombre"><img src="assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV propulsif en 3D"><figcaption>Propulsif</figcaption></figure>
+          <figure class="visuel sombre"><img src="assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV tractif sur nacelles en 3D"><figcaption>Tractif (nacelles)</figcaption></figure>
+        </div>
+        <div class="duo" style="margin-top:14px">
+          <figure class="visuel"><img src="assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="Fuselages imprimés 3D du Speeder V2 et prototype"><figcaption>Speeder V2 : fuselages et prototype</figcaption></figure>
+          <figure class="visuel"><img src="assets/constructions/speeder_v2_impression.webp" width="1200" height="900" loading="lazy" alt="Fuselage du Speeder V2 sur le plateau de l'imprimante 3D"><figcaption>Speeder V2 : impression 3D</figcaption></figure>
+        </div>
       </div>
     </div>
 
@@ -208,9 +220,10 @@
         <span class="badge">Import CAO</span>
         <h3>Tes plans SolidWorks, Fusion 360 ou Onshape</h3>
         <ul>
-          <li><b>STL</b> : vue 3D et silhouette réelle mesurée à chaque inclinaison, utilisable pour la traînée.</li>
-          <li><b>DXF</b> : la silhouette d'une mise en plan est reconstituée depuis tous ses traits.</li>
-          <li>Ajout automatique de la batterie et des moteurs si ton modèle ne les contient pas.</li>
+          <li><b>STL</b> : orientation comme dans un slicer, vue 3D et silhouette réelle mesurée à chaque inclinaison, utilisable pour la traînée.</li>
+          <li><b>DXF</b> : ta vue de dessus et ta vue de face <b>remplacent l'esquisse</b>, avec les mêmes cotes A à G pour les caler.</li>
+          <li><b>Volume 3D depuis tes plans</b> : dessus + face (+ côté) suffisent pour reconstruire ton drone en 3D.</li>
+          <li>Fichiers gardés en mémoire, batterie et moteurs ajoutés si ton modèle ne les contient pas.</li>
         </ul>
       </div>
       <div class="duo">
@@ -230,6 +243,45 @@
         </ul>
       </div>
       <figure class="visuel"><img src="assets/guide/04_recalage_gps.webp" loading="lazy" alt="Recalage de la vitesse calculée sur une mesure GPS"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="soufflerie">
+  <div class="conteneur">
+    <span class="sur">Nouveau · Premium</span>
+    <h2>La <span class="neon">soufflerie virtuelle</span> : traînée et poussée en direct</h2>
+    <p class="intro">Place ton drone dans le vent à la vitesse que tu vises. L'air qui le frappe, le contourne et
+      part en sillage, et le jet de chacune de ses hélices, animés dans la même scène.</p>
+    <div class="fonction">
+      <div>
+        <ul>
+          <li><b>Vitesse cible jusqu'à 300 km/h</b>, 800 km/h en Quad Speeder.</li>
+          <li><b>Inclinaison d'équilibre</b> pour tenir l'altitude, ou angle imposé : le drone accélère-t-il ou ralentit-il ?</li>
+          <li><b>Traînée, S·Cx, puissance absorbée par l'air</b>, poussée nécessaire contre poussée disponible.</li>
+          <li><b>Tes hélices au bon modèle</b> (diamètre, pas, nombre de pales), qui tournent, avec leur jet d'air :
+            part bloquée par le châssis, poussée perdue, répartition avant / arrière, couple.</li>
+          <li><b>Hélice d'essai</b> pour comparer sans toucher à ta configuration, en props in ou props out.</li>
+        </ul>
+        <p class="note">Mêmes formules que la vitesse max, calées sur les vols GPS. Les particules illustrent la silhouette
+          qui fait la traînée : ce n'est pas un calcul CFD.</p>
+      </div>
+      <figure class="visuel"><video autoplay loop muted playsinline poster="assets/soufflerie/combinee.jpg"
+        aria-label="Soufflerie virtuelle : Speeder V2V dans le vent, écoulement et jets des hélices"><source src="assets/soufflerie/combinee.webm" type="video/webm"><source src="assets/soufflerie/combinee.mp4" type="video/mp4"></video>
+        <figcaption>Speeder V2V 3″ (STL) à 165 km/h : l'air autour du drone et le jet des hélices</figcaption></figure>
+    </div>
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Hélices et flux de poussée</span>
+        <h3>Vois où va l'air de tes hélices</h3>
+        <ul>
+          <li>Un Speeder propulsif souffle dans le vide ; un tractif souffle sur son fuselage : la soufflerie le chiffre.</li>
+          <li>Hélices placées sur les vrais moteurs de ton STL, entraxe repéré automatiquement.</li>
+        </ul>
+      </div>
+      <figure class="visuel"><video autoplay loop muted playsinline poster="assets/soufflerie/helices.jpg"
+        aria-label="Hélices en rotation et jets d'air du Speeder V2V"><source src="assets/soufflerie/helices.webm" type="video/webm"><source src="assets/soufflerie/helices.mp4" type="video/mp4"></video>
+        <figcaption>Hélices Gemfan 3052 tripales en rotation et leurs jets</figcaption></figure>
     </div>
   </div>
 </section>
@@ -291,6 +343,23 @@
   </div>
 </section>
 
+<section id="ateliers" class="alterne">
+  <div class="conteneur">
+    <span class="sur">L'atelier</span>
+    <h2>Conçu par un pilote qui construit ses drones</h2>
+    <p class="intro">Châssis découpés, pièces imprimées en 3D, câblage et pesée : le simulateur est né de l'atelier,
+      pour savoir avant de construire.</p>
+    <div class="terrain">
+      <figure class="carte-photo large"><img src="assets/constructions/bob_le_racer.webp" width="1200" height="900" loading="lazy" alt="BOB le Racer, drone FPV à canopée jaune, effigie de la marque TALKTRUE FPV"><figcaption><b class="neon">BOB le Racer</b> · l'effigie de la marque : sa canopée a donné sa forme au logo TALKTRUE</figcaption></figure>
+      <figure class="carte-photo large"><img src="assets/constructions/chassis_carbone.webp" width="1200" height="900" loading="lazy" alt="Châssis FPV en carbone découpé avec pièces TPU jaunes"><figcaption><b>Châssis maison</b> · carbone découpé et pièces TPU</figcaption></figure>
+      <figure class="carte-photo"><img src="assets/constructions/pesee_405g.webp" width="900" height="1200" loading="lazy" alt="Drone FPV pesé à 405 grammes"><figcaption><b class="neon">405 g</b> · la masse réelle, pesée, entre dans le calcul</figcaption></figure>
+      <figure class="carte-photo"><img src="assets/constructions/cablage_stack_5p.webp" width="900" height="1200" loading="lazy" alt="Câblage d'une stack FPV 5 pouces"><figcaption>Câblage de la stack d'un 5″</figcaption></figure>
+      <figure class="carte-photo"><img src="assets/constructions/cablage_esc.webp" width="1200" height="900" loading="lazy" alt="ESC 4 en 1 soudé sur un drone FPV"><figcaption>ESC 4-en-1 et soudures</figcaption></figure>
+      <figure class="carte-photo"><img src="assets/constructions/build_3p_terrain.webp" width="1200" height="900" loading="lazy" alt="Drone FPV 3 pouces prêt à voler"><figcaption><b>3″</b> prêt à décoller</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section class="alterne">
   <div class="conteneur">
     <span class="sur">Offres</span>
@@ -327,6 +396,8 @@
     <h2>Questions fréquentes</h2>
     <details><summary>Le simulateur est-il gratuit ?</summary><p>Oui. Le calcul de poussée, vitesse, autonomie, accélération et les alertes de sécurité sont gratuits et sans inscription. Le mode Premium ajoute le châssis prototype, le Quad Speeder, la 3D, l'import STL/DXF, le recalage GPS et le garage en ligne.</p></details>
     <details><summary>Les vitesses calculées sont-elles fiables ?</summary><p>Le modèle est calé sur de vrais vols mesurés au GPS (121 et 126 km/h) et tient compte de l'inclinaison, de la densité de l'air et du format réel de la batterie. En Premium, tu peux recaler le calcul sur ta propre mesure GPS.</p></details>
+    <details><summary>Qu'est-ce que la soufflerie virtuelle ?</summary><p>Un banc de traînée en Premium : ton drone (maquette, STL ou plans DXF) est placé dans le vent à la vitesse visée. Il donne l'inclinaison d'équilibre, la traînée, la puissance absorbée par l'air et la poussée nécessaire, et anime l'écoulement autour du drone ainsi que les jets de ses hélices. Mêmes formules que la vitesse max, calées sur des vols GPS : ce n'est pas un calcul CFD.</p></details>
+    <details><summary>Qui est BOB ?</summary><p>BOB le Racer, c'est le drone de course à canopée jaune qui a inspiré le logo TALKTRUE FPV : sa silhouette est au centre de la sphère. L'effigie de la marque, et un vrai drone qui vole.</p></details>
     <details><summary>Quelle différence avec eCalc ?</summary><p>eCalc est une référence pour le calcul pur. TALKTRUE FPV est une plateforme de configuration : composants réels avec prix et liens d'achat, comparaison dans un garage, esquisses cotées, maquettes 3D et import de tes plans de CAO.</p></details>
     <details><summary>Puis-je importer mon drone depuis SolidWorks ou Fusion 360 ?</summary><p>Oui, en Premium : un fichier STL pour la vue 3D et la surface frontale exacte à chaque inclinaison, ou un plan DXF dont la silhouette est mesurée automatiquement.</p></details>
     <details><summary>Comment obtenir un accès Premium ?</summary><p>Avec l'offre Fondateur : <b>24 € une seule fois, accès Premium à vie</b>, réservée aux 100 premiers. Paie sur <a href="https://ko-fi.com/s/b5378f58b1">Ko-fi</a> en indiquant ton e-mail dans le message, et tu reçois ton code personnel sous 24 h. Une question : <a href="mailto:talktruefpv@gmail.com">talktruefpv@gmail.com</a> ou Instagram <a href="https://www.instagram.com/talktruefpv/">@talktruefpv</a>.</p></details>
