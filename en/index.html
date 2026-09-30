@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TALKTRUE FPV — CFD simulation and performance calculator for FPV drones</title>
-<meta name="description" content="A real CFD simulation (OpenFOAM) of your FPV drone from your STL file: drag, drag coefficient, pressure map and ParaView files, nothing to install. Plus the speed, thrust and flight-time calculator calibrated on real GPS flights.">
-<meta name="keywords" content="FPV drone CFD, OpenFOAM drone, FPV drone drag, drone drag coefficient, ParaView, drone wind tunnel, FPV calculator, FPV drone simulator, FPV drone speed, FPV speeder, eCalc alternative">
+<title>TALKTRUE FPV — FPV drone performance simulator: speed, thrust, flight time and CFD</title>
+<meta name="description" content="Free FPV calculator: top speed, thrust, flight time and 0-100 km/h of your FPV drone, with 1,000+ real components, calibrated on real GPS flights. Prototype frame and Quad Speeder in 3D, STL/DXF import, and OpenFOAM CFD of your STL with ParaView files.">
+<meta name="keywords" content="FPV calculator, FPV drone simulator, FPV drone speed, drone battery flight time, motor prop thrust, FPV drone CFD, OpenFOAM drone, FPV drone drag, drone drag coefficient, ParaView, drone wind tunnel, FPV calculator, FPV drone simulator, FPV drone speed, FPV speeder, eCalc alternative">
 <link rel="canonical" href="https://jschmiedd.github.io/en/">
 <link rel="alternate" hreflang="fr" href="https://jschmiedd.github.io/">
 <link rel="alternate" hreflang="en" href="https://jschmiedd.github.io/en/">
@@ -14,8 +14,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TALKTRUE FPV">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="TALKTRUE FPV — CFD for your FPV drone">
-<meta property="og:description" content="Upload your STL: mesh, OpenFOAM run, drag, pressure map and ParaView files, fully automatic.">
+<meta property="og:title" content="TALKTRUE FPV — Performance simulator and CFD">
+<meta property="og:description" content="Speed, thrust and flight time of your FPV drone with 1,000+ real parts, calibrated on GPS flights. Plus OpenFOAM CFD of your STL.">
 <meta property="og:url" content="https://jschmiedd.github.io/en/">
 <meta property="og:image" content="https://jschmiedd.github.io/assets/og_en.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -84,55 +84,101 @@
       TALKTRUE FPV
     </a>
     <nav class="menu" aria-label="Sections">
+      <a href="#fonctions">Simulator</a>
       <a href="#cfd">CFD</a>
       <a href="#paraview">ParaView</a>
-      <a href="#fonctions">Simulator</a>
       <a href="#premium">Premium</a>
       <a href="#calage">Accuracy</a>
       <a href="#terrain">In the field</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a class="langue" href="../" hreflang="fr" lang="fr">FR</a>
-    <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">Launch the app</a>
+    <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">Launch the simulator</a>
   </div>
 </header>
 
 <main>
-<section class="heros heros-cfd">
+<section class="heros">
   <div class="conteneur grille">
     <div>
-      <span class="sur">New · OpenFOAM CFD</span>
-      <h1>A real <span class="neon">airflow simulation</span> of your FPV drone. From your STL, in one click.</h1>
-      <p class="accroche">Upload the 3D model of your drone. The TALKTRUE server meshes it, runs OpenFOAM
-        and checks convergence on its own. You get its measured drag, its drag coefficient, the pressure
-        on every surface and the air flowing around it, ready to open in ParaView.</p>
+      <span class="sur">FPV performance simulator · V4</span>
+      <h1>Design your FPV drone. <span class="neon">Know its speed, power and flight time</span> before you build it.</h1>
+      <p class="accroche">Thrust, top speed, flight time and 0 → 100 km/h, computed with real market
+        components and calibrated on real GPS flights. From 3-inch quads to X8 cinelifters and
+        streamlined Quad Speeders, in 2D, in 3D, and now through <b>OpenFOAM CFD</b>.</p>
       <div class="actions">
-        <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🌀 Run a CFD simulation</a>
-        <a class="bouton secondaire" href="#cfd">See how it works</a>
+        <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Launch the simulator — free</a>
+        <a class="bouton secondaire" href="#cfd">🌀 New: CFD simulation</a>
       </div>
       <div class="chiffres">
-        <div><b>OpenFOAM</b><span>industry CFD solver</span></div>
-        <div><b>≈ 1 M</b><span>cells per run</span></div>
-        <div><b>0</b><span>software to install</span></div>
+        <div><b>1,000+</b><span>real components</span></div>
+        <div><b>121 km/h</b><span>GPS-calibrated speed</span></div>
+        <div><b>CFD</b><span>OpenFOAM on your STL</span></div>
       </div>
     </div>
-    <figure class="ecran-cfd">
-      <video autoplay loop muted playsinline poster="../assets/cfd/flux_hero.jpg"
-        aria-label="OpenFOAM CFD: air streaming around the V2V Speeder, drone coloured by pressure">
-        <source src="../assets/cfd/flux_hero.mp4" type="video/mp4"></video>
-      <figcaption><span class="point"></span>V2V Speeder 3″ · 120 km/h · OpenFOAM streamlines, drone coloured by pressure</figcaption>
-    </figure>
+    <div class="sphere">
+      <video autoplay loop muted playsinline poster="../assets/logo_sphere_poster.jpg" aria-label="Rotating TALK TRUE FPV logo">
+        <source src="../assets/logo_sphere.webm" type="video/webm"><source src="../assets/logo_sphere.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
 </section>
 
-<section id="cfd" class="alterne">
+
+
+
+<section id="fonctions" class="alterne">
   <div class="conteneur">
-    <span class="sur">From STL to result</span>
+    <span class="sur">Free, no sign-up</span>
+    <h2>Everything you need to choose right</h2>
+    <p class="intro">Pick your motors, props, frame, battery and electronics: performance updates live,
+      with the price and shop link of every part.</p>
+    <div class="cartes">
+      <div class="carte"><div class="icone">🚀</div><h3>Realistic top speed</h3><p>Thrust that drops with speed, drag based on tilt, today's air density: not an unrealistic “theoretical” speed.</p></div>
+      <div class="carte"><div class="icone">🔋</div><h3>Flight time by flying style</h3><p>Cinematic, freestyle or full throttle, with a discharge curve for each chemistry (LiPo, LiHV, Li-ion).</p></div>
+      <div class="carte"><div class="icone">⚡</div><h3>Safety alerts</h3><p>Motors vs ESC, connector, prop size, voltage: incompatibilities are flagged before you buy.</p></div>
+      <div class="carte"><div class="icone">⏱️</div><h3>0 → 100 km/h</h3><p>Theoretical acceleration, horizontal and vertical, to compare how punchy each build is.</p></div>
+      <div class="carte"><div class="icone">🛒</div><h3>Parts list &amp; cost</h3><p>Complete shopping list, prices in EUR or USD, shop links, PDF / CSV export.</p></div>
+      <div class="carte"><div class="icone">🗄️</div><h3>Build garage</h3><p>Save and compare your builds side by side to find the best trade-off.</p></div>
+    </div>
+    <div class="fonction" style="margin-top:64px">
+      <div>
+        <h3>An interface made for pilots</h3>
+        <ul>
+          <li><b>Pre-filters</b> by frame size, frame type, brand, KV, prop pitch, cells, capacity…</li>
+          <li><b>Memory</b> of all your choices across the user guide and wiki pages.</li>
+          <li><b>Today's conditions</b>: altitude, temperature, humidity and weather pressure (QNH).</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="../assets/guide/01_apercu.webp" width="1200" height="1150" loading="lazy" alt="TALKTRUE FPV simulator interface: component selection and diagnostics"></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="conteneur">
+    <span class="sur">In 3 steps</span>
+    <h2>How it works</h2>
+    <div class="etapes">
+      <div class="etape"><h3>Pick your parts</h3><p>Motors, props, frame, battery, electronics: over 1,000 real, filterable parts.</p></div>
+      <div class="etape"><h3>Read your performance</h3><p>Speed, flight time, thrust, acceleration and alerts update with every change.</p></div>
+      <div class="etape"><h3>Compare &amp; buy</h3><p>Save your builds, compare them, export the shopping list with links.</p></div>
+    </div>
+  </div>
+</section>
+<section id="cfd">
+  <div class="conteneur">
+    <span class="sur">New · Premium · OpenFOAM CFD</span>
     <h2>A complete CFD run, <span class="neon">no CFD engineer needed</span></h2>
     <p class="intro">An airflow simulation usually takes days of setup: domain, mesh, boundary conditions,
       solver, convergence checks. Here everything is automated and verified. You pick the tilt and the
       speed, the compute server does the rest.</p>
 
+    <figure class="ecran-cfd" style="margin:0 0 48px">
+      <video autoplay loop muted playsinline poster="../assets/cfd/flux_hero.jpg" aria-label="OpenFOAM CFD: air streaming around the V2V Speeder">
+        <source src="../assets/cfd/flux_hero.mp4" type="video/mp4"></video>
+      <figcaption><span class="point"></span>V2V Speeder 3″ · 120 km/h · OpenFOAM streamlines, drone coloured by pressure</figcaption>
+    </figure>
     <ol class="sequence">
       <li>
         <figure class="visuel"><img src="../assets/dxf/stl_v2v.webp" loading="lazy" alt="STL import of an FPV Speeder: orientation checked on three views"></figure>
@@ -164,29 +210,27 @@
   </div>
 </section>
 
-<section id="resultats">
+<section id="resultats" class="alterne">
   <div class="conteneur">
     <span class="sur">What CFD reveals</span>
     <h2>Where the air pushes, where it lets go</h2>
     <p class="intro">The pressure on every surface shows where the drag comes from: red, the air hits the drone;
       blue, it is sucked away. Behind it, the wake shows the slowed air the drone drags along.</p>
-    <div class="trio-cfd">
+    <div class="trio-cfd duo-cfd">
       <figure class="visuel sombre"><img src="../assets/cfd/cp_v2v_0.webp" loading="lazy" alt="Pressure on the V2V Speeder, fuselage aligned with the wind"><figcaption>V2V Speeder · fuselage 0° (fast flight)</figcaption></figure>
       <figure class="visuel sombre"><img src="../assets/cfd/cp_v2v_45.webp" loading="lazy" alt="Pressure on the V2V Speeder tilted at 45 degrees"><figcaption>V2V Speeder · fuselage 45°</figcaption></figure>
-      <figure class="visuel sombre"><img src="../assets/cfd/cp_towa_35.webp" loading="lazy" alt="Pressure on the TOWA 5-inch freestyle drone tilted at 35 degrees"><figcaption>TOWA 5″ freestyle · 35°</figcaption></figure>
     </div>
-    <div class="duo" style="margin-top:18px">
-      <figure class="visuel sombre"><img src="../assets/cfd/coupe_v2v_45.webp" loading="lazy" alt="Velocity slice: wake behind the V2V Speeder"><figcaption>V2V Speeder wake at 45° (blue = slowed air)</figcaption></figure>
-      <figure class="visuel sombre"><img src="../assets/cfd/coupe_towa_35.webp" loading="lazy" alt="Velocity slice: wake behind the TOWA 5-inch"><figcaption>TOWA 5″ wake at 35°: much wider</figcaption></figure>
+    <div class="coupe-cfd" style="margin-top:18px">
+      <figure class="visuel sombre"><img src="../assets/cfd/coupe_v2v_45.webp" loading="lazy" alt="Velocity slice: wake behind the V2V Speeder"><figcaption>V2V Speeder wake at 45°: blue = slowed air the drone drags behind it</figcaption></figure>
     </div>
 
     <div class="fonction" style="margin-top:64px">
       <div>
         <span class="badge">Real numbers</span>
-        <h3>A streamlined fuselage cuts drag by 10</h3>
+        <h3>Fuselage into the wind: 5 times less drag</h3>
         <ul>
           <li>Flat into the wind, the V2V Speeder has only <b>9 cm²</b> of drag area: an equivalent drag coefficient of <b>0.22</b>, an imperfect teardrop.</li>
-          <li>The TOWA 5″ freestyle at 35° has <b>92 cm²</b>: ten times more, for a drone barely bigger.</li>
+          <li>Tilted at 45°, the same drone reaches <b>45 cm²</b>: five times more. Keeping the fuselage in the wind is the key to speed.</li>
           <li>The app's quick estimate (fixed Cd 0.68 for an STL) <b>overestimates</b> the drag of a well-streamlined Speeder: CFD corrects it.</li>
         </ul>
         <p class="note">Steady RANS, without the propellers or their slipstream, wall functions: ±15 to 25 %. To be confirmed by a GPS flight, like the rest of the simulator.</p>
@@ -196,7 +240,6 @@
           <tr><th>Case (120 km/h)</th><th>Quick estimate</th><th>OpenFOAM CFD</th><th>Cd</th></tr>
           <tr><td>V2V Speeder · fuselage 0°</td><td>28.8 cm²</td><td class="neon">9.2 cm²</td><td>0.22</td></tr>
           <tr><td>V2V Speeder · fuselage 45°</td><td>59.8 cm²</td><td class="neon">45.5 cm²</td><td>0.52</td></tr>
-          <tr><td>TOWA 5″ · 35°</td><td>69.2 cm²</td><td class="neon">92.4 cm²</td><td>0.91</td></tr>
         </table>
         <p style="color:var(--doux);font-size:.85rem;margin:12px 0 0">S·Cd = drag ÷ (½ ρ V²). Meshes of 1.0 to 1.3 M cells, convergence &lt; 0.3 %.</p>
       </div>
@@ -204,7 +247,7 @@
   </div>
 </section>
 
-<section id="paraview" class="alterne">
+<section id="paraview">
   <div class="conteneur">
     <span class="sur">ParaView · step by step</span>
     <h2>Make the air stream around <span class="neon">your</span> drone</h2>
@@ -232,47 +275,8 @@
   </div>
 </section>
 
-<section id="fonctions">
-  <div class="conteneur">
-    <span class="sur">The simulator · free, no sign-up</span>
-    <h2>Everything you need to choose right</h2>
-    <p class="intro">Before CFD comes the calculator: pick your motors, props, frame, battery and electronics,
-      and performance updates live, with the price and shop link of every part.</p>
-    <div class="cartes">
-      <div class="carte"><div class="icone">🚀</div><h3>Realistic top speed</h3><p>Thrust that drops with speed, drag based on tilt, today's air density: not an unrealistic “theoretical” speed.</p></div>
-      <div class="carte"><div class="icone">🔋</div><h3>Flight time by flying style</h3><p>Cinematic, freestyle or full throttle, with a discharge curve for each chemistry (LiPo, LiHV, Li-ion).</p></div>
-      <div class="carte"><div class="icone">⚡</div><h3>Safety alerts</h3><p>Motors vs ESC, connector, prop size, voltage: incompatibilities are flagged before you buy.</p></div>
-      <div class="carte"><div class="icone">⏱️</div><h3>0 → 100 km/h</h3><p>Theoretical acceleration, horizontal and vertical, to compare how punchy each build is.</p></div>
-      <div class="carte"><div class="icone">🛒</div><h3>Parts list &amp; cost</h3><p>Complete shopping list, prices in EUR or USD, shop links, PDF / CSV export.</p></div>
-      <div class="carte"><div class="icone">🗄️</div><h3>Build garage</h3><p>Save and compare your builds side by side to find the best trade-off.</p></div>
-    </div>
-    <div class="fonction" style="margin-top:64px">
-      <div>
-        <h3>An interface made for pilots</h3>
-        <ul>
-          <li><b>Pre-filters</b> by frame size, frame type, brand, KV, prop pitch, cells, capacity…</li>
-          <li><b>Memory</b> of all your choices across the user guide and wiki pages.</li>
-          <li><b>Today's conditions</b>: altitude, temperature, humidity and weather pressure (QNH).</li>
-        </ul>
-      </div>
-      <figure class="visuel"><img src="../assets/guide/01_apercu.webp" width="1200" height="1150" loading="lazy" alt="TALKTRUE FPV simulator interface: component selection and diagnostics"></figure>
-    </div>
-  </div>
-</section>
 
-<section class="alterne">
-  <div class="conteneur">
-    <span class="sur">In 3 steps</span>
-    <h2>How it works</h2>
-    <div class="etapes">
-      <div class="etape"><h3>Pick your parts</h3><p>Motors, props, frame, battery, electronics: over 1,000 real, filterable parts.</p></div>
-      <div class="etape"><h3>Read your performance</h3><p>Speed, flight time, thrust, acceleration and alerts update with every change.</p></div>
-      <div class="etape"><h3>Compare &amp; buy</h3><p>Save your builds, compare them, export the shopping list with links.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="premium">
+<section id="premium" class="alterne">
   <div class="conteneur">
     <span class="sur">Premium</span>
     <h2>From calculator to <span class="or">design workshop</span></h2>
@@ -413,7 +417,7 @@
     <p class="intro">The measurements used to calibrate the simulator, and what the same TOWA 5″ does once lightened and tuned.</p>
     <div class="terrain">
       <figure class="carte-photo haute"><video id="launch" autoplay loop muted playsinline poster="../assets/terrain/launch_control.jpg" aria-label="FPV drone launch control"><source src="../assets/terrain/launch_control.webm" type="video/webm"><source src="../assets/terrain/launch_control.mp4" type="video/mp4"></video><button class="son" type="button" onclick="const v=document.getElementById('launch');v.muted=!v.muted;v.play();this.textContent=v.muted?'🔊 Sound':'🔇';">🔊 Sound</button><figcaption><b>Launch control</b> · take-off from the box, FPV view and blackbox</figcaption></figure>
-      <figure class="carte-photo large"><img src="../assets/terrain/towa_5pouces.webp" width="864" height="647" loading="lazy" alt="TOWA 5-inch freestyle FPV drone on a path"><figcaption><b>TOWA 5″</b> · the calibration build, and the CFD test drone</figcaption></figure>
+      <figure class="carte-photo large"><img src="../assets/terrain/towa_5pouces.webp" width="864" height="647" loading="lazy" alt="TOWA 5-inch freestyle FPV drone on a path"><figcaption><b>TOWA 5″</b> · the calibration build, 16 g lighter</figcaption></figure>
       <figure class="carte-photo"><img src="../assets/terrain/towa_osd_145.webp" width="864" height="560" loading="lazy" alt="OSD stats: max speed 145 km/h"><figcaption><b class="neon">145 km/h</b> · max speed from the OSD after tuning</figcaption></figure>
       <figure class="carte-photo"><img src="../assets/terrain/towa_blackbox_145.webp" style="object-position:right top" width="1080" height="675" loading="lazy" alt="Betaflight blackbox: GPS speed 40.5 metres per second"><figcaption><b>40.5 m/s × 3.6 = 145.8 km/h</b> · confirmed by the blackbox (GPS speed)</figcaption></figure>
       <figure class="carte-photo"><img src="../assets/terrain/towa_neige.webp" width="1080" height="735" loading="lazy" alt="TOWA 5-inch FPV drone on snow"><figcaption>Winter tests: 3D-printed PET arm guards, <i>“PET holds up”</i></figcaption></figure>
@@ -492,16 +496,16 @@
 
 <section class="appel">
   <div class="conteneur">
-    <h2>Ready to see the air around your drone?</h2>
+    <h2>Ready to see what your drone is really made of?</h2>
     <p>Pick your parts, read your speed, then run your model through CFD.</p>
-    <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🌀 Launch the app</a>
+    <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Launch the simulator</a>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="conteneur">
-    <span>© 2026 TALKTRUE FPV — CFD and performance simulator V4</span>
+    <span>© 2026 TALKTRUE FPV — Performance simulator V4 and CFD</span>
     <nav aria-label="Links">
       <a href="https://talktrue-simulateur-performences-v4.streamlit.app/">Simulator</a>
       <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a>

@@ -241,3 +241,6 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .86em; backgro
   .sequence, .trio-cfd { grid-template-columns: 1fr; }
   .mesure { padding: 18px; overflow-x: auto; }
 }
+.trio-cfd.duo-cfd { grid-template-columns: 1fr 1fr; }
+.coupe-cfd .visuel img { width: 100%; aspect-ratio: 3 / 1; object-fit: cover; }
+@media (max-width: 520px) { .trio-cfd.duo-cfd { grid-template-columns: 1fr; } }
