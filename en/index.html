@@ -85,9 +85,9 @@
     </a>
     <nav class="menu" aria-label="Sections">
       <a href="#fonctions">Simulator</a>
+      <a href="#premium">Premium</a>
       <a href="#cfd">CFD</a>
       <a href="#paraview">ParaView</a>
-      <a href="#premium">Premium</a>
       <a href="#calage">Accuracy</a>
       <a href="#terrain">In the field</a>
       <a href="#faq">FAQ</a>
@@ -123,7 +123,6 @@
     </div>
   </div>
 </section>
-
 
 
 
@@ -166,6 +165,113 @@
     </div>
   </div>
 </section>
+<section id="premium" class="alterne">
+  <div class="conteneur">
+    <span class="sur">Premium</span>
+    <h2>From calculator to <span class="or">design workshop</span></h2>
+    <p class="intro">Design your own frame or speed drone, see it in 3D, import your CAD drawings,
+      run it through CFD and calibrate the calculation on your real measurements.</p>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">Prototype frame</span>
+        <h3>Your frame, drawn to scale</h3>
+        <ul>
+          <li><b>5 layouts</b>: X, Dead Cat, Squished X, Stretch X, H-Frame, as a Quad or coaxial X8.</li>
+          <li><b>Dimensioned sketch</b> redrawn at every input, top and front view.</li>
+          <li><b>3D model</b> you can tilt, with its exact frontal area at every angle.</li>
+        </ul>
+      </div>
+      <div>
+        <figure class="visuel sombre"><img src="../assets/guide/rendu_proto.webp" width="1200" height="900" loading="lazy" alt="3D model of an FPV drone tilted 35 degrees with its frontal area"></figure>
+        <figure class="visuel sombre"><img src="../assets/guide/05_prototype_x.webp" loading="lazy" alt="FPV prototype frame geometry with dimensioned sketch"><figcaption>Dimensioned sketch of the X frame</figcaption></figure>
+        <div class="trio">
+          <figure class="visuel sombre"><img src="../assets/guide/06_proto_deadcat.webp" loading="lazy" alt="Dead Cat frame sketch"><figcaption>Dead Cat</figcaption></figure>
+          <figure class="visuel sombre"><img src="../assets/guide/07_proto_hframe.webp" loading="lazy" alt="H-Frame sketch"><figcaption>H-Frame</figcaption></figure>
+          <figure class="visuel sombre"><img src="../assets/guide/08_proto_stretch.webp" loading="lazy" alt="Stretch X frame sketch"><figcaption>Stretch X</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Quad Speeder</span>
+        <h3>The speed drone, pusher or tractor</h3>
+        <ul>
+          <li><b>Teardrop fuselage</b>, drag coefficient computed from its fineness ratio (Hoerner).</li>
+          <li><b>Pusher</b> (SPEEDER V2 type) or <b>tractor</b> on nacelles (Blackbird type).</li>
+          <li><b>Fuselage angle</b>: 0° in fast flight into the wind, 90° at take-off.</li>
+          <li><b>Your Speeder as STL</b>: dimensions taken from the model, adjustable battery and centre of gravity.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="duo">
+          <figure class="visuel sombre"><img src="../assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Pusher FPV Quad Speeder in 3D"><figcaption>Pusher</figcaption></figure>
+          <figure class="visuel sombre"><img src="../assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Tractor FPV Quad Speeder on nacelles in 3D"><figcaption>Tractor (nacelles)</figcaption></figure>
+        </div>
+        <div class="duo" style="margin-top:14px">
+          <figure class="visuel"><img src="../assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="3D-printed Speeder V2 fuselages"><figcaption>Speeder V2: 3D-printed fuselages</figcaption></figure>
+          <figure class="visuel"><img src="../assets/constructions/speeder_v2_impression.webp" width="1200" height="900" loading="lazy" alt="Speeder V2"><figcaption>Speeder V2: 3D printing</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">CAD import</span>
+        <h3>Your SolidWorks, Fusion 360 or Onshape drawings</h3>
+        <ul>
+          <li><b>STL</b>: 3D view, real silhouette at every tilt, and <b>CFD simulation</b>.</li>
+          <li><b>DXF</b>: your top and front views replace the sketch, with the same dimensions.</li>
+          <li><b>3D volume from your drawings</b>: top + front (+ side) are enough to rebuild your drone.</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="../assets/dxf/stl_v2v.webp" loading="lazy" alt="STL import: orientation checked on 3 views"><figcaption>Your STL: orientation checked on 3 views</figcaption></figure>
+    </div>
+
+    <h3 class="titre-etapes" style="margin-top:0">From DXF drawings to a 3D model, in 3 steps</h3>
+    <div class="etapes-dxf">
+      <figure class="visuel"><img src="../assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Loaded DXF drawings table: top view, front view, 3D volume"><figcaption>1 · Your DXF drawings</figcaption></figure>
+      <figure class="visuel sombre"><img src="../assets/dxf/2_esquisse.webp" width="349" height="398" loading="lazy" alt="Dimensioned sketch replaced by the top and front DXF drawings of a TOWA 5-inch"><figcaption>2 · They replace the sketch, same dimensions</figcaption></figure>
+      <figure class="visuel"><img src="../assets/dxf/3_volume.webp" width="890" height="482" loading="lazy" alt="3D volume of an FPV drone rebuilt from its DXF drawings"><figcaption>3 · The rebuilt 3D volume</figcaption></figure>
+    </div>
+
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Virtual wind tunnel</span>
+        <h3>The instant estimate, before CFD</h3>
+        <ul>
+          <li><b>Equilibrium tilt</b>, drag, power absorbed by the air and required thrust, live.</li>
+          <li><b>Props modelled to size</b>, spinning, with their slipstream: thrust lost on the frame, front / rear split.</li>
+          <li>Instant answers to explore; <b>CFD</b> to settle it.</li>
+        </ul>
+        <p class="note">The wind tunnel applies the simulator's formulas, calibrated on GPS flights; its particles illustrate the flow.
+          The CFD simulation actually solves the airflow around your STL.</p>
+      </div>
+      <div>
+        <figure class="visuel"><video autoplay loop muted playsinline poster="../assets/soufflerie/combinee.jpg"
+        aria-label="Virtual wind tunnel: V2V Speeder in the wind, airflow and prop slipstreams"><source src="../assets/soufflerie/combinee.webm" type="video/webm"><source src="../assets/soufflerie/combinee.mp4" type="video/mp4"></video>
+        <figcaption>Virtual wind tunnel: air around the drone and prop slipstream</figcaption></figure>
+        <figure class="visuel" style="margin-top:14px"><video autoplay loop muted playsinline poster="../assets/soufflerie/helices.jpg"
+        aria-label="Spinning props and slipstreams of the V2V Speeder"><source src="../assets/soufflerie/helices.webm" type="video/webm"><source src="../assets/soufflerie/helices.mp4" type="video/mp4"></video>
+        <figcaption>Gemfan 3052 tri-blade props spinning, with their slipstreams</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">GPS calibration &amp; online garage</span>
+        <h3>Your measurement becomes the reference</h3>
+        <ul>
+          <li><b>GPS calibration</b>: enter your measured speed, the calculation adjusts and keeps the setting.</li>
+          <li><b>Online garage</b>: 10 builds and your CFD runs, on all your devices.</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="../assets/guide/04_recalage_gps.webp" loading="lazy" alt="Calibrating the calculated speed on a GPS measurement"></figure>
+    </div>
+  </div>
+</section>
+
 <section id="cfd">
   <div class="conteneur">
     <span class="sur">New · Premium · OpenFOAM CFD</span>
@@ -276,114 +382,7 @@
 </section>
 
 
-<section id="premium" class="alterne">
-  <div class="conteneur">
-    <span class="sur">Premium</span>
-    <h2>From calculator to <span class="or">design workshop</span></h2>
-    <p class="intro">Design your own frame or speed drone, see it in 3D, import your CAD drawings,
-      run it through CFD and calibrate the calculation on your real measurements.</p>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">Prototype frame</span>
-        <h3>Your frame, drawn to scale</h3>
-        <ul>
-          <li><b>5 layouts</b>: X, Dead Cat, Squished X, Stretch X, H-Frame, as a Quad or coaxial X8.</li>
-          <li><b>Dimensioned sketch</b> redrawn at every input, top and front view.</li>
-          <li><b>3D model</b> you can tilt, with its exact frontal area at every angle.</li>
-        </ul>
-      </div>
-      <div>
-        <figure class="visuel sombre"><img src="../assets/guide/rendu_proto.webp" width="1200" height="900" loading="lazy" alt="3D model of an FPV drone tilted 35 degrees with its frontal area"></figure>
-        <figure class="visuel sombre"><img src="../assets/guide/05_prototype_x.webp" loading="lazy" alt="FPV prototype frame geometry with dimensioned sketch"><figcaption>Dimensioned sketch of the X frame</figcaption></figure>
-        <div class="trio">
-          <figure class="visuel sombre"><img src="../assets/guide/06_proto_deadcat.webp" loading="lazy" alt="Dead Cat frame sketch"><figcaption>Dead Cat</figcaption></figure>
-          <figure class="visuel sombre"><img src="../assets/guide/07_proto_hframe.webp" loading="lazy" alt="H-Frame sketch"><figcaption>H-Frame</figcaption></figure>
-          <figure class="visuel sombre"><img src="../assets/guide/08_proto_stretch.webp" loading="lazy" alt="Stretch X frame sketch"><figcaption>Stretch X</figcaption></figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="fonction inverse">
-      <div>
-        <span class="badge">Quad Speeder</span>
-        <h3>The speed drone, pusher or tractor</h3>
-        <ul>
-          <li><b>Teardrop fuselage</b>, drag coefficient computed from its fineness ratio (Hoerner).</li>
-          <li><b>Pusher</b> (SPEEDER V2 type) or <b>tractor</b> on nacelles (Blackbird type).</li>
-          <li><b>Fuselage angle</b>: 0° in fast flight into the wind, 90° at take-off.</li>
-          <li><b>Your Speeder as STL</b>: dimensions taken from the model, adjustable battery and centre of gravity.</li>
-        </ul>
-      </div>
-      <div>
-        <div class="duo">
-          <figure class="visuel sombre"><img src="../assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Pusher FPV Quad Speeder in 3D"><figcaption>Pusher</figcaption></figure>
-          <figure class="visuel sombre"><img src="../assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Tractor FPV Quad Speeder on nacelles in 3D"><figcaption>Tractor (nacelles)</figcaption></figure>
-        </div>
-        <div class="duo" style="margin-top:14px">
-          <figure class="visuel"><img src="../assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="3D-printed Speeder V2 fuselages"><figcaption>Speeder V2: 3D-printed fuselages</figcaption></figure>
-          <figure class="visuel"><img src="../assets/constructions/speeder_v2_impression.webp" width="1200" height="900" loading="lazy" alt="Speeder V2"><figcaption>Speeder V2: 3D printing</figcaption></figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">CAD import</span>
-        <h3>Your SolidWorks, Fusion 360 or Onshape drawings</h3>
-        <ul>
-          <li><b>STL</b>: 3D view, real silhouette at every tilt, and <b>CFD simulation</b>.</li>
-          <li><b>DXF</b>: your top and front views replace the sketch, with the same dimensions.</li>
-          <li><b>3D volume from your drawings</b>: top + front (+ side) are enough to rebuild your drone.</li>
-        </ul>
-      </div>
-      <figure class="visuel"><img src="../assets/dxf/stl_v2v.webp" loading="lazy" alt="STL import: orientation checked on 3 views"><figcaption>Your STL: orientation checked on 3 views</figcaption></figure>
-    </div>
-
-    <h3 class="titre-etapes" style="margin-top:0">From DXF drawings to a 3D model, in 3 steps</h3>
-    <div class="etapes-dxf">
-      <figure class="visuel"><img src="../assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Loaded DXF drawings table: top view, front view, 3D volume"><figcaption>1 · Your DXF drawings</figcaption></figure>
-      <figure class="visuel sombre"><img src="../assets/dxf/2_esquisse.webp" width="349" height="398" loading="lazy" alt="Dimensioned sketch replaced by the top and front DXF drawings of a TOWA 5-inch"><figcaption>2 · They replace the sketch, same dimensions</figcaption></figure>
-      <figure class="visuel"><img src="../assets/dxf/3_volume.webp" width="890" height="482" loading="lazy" alt="3D volume of an FPV drone rebuilt from its DXF drawings"><figcaption>3 · The rebuilt 3D volume</figcaption></figure>
-    </div>
-
-    <div class="fonction inverse">
-      <div>
-        <span class="badge">Virtual wind tunnel</span>
-        <h3>The instant estimate, before CFD</h3>
-        <ul>
-          <li><b>Equilibrium tilt</b>, drag, power absorbed by the air and required thrust, live.</li>
-          <li><b>Props modelled to size</b>, spinning, with their slipstream: thrust lost on the frame, front / rear split.</li>
-          <li>Instant answers to explore; <b>CFD</b> to settle it.</li>
-        </ul>
-        <p class="note">The wind tunnel applies the simulator's formulas, calibrated on GPS flights; its particles illustrate the flow.
-          The CFD simulation actually solves the airflow around your STL.</p>
-      </div>
-      <div>
-        <figure class="visuel"><video autoplay loop muted playsinline poster="../assets/soufflerie/combinee.jpg"
-        aria-label="Virtual wind tunnel: V2V Speeder in the wind, airflow and prop slipstreams"><source src="../assets/soufflerie/combinee.webm" type="video/webm"><source src="../assets/soufflerie/combinee.mp4" type="video/mp4"></video>
-        <figcaption>Virtual wind tunnel: air around the drone and prop slipstream</figcaption></figure>
-        <figure class="visuel" style="margin-top:14px"><video autoplay loop muted playsinline poster="../assets/soufflerie/helices.jpg"
-        aria-label="Spinning props and slipstreams of the V2V Speeder"><source src="../assets/soufflerie/helices.webm" type="video/webm"><source src="../assets/soufflerie/helices.mp4" type="video/mp4"></video>
-        <figcaption>Gemfan 3052 tri-blade props spinning, with their slipstreams</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">GPS calibration &amp; online garage</span>
-        <h3>Your measurement becomes the reference</h3>
-        <ul>
-          <li><b>GPS calibration</b>: enter your measured speed, the calculation adjusts and keeps the setting.</li>
-          <li><b>Online garage</b>: 10 builds and your CFD runs, on all your devices.</li>
-        </ul>
-      </div>
-      <figure class="visuel"><img src="../assets/guide/04_recalage_gps.webp" loading="lazy" alt="Calibrating the calculated speed on a GPS measurement"></figure>
-    </div>
-  </div>
-</section>
-
-<section id="calage">
+<section id="calage" class="alterne">
   <div class="conteneur calage">
     <div>
       <span class="sur">Accuracy</span>
@@ -410,7 +409,7 @@
   </div>
 </section>
 
-<section id="terrain" class="alterne">
+<section id="terrain">
   <div class="conteneur">
     <span class="sur">In the field</span>
     <h2>Drones that actually fly</h2>
@@ -428,7 +427,7 @@
   </div>
 </section>
 
-<section id="ateliers">
+<section id="ateliers" class="alterne">
   <div class="conteneur">
     <span class="sur">The workshop</span>
     <h2>Built by a pilot who builds his own drones</h2>
@@ -446,7 +445,7 @@
   </div>
 </section>
 
-<section class="alterne">
+<section>
   <div class="conteneur">
     <span class="sur">Plans</span>
     <h2>Free or Premium</h2>

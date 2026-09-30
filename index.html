@@ -86,9 +86,9 @@
     </a>
     <nav class="menu" aria-label="Sections">
       <a href="#fonctions">Simulateur</a>
+      <a href="#premium">Premium</a>
       <a href="#cfd">Calcul CFD</a>
       <a href="#paraview">ParaView</a>
-      <a href="#premium">Premium</a>
       <a href="#calage">Précision</a>
       <a href="#terrain">Terrain</a>
       <a href="#faq">FAQ</a>
@@ -124,7 +124,6 @@
     </div>
   </div>
 </section>
-
 
 
 
@@ -167,6 +166,113 @@
     </div>
   </div>
 </section>
+<section id="premium" class="alterne">
+  <div class="conteneur">
+    <span class="sur">Premium</span>
+    <h2>Passe du calculateur à l'<span class="or">atelier de conception</span></h2>
+    <p class="intro">Dessine ton propre châssis ou ton drone de vitesse, vois-le en 3D, importe tes
+      plans de CAO, passe-le au CFD et cale le calcul sur tes vraies mesures.</p>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">Châssis prototype</span>
+        <h3>Ton châssis, coté à l'échelle</h3>
+        <ul>
+          <li><b>5 formes</b> : X, Dead Cat, Squished X, Stretch X, H-Frame, en Quad ou en X8 coaxial.</li>
+          <li><b>Esquisse cotée</b> redessinée à chaque saisie, vue de dessus et de face.</li>
+          <li><b>Maquette 3D</b> inclinable, avec sa surface frontale exacte à chaque inclinaison.</li>
+        </ul>
+      </div>
+      <div>
+        <figure class="visuel sombre"><img src="assets/guide/rendu_proto.webp" width="1200" height="900" loading="lazy" alt="Maquette 3D d'un drone FPV inclinée à 35 degrés avec sa surface frontale"></figure>
+        <figure class="visuel sombre"><img src="assets/guide/05_prototype_x.webp" loading="lazy" alt="Géométrie du châssis prototype FPV avec esquisse cotée"><figcaption>Esquisse cotée du châssis X</figcaption></figure>
+        <div class="trio">
+          <figure class="visuel sombre"><img src="assets/guide/06_proto_deadcat.webp" loading="lazy" alt="Esquisse d'un châssis Dead Cat"><figcaption>Dead Cat</figcaption></figure>
+          <figure class="visuel sombre"><img src="assets/guide/07_proto_hframe.webp" loading="lazy" alt="Esquisse d'un châssis H-Frame"><figcaption>H-Frame</figcaption></figure>
+          <figure class="visuel sombre"><img src="assets/guide/08_proto_stretch.webp" loading="lazy" alt="Esquisse d'un châssis Stretch X"><figcaption>Stretch X</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Quad Speeder</span>
+        <h3>Le drone de vitesse, propulsif ou tractif</h3>
+        <ul>
+          <li><b>Fuselage goutte d'eau</b>, Cx calculé depuis sa finesse (Hoerner).</li>
+          <li><b>Propulsif</b> (type SPEEDER V2) ou <b>tractif</b> sur nacelles (type Blackbird).</li>
+          <li><b>Angle du fuselage</b> : 0° en vol rapide face au vent, 90° au décollage.</li>
+          <li><b>Ton Speeder en STL</b> : cotes reprises du modèle, batterie et centre de gravité réglables.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="duo">
+          <figure class="visuel sombre"><img src="assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV propulsif en 3D"><figcaption>Propulsif</figcaption></figure>
+          <figure class="visuel sombre"><img src="assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV tractif sur nacelles en 3D"><figcaption>Tractif (nacelles)</figcaption></figure>
+        </div>
+        <div class="duo" style="margin-top:14px">
+          <figure class="visuel"><img src="assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="Fuselages imprimés 3D du Speeder V2 et prototype"><figcaption>Speeder V2 : fuselages imprimés 3D</figcaption></figure>
+          <figure class="visuel"><img src="assets/constructions/speeder_v2_impression.webp" width="1200" height="900" loading="lazy" alt="Speeder V2"><figcaption>Speeder V2 : impression 3D</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">Import CAO</span>
+        <h3>Tes plans SolidWorks, Fusion 360 ou Onshape</h3>
+        <ul>
+          <li><b>STL</b> : vue 3D, silhouette réelle à chaque inclinaison, et <b>calcul CFD</b>.</li>
+          <li><b>DXF</b> : ta vue de dessus et ta vue de face remplacent l'esquisse, avec les mêmes cotes.</li>
+          <li><b>Volume 3D depuis tes plans</b> : dessus + face (+ côté) suffisent pour reconstruire ton drone.</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="assets/dxf/stl_v2v.webp" loading="lazy" alt="Import STL : contrôle de l'orientation sur 3 vues"><figcaption>Ton STL : orientation contrôlée sur 3 vues</figcaption></figure>
+    </div>
+
+    <h3 class="titre-etapes" style="margin-top:0">Des plans DXF au modèle 3D, en 3 étapes</h3>
+    <div class="etapes-dxf">
+      <figure class="visuel"><img src="assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Tableau des plans DXF chargés : vue de dessus, vue de face, volume 3D"><figcaption>1 · Tes plans DXF</figcaption></figure>
+      <figure class="visuel sombre"><img src="assets/dxf/2_esquisse.webp" width="349" height="398" loading="lazy" alt="Esquisse cotée remplacée par les plans DXF de dessus et de face d'un TOWA 5 pouces"><figcaption>2 · Ils remplacent l'esquisse, mêmes cotes</figcaption></figure>
+      <figure class="visuel"><img src="assets/dxf/3_volume.webp" width="890" height="482" loading="lazy" alt="Volume 3D d'un drone FPV reconstruit à partir de ses plans DXF"><figcaption>3 · Le volume 3D reconstruit</figcaption></figure>
+    </div>
+
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Soufflerie virtuelle</span>
+        <h3>L'estimation instantanée, avant le CFD</h3>
+        <ul>
+          <li><b>Inclinaison d'équilibre</b>, traînée, puissance absorbée par l'air et poussée nécessaire, en direct.</li>
+          <li><b>Hélices au bon modèle</b> qui tournent, avec leur jet : poussée perdue sur le châssis, répartition avant / arrière.</li>
+          <li>Réponse immédiate pour explorer ; le <b>calcul CFD</b> pour trancher.</li>
+        </ul>
+        <p class="note">La soufflerie applique les formules du simulateur, calées sur les vols GPS ; ses particules illustrent l'écoulement.
+          Le calcul CFD, lui, résout réellement l'écoulement autour de ton STL.</p>
+      </div>
+      <div>
+        <figure class="visuel"><video autoplay loop muted playsinline poster="assets/soufflerie/combinee.jpg"
+        aria-label="Soufflerie virtuelle : Speeder V2V dans le vent, écoulement et jets des hélices"><source src="assets/soufflerie/combinee.webm" type="video/webm"><source src="assets/soufflerie/combinee.mp4" type="video/mp4"></video>
+        <figcaption>Soufflerie virtuelle : l'air autour du drone et le jet des hélices</figcaption></figure>
+        <figure class="visuel" style="margin-top:14px"><video autoplay loop muted playsinline poster="assets/soufflerie/helices.jpg"
+        aria-label="Hélices en rotation et jets d'air du Speeder V2V"><source src="assets/soufflerie/helices.webm" type="video/webm"><source src="assets/soufflerie/helices.mp4" type="video/mp4"></video>
+        <figcaption>Hélices Gemfan 3052 tripales en rotation et leurs jets</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">Recalage GPS &amp; garage en ligne</span>
+        <h3>Ta mesure devient la référence</h3>
+        <ul>
+          <li><b>Recalage GPS</b> : saisis la vitesse mesurée, le calcul s'ajuste et garde ce réglage.</li>
+          <li><b>Garage en ligne</b> : 10 configurations et tes calculs CFD, sur tous tes appareils.</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="assets/guide/04_recalage_gps.webp" loading="lazy" alt="Recalage de la vitesse calculée sur une mesure GPS"></figure>
+    </div>
+  </div>
+</section>
+
 <section id="cfd">
   <div class="conteneur">
     <span class="sur">Nouveau · Premium · Calcul CFD OpenFOAM</span>
@@ -277,114 +383,7 @@
 </section>
 
 
-<section id="premium" class="alterne">
-  <div class="conteneur">
-    <span class="sur">Premium</span>
-    <h2>Passe du calculateur à l'<span class="or">atelier de conception</span></h2>
-    <p class="intro">Dessine ton propre châssis ou ton drone de vitesse, vois-le en 3D, importe tes
-      plans de CAO, passe-le au CFD et cale le calcul sur tes vraies mesures.</p>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">Châssis prototype</span>
-        <h3>Ton châssis, coté à l'échelle</h3>
-        <ul>
-          <li><b>5 formes</b> : X, Dead Cat, Squished X, Stretch X, H-Frame, en Quad ou en X8 coaxial.</li>
-          <li><b>Esquisse cotée</b> redessinée à chaque saisie, vue de dessus et de face.</li>
-          <li><b>Maquette 3D</b> inclinable, avec sa surface frontale exacte à chaque inclinaison.</li>
-        </ul>
-      </div>
-      <div>
-        <figure class="visuel sombre"><img src="assets/guide/rendu_proto.webp" width="1200" height="900" loading="lazy" alt="Maquette 3D d'un drone FPV inclinée à 35 degrés avec sa surface frontale"></figure>
-        <figure class="visuel sombre"><img src="assets/guide/05_prototype_x.webp" loading="lazy" alt="Géométrie du châssis prototype FPV avec esquisse cotée"><figcaption>Esquisse cotée du châssis X</figcaption></figure>
-        <div class="trio">
-          <figure class="visuel sombre"><img src="assets/guide/06_proto_deadcat.webp" loading="lazy" alt="Esquisse d'un châssis Dead Cat"><figcaption>Dead Cat</figcaption></figure>
-          <figure class="visuel sombre"><img src="assets/guide/07_proto_hframe.webp" loading="lazy" alt="Esquisse d'un châssis H-Frame"><figcaption>H-Frame</figcaption></figure>
-          <figure class="visuel sombre"><img src="assets/guide/08_proto_stretch.webp" loading="lazy" alt="Esquisse d'un châssis Stretch X"><figcaption>Stretch X</figcaption></figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="fonction inverse">
-      <div>
-        <span class="badge">Quad Speeder</span>
-        <h3>Le drone de vitesse, propulsif ou tractif</h3>
-        <ul>
-          <li><b>Fuselage goutte d'eau</b>, Cx calculé depuis sa finesse (Hoerner).</li>
-          <li><b>Propulsif</b> (type SPEEDER V2) ou <b>tractif</b> sur nacelles (type Blackbird).</li>
-          <li><b>Angle du fuselage</b> : 0° en vol rapide face au vent, 90° au décollage.</li>
-          <li><b>Ton Speeder en STL</b> : cotes reprises du modèle, batterie et centre de gravité réglables.</li>
-        </ul>
-      </div>
-      <div>
-        <div class="duo">
-          <figure class="visuel sombre"><img src="assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV propulsif en 3D"><figcaption>Propulsif</figcaption></figure>
-          <figure class="visuel sombre"><img src="assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV tractif sur nacelles en 3D"><figcaption>Tractif (nacelles)</figcaption></figure>
-        </div>
-        <div class="duo" style="margin-top:14px">
-          <figure class="visuel"><img src="assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="Fuselages imprimés 3D du Speeder V2 et prototype"><figcaption>Speeder V2 : fuselages imprimés 3D</figcaption></figure>
-          <figure class="visuel"><img src="assets/constructions/speeder_v2_impression.webp" width="1200" height="900" loading="lazy" alt="Speeder V2"><figcaption>Speeder V2 : impression 3D</figcaption></figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">Import CAO</span>
-        <h3>Tes plans SolidWorks, Fusion 360 ou Onshape</h3>
-        <ul>
-          <li><b>STL</b> : vue 3D, silhouette réelle à chaque inclinaison, et <b>calcul CFD</b>.</li>
-          <li><b>DXF</b> : ta vue de dessus et ta vue de face remplacent l'esquisse, avec les mêmes cotes.</li>
-          <li><b>Volume 3D depuis tes plans</b> : dessus + face (+ côté) suffisent pour reconstruire ton drone.</li>
-        </ul>
-      </div>
-      <figure class="visuel"><img src="assets/dxf/stl_v2v.webp" loading="lazy" alt="Import STL : contrôle de l'orientation sur 3 vues"><figcaption>Ton STL : orientation contrôlée sur 3 vues</figcaption></figure>
-    </div>
-
-    <h3 class="titre-etapes" style="margin-top:0">Des plans DXF au modèle 3D, en 3 étapes</h3>
-    <div class="etapes-dxf">
-      <figure class="visuel"><img src="assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Tableau des plans DXF chargés : vue de dessus, vue de face, volume 3D"><figcaption>1 · Tes plans DXF</figcaption></figure>
-      <figure class="visuel sombre"><img src="assets/dxf/2_esquisse.webp" width="349" height="398" loading="lazy" alt="Esquisse cotée remplacée par les plans DXF de dessus et de face d'un TOWA 5 pouces"><figcaption>2 · Ils remplacent l'esquisse, mêmes cotes</figcaption></figure>
-      <figure class="visuel"><img src="assets/dxf/3_volume.webp" width="890" height="482" loading="lazy" alt="Volume 3D d'un drone FPV reconstruit à partir de ses plans DXF"><figcaption>3 · Le volume 3D reconstruit</figcaption></figure>
-    </div>
-
-    <div class="fonction inverse">
-      <div>
-        <span class="badge">Soufflerie virtuelle</span>
-        <h3>L'estimation instantanée, avant le CFD</h3>
-        <ul>
-          <li><b>Inclinaison d'équilibre</b>, traînée, puissance absorbée par l'air et poussée nécessaire, en direct.</li>
-          <li><b>Hélices au bon modèle</b> qui tournent, avec leur jet : poussée perdue sur le châssis, répartition avant / arrière.</li>
-          <li>Réponse immédiate pour explorer ; le <b>calcul CFD</b> pour trancher.</li>
-        </ul>
-        <p class="note">La soufflerie applique les formules du simulateur, calées sur les vols GPS ; ses particules illustrent l'écoulement.
-          Le calcul CFD, lui, résout réellement l'écoulement autour de ton STL.</p>
-      </div>
-      <div>
-        <figure class="visuel"><video autoplay loop muted playsinline poster="assets/soufflerie/combinee.jpg"
-        aria-label="Soufflerie virtuelle : Speeder V2V dans le vent, écoulement et jets des hélices"><source src="assets/soufflerie/combinee.webm" type="video/webm"><source src="assets/soufflerie/combinee.mp4" type="video/mp4"></video>
-        <figcaption>Soufflerie virtuelle : l'air autour du drone et le jet des hélices</figcaption></figure>
-        <figure class="visuel" style="margin-top:14px"><video autoplay loop muted playsinline poster="assets/soufflerie/helices.jpg"
-        aria-label="Hélices en rotation et jets d'air du Speeder V2V"><source src="assets/soufflerie/helices.webm" type="video/webm"><source src="assets/soufflerie/helices.mp4" type="video/mp4"></video>
-        <figcaption>Hélices Gemfan 3052 tripales en rotation et leurs jets</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">Recalage GPS &amp; garage en ligne</span>
-        <h3>Ta mesure devient la référence</h3>
-        <ul>
-          <li><b>Recalage GPS</b> : saisis la vitesse mesurée, le calcul s'ajuste et garde ce réglage.</li>
-          <li><b>Garage en ligne</b> : 10 configurations et tes calculs CFD, sur tous tes appareils.</li>
-        </ul>
-      </div>
-      <figure class="visuel"><img src="assets/guide/04_recalage_gps.webp" loading="lazy" alt="Recalage de la vitesse calculée sur une mesure GPS"></figure>
-    </div>
-  </div>
-</section>
-
-<section id="calage">
+<section id="calage" class="alterne">
   <div class="conteneur calage">
     <div>
       <span class="sur">Précision</span>
@@ -412,7 +411,7 @@
   </div>
 </section>
 
-<section id="terrain" class="alterne">
+<section id="terrain">
   <div class="conteneur">
     <span class="sur">Sur le terrain</span>
     <h2>Des drones qui volent vraiment</h2>
@@ -430,7 +429,7 @@
   </div>
 </section>
 
-<section id="ateliers">
+<section id="ateliers" class="alterne">
   <div class="conteneur">
     <span class="sur">L'atelier</span>
     <h2>Conçu par un pilote qui construit ses drones</h2>
@@ -448,7 +447,7 @@
   </div>
 </section>
 
-<section class="alterne">
+<section>
   <div class="conteneur">
     <span class="sur">Offres</span>
     <h2>Free ou Premium</h2>
