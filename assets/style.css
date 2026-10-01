@@ -244,3 +244,9 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .86em; backgro
 .trio-cfd.duo-cfd { grid-template-columns: 1fr 1fr; }
 .coupe-cfd .visuel img { width: 100%; aspect-ratio: 3 / 1; object-fit: cover; }
 @media (max-width: 520px) { .trio-cfd.duo-cfd { grid-template-columns: 1fr; } }
+.titre-guide { display: flex; align-items: center; gap: 12px; margin: 48px 0 18px; font-size: 1.5rem; }
+.titre-guide span { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: var(--neon);
+  color: #0b0f00; font: 700 1.2rem "Rajdhani", sans-serif; flex: none; }
+.visuel.erreur { border-color: rgba(255, 90, 90, .6); }
+.visuel.erreur figcaption { color: #ff9a9a; }
+#paraview .fonction { margin-bottom: 20px; align-items: start; }

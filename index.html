@@ -212,7 +212,7 @@
         </div>
         <div class="duo" style="margin-top:14px">
           <figure class="visuel"><img src="assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="Fuselages imprimés 3D du Speeder V2 et prototype"><figcaption>Speeder V2 : fuselages imprimés 3D</figcaption></figure>
-          <figure class="visuel"><img src="assets/constructions/speeder_v2_impression.webp" width="1200" height="900" loading="lazy" alt="Speeder V2"><figcaption>Speeder V2 : impression 3D</figcaption></figure>
+          <figure class="visuel"><img src="assets/constructions/v2v_solidworks.webp" width="780" height="570" loading="lazy" alt="Speeder V2V 3 pouces modélisé dans SolidWorks"><figcaption>Speeder V2V dans SolidWorks : le STL du calcul CFD</figcaption></figure>
         </div>
       </div>
     </div>
@@ -233,7 +233,7 @@
     <h3 class="titre-etapes" style="margin-top:0">Des plans DXF au modèle 3D, en 3 étapes</h3>
     <div class="etapes-dxf">
       <figure class="visuel"><img src="assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Tableau des plans DXF chargés : vue de dessus, vue de face, volume 3D"><figcaption>1 · Tes plans DXF</figcaption></figure>
-      <figure class="visuel sombre"><img src="assets/dxf/2_esquisse.webp" width="349" height="398" loading="lazy" alt="Esquisse cotée remplacée par les plans DXF de dessus et de face d'un TOWA 5 pouces"><figcaption>2 · Ils remplacent l'esquisse, mêmes cotes</figcaption></figure>
+      <figure class="visuel sombre"><img src="assets/dxf/2_esquisse_towa.webp" width="254" height="288" loading="lazy" alt="Esquisse cotée remplacée par les plans DXF de dessus et de face d'un TOWA 5 pouces"><figcaption>2 · Ils remplacent l'esquisse, mêmes cotes</figcaption></figure>
       <figure class="visuel"><img src="assets/dxf/3_volume.webp" width="890" height="482" loading="lazy" alt="Volume 3D d'un drone FPV reconstruit à partir de ses plans DXF"><figcaption>3 · Le volume 3D reconstruit</figcaption></figure>
     </div>
 
@@ -253,9 +253,7 @@
         <figure class="visuel"><video autoplay loop muted playsinline poster="assets/soufflerie/combinee.jpg"
         aria-label="Soufflerie virtuelle : Speeder V2V dans le vent, écoulement et jets des hélices"><source src="assets/soufflerie/combinee.webm" type="video/webm"><source src="assets/soufflerie/combinee.mp4" type="video/mp4"></video>
         <figcaption>Soufflerie virtuelle : l'air autour du drone et le jet des hélices</figcaption></figure>
-        <figure class="visuel" style="margin-top:14px"><video autoplay loop muted playsinline poster="assets/soufflerie/helices.jpg"
-        aria-label="Hélices en rotation et jets d'air du Speeder V2V"><source src="assets/soufflerie/helices.webm" type="video/webm"><source src="assets/soufflerie/helices.mp4" type="video/mp4"></video>
-        <figcaption>Hélices Gemfan 3052 tripales en rotation et leurs jets</figcaption></figure>
+        <figure class="visuel" style="margin-top:14px"><img src="assets/soufflerie/quad_x8_helices.webp" width="1170" height="625" loading="lazy" alt="Soufflerie virtuelle d'un X8 coaxial : hélices, jets d'air et poussée par moteur"><figcaption>X8 coaxial (Azure LCP 5140) : jets des hélices, part bloquée par le châssis, poussée par moteur</figcaption></figure>
       </div>
     </div>
 
@@ -356,28 +354,54 @@
 
 <section id="paraview">
   <div class="conteneur">
-    <span class="sur">ParaView · pas à pas</span>
-    <h2>Fais défiler l'air autour de <span class="neon">ton</span> drone</h2>
-    <p class="intro">Chaque calcul CFD fournit un paquet de fichiers pour <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a>,
-      le logiciel gratuit de visualisation scientifique (Windows, macOS, Linux). Avec la macro fournie,
-      l'animation est prête en deux minutes.</p>
+    <span class="sur">Marche à suivre · du STL à la vidéo</span>
+    <h2>Lancer un calcul CFD et voir l'air autour de <span class="neon">ton</span> drone</h2>
+    <p class="intro">Trois étapes : lancer le calcul dans l'app, lire les résultats, puis animer l'écoulement dans
+      <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a> (gratuit). Suis-les dans l'ordre, sans en sauter.</p>
+
+    <h3 class="titre-guide"><span>A</span> Lancer le calcul dans l'app</h3>
     <div class="fonction">
       <ol class="pas-a-pas">
-        <li><b>Installe ParaView</b> (gratuit) : <a href="https://www.paraview.org/download/" rel="noopener">paraview.org/download</a>, la dernière version pour ton système.</li>
-        <li><b>Télécharge le zip ParaView</b> de ton calcul : app &gt; Import de plan &gt; onglet 🌀 Calcul CFD &gt; ton calcul terminé &gt; « Fichiers ParaView ». Dézippe-le.</li>
-        <li><b>Installe la macro</b> une seule fois : ParaView &gt; <i>Macros</i> &gt; <i>Import new macro…</i> &gt; <code>animer_flux.py</code> (dans le zip). Un bouton « animer_flux » apparaît dans la barre.</li>
-        <li><b>Ouvre deux fichiers du même angle</b> : <i>File</i> &gt; <i>Open</i>, Ctrl+clic sur <code>…surface_drone.vtp</code> et <code>…lignes_courant.vtp</code>, puis <i>Apply</i>. Laisse les coupes de côté : elles cachent le flux.</li>
-        <li><b>Clique sur « animer_flux »</b> puis ▶ <i>Play</i> : fond sombre, drone coloré par la pression, traits d'air colorés par leur vitesse qui défilent.</li>
-        <li><b>Enregistre</b> : <i>File</i> &gt; <i>Save Animation</i> pour la vidéo, <i>Save Screenshot</i> pour une image, <i>Save State</i> pour retrouver la scène.</li>
+        <li><b>Choisis la bonne architecture</b> tout en haut de l'app : <b>Quad X</b> pour un drone classique, <b>Quad Speeder</b> pour un drone à fuselage. C'est elle qui fixe la façon de compter les angles.</li>
+        <li><b>Charge ton STL</b> : 📦 Import de plan &gt; onglet <b>📦 Modèle 3D (STL)</b>. Règle <b>l'unité</b> (mm, cm ou m, comme dans ta CAO), <b>l'axe avant</b> et <b>l'axe haut</b>.</li>
+        <li><b>Contrôle les 3 vues</b> : le nez doit pointer vers l'avant, le dessus du drone vers le haut. Coche « exporté en attitude de vol » <b>seulement</b> pour un Speeder dessiné à l'horizontale, comme un avion.</li>
+        <li>Onglet <b>🌀 Calcul CFD</b> : choisis l'<b>inclinaison</b> (Quad X : angle du drone, par exemple 35°) ou l'<b>angle du fuselage</b> (Speeder : 0° = vol rapide), puis la <b>vitesse</b>. Un ou deux angles suffisent : chaque angle prend 30 à 60 min.</li>
+        <li>Clique <b>« 🚀 Lancer le calcul CFD »</b>. La demande apparaît dans <b>Mes calculs CFD</b> : ⏳ en attente, ⚙️ en cours (maillage, puis calcul), ✅ terminé. Tu peux fermer l'app, le calcul continue.</li>
       </ol>
-      <figure class="visuel sombre"><video autoplay loop muted playsinline poster="assets/cfd/paraview_v2v.jpg"
-        aria-label="Résultat de la macro animer_flux dans ParaView : Speeder V2V dans le flux"><source src="assets/cfd/paraview_v2v.mp4" type="video/mp4"></video>
-        <figcaption>Le résultat, enregistré dans ParaView par un pilote : Speeder V2V, fuselage dans le vent</figcaption></figure>
+      <figure class="visuel"><img src="assets/dxf/stl_v2v.webp" loading="lazy" alt="Contrôle de l'orientation du STL sur trois vues"><figcaption>Vérifie les 3 vues avant de lancer : le serveur calcule exactement ce que tu vois</figcaption></figure>
     </div>
+
+    <h3 class="titre-guide"><span>B</span> Lire les résultats</h3>
+    <div class="fonction inverse">
+      <ol class="pas-a-pas">
+        <li>Ouvre ton calcul <b>✅ terminé</b> dans <b>Mes calculs CFD</b> : le tableau donne pour chaque angle le <b>S·Cx</b> (traînée), le <b>Cx équivalent</b>, l'écart avec le calcul rapide de l'app, et la convergence.</li>
+        <li>Active <b>« Afficher la carte de pression 3D »</b> et choisis l'angle : rouge = l'air appuie, bleu = aspiration. Tourne la vue à la souris.</li>
+        <li>Active <b>« Préparer le téléchargement ParaView »</b>, puis clique <b>« Fichiers ParaView (.zip) »</b>. Le zip arrive dans tes <b>Téléchargements</b> : dézippe-le dans un dossier à toi.</li>
+        <li>Pour que l'app colle à la CFD : reporte le <b>Cx équivalent</b> dans « Cx appliqué » de l'onglet STL.</li>
+      </ol>
+      <figure class="visuel"><img src="assets/cfd/app_resultats.webp" loading="lazy" alt="Résultats du calcul CFD dans l'app : tableau, carte de pression, téléchargement ParaView"><figcaption>Le retour du calcul dans l'app : tableau, carte de pression 3D et bouton « Fichiers ParaView »</figcaption></figure>
+    </div>
+
+    <h3 class="titre-guide"><span>C</span> Animer l'air dans ParaView</h3>
+    <div class="fonction">
+      <ol class="pas-a-pas">
+        <li><b>Installe ParaView</b> : <a href="https://www.paraview.org/download/" rel="noopener">paraview.org/download</a> &gt; onglet <b>Windows</b> (ou macOS / Linux) &gt; le fichier <code>…-Windows-Python3.12-…-AMD64.msi</code> (<b>sans</b> « MPI »). Installe avec les options par défaut.</li>
+        <li><b>Importe la macro</b>, une seule fois : <i>Macros</i> &gt; <i>Import new macro…</i> &gt; <code>animer_flux.py</code> (dans ton zip). Un bouton <b>animer_flux</b> apparaît en haut à droite.</li>
+        <li><b>Ouvre deux fichiers du même angle</b> : <i>File</i> &gt; <i>Open</i>, puis <b>Ctrl+clic</b> sur <code>v2v90_surface_drone.vtp</code> <b>et</b> <code>v2v90_lignes_courant.vtp</code> (« 90 » = même angle), <i>OK</i>, puis le bouton vert <b>Apply</b>.</li>
+        <li><b>Ne coche pas les coupes</b> (<code>coupe_laterale</code>, <code>coupe_verticale</code>) : ce sont des plans opaques qui cachent tout (capture rouge ci-dessous).</li>
+        <li>Clique <b>animer_flux</b> : fond bleu nuit, drone coloré, ligne « <b>Traits d'air</b> » dans le Pipeline Browser. Puis <b>▶ Play</b> : l'air défile.</li>
+        <li><b>Tourne la vue</b> (clic gauche), <b>zoome</b> (molette), puis <i>File</i> &gt; <i>Save Animation</i> : <b>Frame Rate 30</b>, 1920 × 1080, format MP4 ou AVI. <i>Save State</i> garde la scène pour plus tard.</li>
+      </ol>
+      <div>
+        <figure class="visuel sombre"><img src="assets/cfd/pv_macro_ok.webp" loading="lazy" alt="ParaView avec la macro animer_flux : Traits d'air dans le pipeline, drone dans le flux"><figcaption>✅ Correct : surface + lignes de courant du même angle, « Traits d'air » créé par la macro</figcaption></figure>
+        <figure class="visuel sombre erreur" style="margin-top:14px"><img src="assets/cfd/pv_erreur_coupe.webp" loading="lazy" alt="ParaView avec la coupe latérale ouverte : un plan orange cache le flux"><figcaption>❌ À éviter : la coupe latérale ouverte forme un mur orange qui cache le flux</figcaption></figure>
+      </div>
+    </div>
+
     <div class="cartes" style="margin-top:40px">
-      <div class="carte"><div class="icone">🎨</div><h3>Couleurs</h3><p><b>vitesse</b> pour les lignes de courant (bleu = air freiné, jaune = air accéléré), <b>p</b> pour la surface (× 1,2 = Pa).</p></div>
-      <div class="carte"><div class="icone">✂️</div><h3>Coupes</h3><p><code>coupe_laterale</code> et <code>coupe_verticale</code> : vitesse et pression dans un plan qui traverse le drone, pour voir le sillage.</p></div>
-      <div class="carte"><div class="icone">🧭</div><h3>Repère</h3><p>Le vent souffle selon +x, le nez du drone pointe vers −x. Clic gauche pour tourner, molette pour zoomer.</p></div>
+      <div class="carte"><div class="icone">🧩</div><h3>Ça ne marche pas ?</h3><p>Erreur à la ligne 13, 23 ou 34 : ParaView utilise une <b>ancienne copie</b> de la macro. <i>Macros</i> &gt; <i>Delete</i> &gt; animer_flux, puis réimporte celle du zip.</p></div>
+      <div class="carte"><div class="icone">🎨</div><h3>Couleurs</h3><p><b>vitesse</b> pour les lignes (bleu = air freiné, rouge = air accéléré), <b>p</b> pour la surface du drone (× 1,2 = Pa).</p></div>
+      <div class="carte"><div class="icone">🎞️</div><h3>Vidéo saccadée ?</h3><p>Le <b>Frame Rate</b> était à 1 : remets <b>30</b> dans Save Animation. 90 images = 3 secondes fluides.</p></div>
     </div>
   </div>
 </section>

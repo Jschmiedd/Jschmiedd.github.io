@@ -211,7 +211,7 @@
         </div>
         <div class="duo" style="margin-top:14px">
           <figure class="visuel"><img src="../assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="3D-printed Speeder V2 fuselages"><figcaption>Speeder V2: 3D-printed fuselages</figcaption></figure>
-          <figure class="visuel"><img src="../assets/constructions/speeder_v2_impression.webp" width="1200" height="900" loading="lazy" alt="Speeder V2"><figcaption>Speeder V2: 3D printing</figcaption></figure>
+          <figure class="visuel"><img src="../assets/constructions/v2v_solidworks.webp" width="780" height="570" loading="lazy" alt="V2V Speeder 3-inch modelled in SolidWorks"><figcaption>V2V Speeder in SolidWorks: the STL used for CFD</figcaption></figure>
         </div>
       </div>
     </div>
@@ -232,7 +232,7 @@
     <h3 class="titre-etapes" style="margin-top:0">From DXF drawings to a 3D model, in 3 steps</h3>
     <div class="etapes-dxf">
       <figure class="visuel"><img src="../assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Loaded DXF drawings table: top view, front view, 3D volume"><figcaption>1 · Your DXF drawings</figcaption></figure>
-      <figure class="visuel sombre"><img src="../assets/dxf/2_esquisse.webp" width="349" height="398" loading="lazy" alt="Dimensioned sketch replaced by the top and front DXF drawings of a TOWA 5-inch"><figcaption>2 · They replace the sketch, same dimensions</figcaption></figure>
+      <figure class="visuel sombre"><img src="../assets/dxf/2_esquisse_towa.webp" width="254" height="288" loading="lazy" alt="Dimensioned sketch replaced by the top and front DXF drawings of a TOWA 5-inch"><figcaption>2 · They replace the sketch, same dimensions</figcaption></figure>
       <figure class="visuel"><img src="../assets/dxf/3_volume.webp" width="890" height="482" loading="lazy" alt="3D volume of an FPV drone rebuilt from its DXF drawings"><figcaption>3 · The rebuilt 3D volume</figcaption></figure>
     </div>
 
@@ -252,9 +252,7 @@
         <figure class="visuel"><video autoplay loop muted playsinline poster="../assets/soufflerie/combinee.jpg"
         aria-label="Virtual wind tunnel: V2V Speeder in the wind, airflow and prop slipstreams"><source src="../assets/soufflerie/combinee.webm" type="video/webm"><source src="../assets/soufflerie/combinee.mp4" type="video/mp4"></video>
         <figcaption>Virtual wind tunnel: air around the drone and prop slipstream</figcaption></figure>
-        <figure class="visuel" style="margin-top:14px"><video autoplay loop muted playsinline poster="../assets/soufflerie/helices.jpg"
-        aria-label="Spinning props and slipstreams of the V2V Speeder"><source src="../assets/soufflerie/helices.webm" type="video/webm"><source src="../assets/soufflerie/helices.mp4" type="video/mp4"></video>
-        <figcaption>Gemfan 3052 tri-blade props spinning, with their slipstreams</figcaption></figure>
+        <figure class="visuel" style="margin-top:14px"><img src="../assets/soufflerie/quad_x8_helices.webp" width="1170" height="625" loading="lazy" alt="Virtual wind tunnel of a coaxial X8: props, slipstreams and thrust per motor"><figcaption>Coaxial X8 (Azure LCP 5140): prop slipstreams, share blocked by the frame, thrust per motor</figcaption></figure>
       </div>
     </div>
 
@@ -355,28 +353,54 @@
 
 <section id="paraview">
   <div class="conteneur">
-    <span class="sur">ParaView · step by step</span>
-    <h2>Make the air stream around <span class="neon">your</span> drone</h2>
-    <p class="intro">Every CFD run comes with a file pack for <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a>,
-      the free scientific visualisation software (Windows, macOS, Linux). With the included macro,
-      the animation is ready in two minutes.</p>
+    <span class="sur">Step by step · from STL to video</span>
+    <h2>Run a CFD simulation and see the air around <span class="neon">your</span> drone</h2>
+    <p class="intro">Three stages: run the simulation in the app, read the results, then animate the flow in
+      <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a> (free). Follow them in order, without skipping.</p>
+
+    <h3 class="titre-guide"><span>A</span> Run the simulation in the app</h3>
     <div class="fonction">
       <ol class="pas-a-pas">
-        <li><b>Install ParaView</b> (free): <a href="https://www.paraview.org/download/" rel="noopener">paraview.org/download</a>, latest version for your system.</li>
-        <li><b>Download the ParaView zip</b> of your run: app &gt; Import de plan &gt; 🌀 Calcul CFD tab &gt; your finished run &gt; “Fichiers ParaView”. Unzip it.</li>
-        <li><b>Install the macro</b> once: ParaView &gt; <i>Macros</i> &gt; <i>Import new macro…</i> &gt; <code>animer_flux.py</code> (in the zip). An “animer_flux” button appears in the toolbar.</li>
-        <li><b>Open two files of the same angle</b>: <i>File</i> &gt; <i>Open</i>, Ctrl+click <code>…surface_drone.vtp</code> and <code>…lignes_courant.vtp</code>, then <i>Apply</i>. Leave the slices aside: they hide the flow.</li>
-        <li><b>Click “animer_flux”</b> then ▶ <i>Play</i>: dark background, drone coloured by pressure, air streaks coloured by speed flowing past.</li>
-        <li><b>Save</b>: <i>File</i> &gt; <i>Save Animation</i> for the video, <i>Save Screenshot</i> for an image, <i>Save State</i> to reopen the scene.</li>
+        <li><b>Pick the right architecture</b> at the top of the app: <b>Quad X</b> for a regular drone, <b>Quad Speeder</b> for a fuselage drone. It sets how angles are counted.</li>
+        <li><b>Load your STL</b>: 📦 Import de plan &gt; <b>📦 Modèle 3D (STL)</b> tab. Set the <b>unit</b> (mm, cm or m, as in your CAD), the <b>front axis</b> and the <b>up axis</b>.</li>
+        <li><b>Check the 3 views</b>: nose forward, top of the drone up. Tick “exported in flight attitude” <b>only</b> for a Speeder drawn horizontally, like a plane.</li>
+        <li><b>🌀 Calcul CFD</b> tab: choose the <b>tilt</b> (Quad X: drone angle, e.g. 35°) or the <b>fuselage angle</b> (Speeder: 0° = fast flight), then the <b>speed</b>. One or two angles are enough: each takes 30 to 60 min.</li>
+        <li>Click <b>“🚀 Lancer le calcul CFD”</b>. The request shows in <b>Mes calculs CFD</b>: ⏳ waiting, ⚙️ running (mesh, then solve), ✅ done. You can close the app, the run continues.</li>
       </ol>
-      <figure class="visuel sombre"><video autoplay loop muted playsinline poster="../assets/cfd/paraview_v2v.jpg"
-        aria-label="Result of the animer_flux macro in ParaView: V2V Speeder in the flow"><source src="../assets/cfd/paraview_v2v.mp4" type="video/mp4"></video>
-        <figcaption>The result, saved in ParaView by a pilot: V2V Speeder, fuselage into the wind</figcaption></figure>
+      <figure class="visuel"><img src="../assets/dxf/stl_v2v.webp" loading="lazy" alt="STL orientation check on three views"><figcaption>Check the 3 views before running: the server computes exactly what you see</figcaption></figure>
     </div>
+
+    <h3 class="titre-guide"><span>B</span> Read the results</h3>
+    <div class="fonction inverse">
+      <ol class="pas-a-pas">
+        <li>Open your <b>✅ finished</b> run in <b>Mes calculs CFD</b>: the table gives, for each angle, the <b>drag area S·Cd</b>, the <b>equivalent Cd</b>, the gap with the app's quick estimate and convergence.</li>
+        <li>Turn on <b>“Afficher la carte de pression 3D”</b> and pick the angle: red = air pushing, blue = suction. Rotate with the mouse.</li>
+        <li>Turn on <b>“Préparer le téléchargement ParaView”</b>, then click <b>“Fichiers ParaView (.zip)”</b>. The zip lands in your <b>Downloads</b>: unzip it into a folder of your own.</li>
+        <li>To make the app match the CFD: copy the <b>equivalent Cd</b> into “Cx appliqué” in the STL tab.</li>
+      </ol>
+      <figure class="visuel"><img src="../assets/cfd/app_resultats.webp" loading="lazy" alt="CFD results in the app: table, pressure map, ParaView download"><figcaption>Results back in the app: table, 3D pressure map and the “Fichiers ParaView” button</figcaption></figure>
+    </div>
+
+    <h3 class="titre-guide"><span>C</span> Animate the air in ParaView</h3>
+    <div class="fonction">
+      <ol class="pas-a-pas">
+        <li><b>Install ParaView</b>: <a href="https://www.paraview.org/download/" rel="noopener">paraview.org/download</a> &gt; <b>Windows</b> tab (or macOS / Linux) &gt; the <code>…-Windows-Python3.12-…-AMD64.msi</code> file (<b>without</b> “MPI”). Install with default options.</li>
+        <li><b>Import the macro</b>, once: <i>Macros</i> &gt; <i>Import new macro…</i> &gt; <code>animer_flux.py</code> (in your zip). An <b>animer_flux</b> button appears at the top right.</li>
+        <li><b>Open two files of the same angle</b>: <i>File</i> &gt; <i>Open</i>, then <b>Ctrl+click</b> <code>v2v90_surface_drone.vtp</code> <b>and</b> <code>v2v90_lignes_courant.vtp</code> (“90” = same angle), <i>OK</i>, then the green <b>Apply</b> button.</li>
+        <li><b>Don't open the slices</b> (<code>coupe_laterale</code>, <code>coupe_verticale</code>): they are opaque planes that hide everything (red screenshot below).</li>
+        <li>Click <b>animer_flux</b>: dark blue background, coloured drone, a “<b>Traits d'air</b>” line in the Pipeline Browser. Then <b>▶ Play</b>: the air flows.</li>
+        <li><b>Rotate</b> (left click), <b>zoom</b> (scroll), then <i>File</i> &gt; <i>Save Animation</i>: <b>Frame Rate 30</b>, 1920 × 1080, MP4 or AVI. <i>Save State</i> keeps the scene for later.</li>
+      </ol>
+      <div>
+        <figure class="visuel sombre"><img src="../assets/cfd/pv_macro_ok.webp" loading="lazy" alt="ParaView with the animer_flux macro: Traits d'air in the pipeline, drone in the flow"><figcaption>✅ Right: surface + streamlines of the same angle, “Traits d'air” created by the macro</figcaption></figure>
+        <figure class="visuel sombre erreur" style="margin-top:14px"><img src="../assets/cfd/pv_erreur_coupe.webp" loading="lazy" alt="ParaView with the side slice open: an orange plane hides the flow"><figcaption>❌ Avoid: the open side slice forms an orange wall that hides the flow</figcaption></figure>
+      </div>
+    </div>
+
     <div class="cartes" style="margin-top:40px">
-      <div class="carte"><div class="icone">🎨</div><h3>Colours</h3><p><b>vitesse</b> (speed) for the streamlines (blue = slowed air, yellow = accelerated), <b>p</b> for the surface (× 1.2 = Pa).</p></div>
-      <div class="carte"><div class="icone">✂️</div><h3>Slices</h3><p><code>coupe_laterale</code> and <code>coupe_verticale</code>: speed and pressure in a plane through the drone, to see the wake.</p></div>
-      <div class="carte"><div class="icone">🧭</div><h3>Axes</h3><p>The wind blows along +x, the drone's nose points to −x. Left-click to rotate, scroll to zoom.</p></div>
+      <div class="carte"><div class="icone">🧩</div><h3>Not working?</h3><p>Error at line 13, 23 or 34: ParaView is using an <b>old copy</b> of the macro. <i>Macros</i> &gt; <i>Delete</i> &gt; animer_flux, then re-import the one from the zip.</p></div>
+      <div class="carte"><div class="icone">🎨</div><h3>Colours</h3><p><b>vitesse</b> (speed) for the lines (blue = slowed air, red = accelerated), <b>p</b> for the drone surface (× 1.2 = Pa).</p></div>
+      <div class="carte"><div class="icone">🎞️</div><h3>Choppy video?</h3><p>The <b>Frame Rate</b> was 1: set it back to <b>30</b> in Save Animation. 90 frames = 3 smooth seconds.</p></div>
     </div>
   </div>
 </section>
