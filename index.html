@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TALKTRUE FPV — Simulateur de performances drone FPV : vitesse, poussée, autonomie et calcul CFD</title>
-<meta name="description" content="Calculateur FPV gratuit : vitesse max, poussée, autonomie et 0-100 km/h de ton drone FPV, avec plus de 1 000 composants réels, calés sur de vrais vols GPS. Châssis prototype et Quad Speeder en 3D, import STL/DXF, et calcul CFD OpenFOAM de ton STL avec fichiers ParaView.">
+<title>TALKTRUE FPV — De l'idée au vol : calculateur de drone FPV, panier groupé, garage et CFD</title>
+<meta name="description" content="Calcule ton drone FPV en 30 s : vitesse max, poussée, autonomie, avec plus de 1 000 composants réels et plus de 200 châssis, calés sur de vrais vols GPS. Panier groupé par revendeur, garage de configurations, et en PRO la soufflerie et le calcul CFD OpenFOAM.">
 <meta name="keywords" content="calculateur FPV, simulateur drone FPV, vitesse drone FPV, autonomie batterie drone, poussée moteur hélice, CFD drone FPV, OpenFOAM drone, traînée drone FPV, Cx drone, ParaView, soufflerie drone, calculateur FPV, simulateur drone FPV, vitesse drone FPV, speeder FPV, eCalc alternative">
 <link rel="canonical" href="https://jschmiedd.github.io/">
 <link rel="alternate" hreflang="fr" href="https://jschmiedd.github.io/">
@@ -15,8 +15,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TALKTRUE FPV">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="TALKTRUE FPV — Simulateur de performances et calcul CFD">
-<meta property="og:description" content="Vitesse, poussée, autonomie de ton drone FPV avec 1 000+ composants réels, calés sur des vols GPS. Et le calcul CFD OpenFOAM de ton STL.">
+<meta property="og:title" content="TALKTRUE FPV — De l'idée au vol. Sans perdre 5 h, 350 € ni faire d'erreurs.">
+<meta property="og:description" content="Calcule en 30 s. Panier auto-groupé. CFD optionnel. Plus de 1 000 composants réels, calés sur des vols GPS.">
 <meta property="og:url" content="https://jschmiedd.github.io/">
 <meta property="og:image" content="https://jschmiedd.github.io/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -63,11 +63,11 @@
     {"@type": "Question", "name": "Faut-il savoir utiliser OpenFOAM ?",
      "acceptedAnswer": {"@type": "Answer", "text": "Non. Tu charges ton STL, tu choisis l'inclinaison et la vitesse, et le serveur de calcul TALKTRUE fait tout : réparation du STL, domaine, maillage snappyHexMesh, calcul k-ω SST jusqu'à convergence. Rien à installer."}},
     {"@type": "Question", "name": "Comment ouvrir les résultats dans ParaView ?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Installe ParaView (gratuit, paraview.org), télécharge le zip ParaView depuis l'app, ouvre surface_drone.vtp et lignes_courant.vtp, puis lance la macro animer_flux.py fournie : l'air défile autour de ton drone, et tu peux enregistrer la vidéo."}},
+     "acceptedAnswer": {"@type": "Answer", "text": "Chaque calcul fournit un zip pour ParaView (gratuit) : surface du drone, lignes de courant et une macro qui fait défiler l'air. Le pas à pas illustré est dans le Mode d'emploi de l'app."}},
     {"@type": "Question", "name": "Le simulateur TALKTRUE FPV est-il gratuit ?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le calcul de poussée, vitesse, autonomie, accélération et les alertes de sécurité sont gratuits et sans inscription. Le mode Premium ajoute le calcul CFD, le châssis prototype, le Quad Speeder, la 3D, l'import STL/DXF, le recalage GPS et le garage en ligne."}},
+     "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le calculateur complet, plus de 200 châssis, les alertes de sécurité, le panier groupé par revendeur et un garage de 3 configurations sont gratuits et sans inscription. Le PRO ajoute le garage en ligne, la soufflerie, le calcul CFD, le châssis prototype, le Quad Speeder, la 3D, l'import STL/DXF et le recalage GPS."}},
     {"@type": "Question", "name": "Les vitesses calculées sont-elles fiables ?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Le modèle est calé sur de vrais vols mesurés au GPS (TOWA 5 pouces, 121 et 126 km/h) et tient compte de l'inclinaison du drone, de la densité de l'air et du format réel de la batterie. En Premium, tu peux recaler le calcul sur ta propre mesure GPS."}},
+     "acceptedAnswer": {"@type": "Answer", "text": "Le modèle est calé sur de vrais vols mesurés au GPS (TOWA 5 pouces, 121 et 126 km/h) et tient compte de l'inclinaison du drone, de la densité de l'air et du format réel de la batterie. En PRO, tu peux recaler le calcul sur ta propre mesure GPS."}},
     {"@type": "Question", "name": "Quelle différence avec eCalc ?",
      "acceptedAnswer": {"@type": "Answer", "text": "eCalc est une référence pour le calcul pur. TALKTRUE FPV est une plateforme de conception : calcul CFD de ton propre modèle, composants réels avec prix et liens d'achat, garage de configurations, esquisses cotées, maquettes 3D et import de tes plans de CAO."}}
   ]
@@ -85,12 +85,13 @@
       TALKTRUE FPV
     </a>
     <nav class="menu" aria-label="Sections">
-      <a href="#fonctions">Simulateur</a>
-      <a href="#premium">Premium</a>
-      <a href="#cfd">Calcul CFD</a>
-      <a href="#paraview">ParaView</a>
+      <a href="#fonctions">Calculateur</a>
+      <a href="#panier">Panier</a>
+      <a href="#garage">Garage</a>
       <a href="#calage">Précision</a>
-      <a href="#terrain">Terrain</a>
+      <a href="#premium">PRO</a>
+      <a href="#cfd">Calcul CFD</a>
+      <a href="#offres">Tarifs</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a class="langue" href="en/" hreflang="en" lang="en">EN</a>
@@ -103,18 +104,18 @@
   <div class="conteneur grille">
     <div>
       <span class="sur">Simulateur de performances FPV · V4</span>
-      <h1>Conçois ton drone FPV. <span class="neon">Connais sa vitesse, sa puissance et son autonomie</span> avant de le construire.</h1>
-      <p class="accroche">Poussée, vitesse max, autonomie et 0 → 100 km/h, calculés avec de vrais
-        composants du marché et calés sur de vrais vols GPS. Du 3 pouces au cinelifter X8, jusqu'au
-        Quad Speeder à fuselage profilé, en 2D, en 3D, et maintenant au <b>calcul CFD OpenFOAM</b>.</p>
+      <h1>De l'idée au vol. <span class="neon">Sans perdre 5 h. Sans perdre 350 €. Sans erreurs.</span></h1>
+      <p class="accroche"><b class="sous-titre">Calcule en 30 s. Panier auto-groupé. CFD optionnel. Construis confiant.</b>
+        Plus de 1 000 composants réels et plus de 200 châssis référencés, des formules calées sur de vrais
+        vols GPS, et un panier qui se groupe tout seul par revendeur.</p>
       <div class="actions">
-        <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Lancer le simulateur — gratuit</a>
-        <a class="bouton secondaire" href="#cfd">🌀 Nouveau : calcul CFD</a>
+        <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Débuter gratuitement</a>
+        <a class="bouton secondaire" href="#offres">Free ou PRO ?</a>
       </div>
       <div class="chiffres">
         <div><b>1 000+</b><span>composants réels</span></div>
-        <div><b>121 km/h</b><span>vitesse calée au GPS</span></div>
-        <div><b>CFD</b><span>OpenFOAM sur ton STL</span></div>
+        <div><b>200+</b><span>châssis référencés</span></div>
+        <div><b>121 km/h</b><span>Vitesse max. validée par GPS</span></div>
       </div>
     </div>
     <div class="sphere">
@@ -125,290 +126,97 @@
   </div>
 </section>
 
+<section id="piliers" class="alterne">
+  <div class="conteneur">
+    <span class="sur">Pourquoi TALKTRUE FPV</span>
+    <h2>Ni temps perdu, ni argent perdu, <span class="neon">ni mauvaise surprise</span></h2>
+    <div class="cartes">
+      <div class="carte"><div class="icone">⏱️</div><h3>Temps : pas 2 h de calcul</h3><p>Choisis tes pièces : poussée, vitesse max, autonomie et 0 → 100 km/h se recalculent en direct. Une configuration complète en 30 secondes.</p></div>
+      <div class="carte"><div class="icone">🎯</div><h3>Qualité : testé en vol réel</h3><p>Les formules sont calées sur des vols mesurés au GPS (121 et 126 km/h) et tiennent compte de l'inclinaison, de la densité de l'air et du format de la batterie.</p></div>
+      <div class="carte"><div class="icone">💶</div><h3>Argent : zéro erreur d'achat</h3><p>Moteurs contre ESC, connecteur, hélice, tension : les incompatibilités sont signalées avant l'achat, et le panier se groupe par revendeur.</p></div>
+    </div>
+  </div>
+</section>
 
+<section id="parcours">
+  <div class="conteneur">
+    <span class="sur">De l'idée au vol</span>
+    <h2>Protocole de conception</h2>
+    <div class="etapes quatre">
+      <div class="etape"><h3>Sélection des composants</h3><p>Configurez la chaîne de propulsion et les éléments critiques : moteurs, hélices, châssis, batterie et électronique. Accédez à une base de données de plus de 1 000 références industrielles réelles avec filtres multicritères.</p></div>
+      <div class="etape"><h3>Analyse des performances</h3><p>Évaluez instantanément les indicateurs clés : vitesse de pointe, autonomie, courbe de poussée, accélération et seuils d'alerte critiques, mis à jour dynamiquement à chaque modification.</p></div>
+      <div class="etape"><h3>Validation <span class="or">PRO</span></h3><p>Optionnelle : vérification aérodynamique en soufflerie virtuelle, puis calcul CFD OpenFOAM du modèle réel (traînée S·C<sub>x</sub>, carte de pression, fichiers ParaView).</p></div>
+      <div class="etape"><h3>Benchmark &amp; Exportation</h3><p>Sauvegardez vos différentes configurations, effectuez une analyse comparative (benchmark) et exportez votre nomenclature matérielle (BOM) incluant les liens d'approvisionnement.</p></div>
+    </div>
+  </div>
+</section>
 
 <section id="fonctions" class="alterne">
   <div class="conteneur">
-    <span class="sur">Gratuit, sans inscription</span>
-    <h2>Tout ce qu'il faut pour choisir juste</h2>
+    <span class="sur">Gratuit, sans inscription · le calculateur</span>
+    <h2>Choisis juste, <span class="neon">en 30 secondes</span></h2>
     <p class="intro">Choisis tes moteurs, hélices, châssis, batterie et électronique : les performances
       se recalculent en direct, avec les prix et les liens d'achat de chaque pièce.</p>
-    <div class="cartes">
-      <div class="carte"><div class="icone">🚀</div><h3>Vitesse max réaliste</h3><p>Poussée qui baisse avec la vitesse, traînée selon l'inclinaison, densité de l'air du jour : pas une vitesse « théorique » irréaliste.</p></div>
-      <div class="carte"><div class="icone">🔋</div><h3>Autonomie par style de vol</h3><p>Cinématique, freestyle ou plein gaz, courbe de décharge propre à chaque chimie (LiPo, LiHV, Li-ion).</p></div>
-      <div class="carte"><div class="icone">⚡</div><h3>Alertes de sécurité</h3><p>Moteurs contre ESC, connecteur, taille d'hélice, tension : les incompatibilités sont signalées avant l'achat.</p></div>
-      <div class="carte"><div class="icone">⏱️</div><h3>0 → 100 km/h</h3><p>Accélération théorique à l'horizontale et à la verticale, pour comparer la nervosité des configurations.</p></div>
-      <div class="carte"><div class="icone">🛒</div><h3>Nomenclature &amp; coût</h3><p>Liste d'achat complète, prix en EUR ou USD, liens vers les revendeurs, export PDF / CSV.</p></div>
-      <div class="carte"><div class="icone">🗄️</div><h3>Garage de configurations</h3><p>Enregistre et compare tes configurations côte à côte pour trouver le meilleur compromis.</p></div>
-    </div>
-    <div class="fonction" style="margin-top:64px">
+    <div class="fonction" style="margin-bottom:56px">
       <div>
         <h3>Une interface pensée pour les pilotes</h3>
         <ul>
-          <li><b>Pré-filtres</b> par taille de cadre, type de châssis, marque, KV, pas d'hélice, cellules, capacité…</li>
-          <li><b>Mémoire</b> de tous tes choix entre les pages du mode d'emploi et du wiki.</li>
-          <li><b>Conditions du jour</b> : altitude, température, humidité et pression météo (QNH).</li>
+          <li><b>Filtres multicritères avancés</b> : tri instantané par dimensions de cellule, géométrie de châssis, équipementier, constante de vitesse (KV), pas d'hélice, configuration de cellules (S) et capacité nominale.</li>
+          <li><b>Persistance des données</b> : sauvegarde automatique de l'état de votre configuration lors de la navigation entre le simulateur, la documentation technique et le wiki.</li>
+          <li><b>Modélisation des conditions atmosphériques</b> : intégration des variables d'environnement (altitude-densité, température, hygrométrie et pression calée au niveau de la mer, QNH).</li>
         </ul>
       </div>
-      <figure class="visuel"><img src="assets/guide/01_apercu.webp" width="1200" height="1150" loading="lazy" alt="Interface du simulateur TALKTRUE FPV : sélection des composants et diagnostics"></figure>
+      <figure class="visuel"><img src="assets/guide/01_apercu.webp" width="1500" height="1419" loading="lazy" alt="Interface du simulateur TALKTRUE FPV : sélection des composants et diagnostics"></figure>
     </div>
-  </div>
+  
+    <div class="cartes">
+      <div class="carte"><div class="icone">🚀</div><h3>Vitesse max</h3><p>Point d'équilibre poussée / traînée à l'inclinaison de vol : poussée dynamique décroissante jusqu'à la vitesse de pas (T = T<sub>0</sub> (1 − V / V<sub>pas</sub>)), traînée S·C<sub>x</sub> selon l'assiette, densité de l'air du jour.</p></div>
+      <div class="carte"><div class="icone">🔋</div><h3>Autonomie par style de vol</h3><p>Courant moyen pondéré par profil de vol (cinématique, freestyle, plein gaz), courbe de décharge propre à la chimie (LiPo, LiHV, Li-ion) et capacité utilisable avant atterrissage.</p></div>
+      <div class="carte"><div class="icone">⚡</div><h3>Alertes de sécurité</h3><p>Contrôle de compatibilité avant achat : courant crête moteur contre courant continu / burst de l'ESC, tension (S) contre KV de référence, connecteur, diamètre d'hélice contre châssis.</p></div>
+      <div class="carte"><div class="icone">⏱️</div><h3>0 → 100 km/h</h3><p>Accélération théorique horizontale et verticale, déduite de la poussée excédentaire et de la masse au décollage (AUW).</p></div>
+      <div class="carte"><div class="icone">🧩</div><h3>Plus de 200 châssis</h3><p>Base de châssis référencés : masse, entraxe moteurs, taille et typologie (freestyle, cinewhoop, long range…), filtrable, en Free comme en PRO.</p></div>
+      <div class="carte"><div class="icone">🛸</div><h3>3 architectures</h3><p>Quadrirotor X et cinelifter X8 coaxial (électronique esclave dédiée) en Free ; Quad Speeder à fuselage profilé en PRO.</p></div>
+    </div>
+
+    </div>
 </section>
 
-<section>
+<section id="panier" class="alterne">
   <div class="conteneur">
-    <span class="sur">En 3 étapes</span>
-    <h2>Comment ça marche</h2>
-    <div class="etapes">
-      <div class="etape"><h3>Choisis tes pièces</h3><p>Moteurs, hélices, châssis, batterie, électronique : plus de 1 000 références réelles, filtrables.</p></div>
-      <div class="etape"><h3>Lis tes performances</h3><p>Vitesse, autonomie, poussée, accélération et alertes se mettent à jour à chaque changement.</p></div>
-      <div class="etape"><h3>Compare &amp; achète</h3><p>Enregistre tes configurations, compare-les, exporte la liste d'achat avec les liens.</p></div>
-    </div>
-  </div>
-</section>
-<section id="premium" class="alterne">
-  <div class="conteneur">
-    <span class="sur">Premium</span>
-    <h2>Passe du calculateur à l'<span class="or">atelier de conception</span></h2>
-    <p class="intro">Dessine ton propre châssis ou ton drone de vitesse, vois-le en 3D, importe tes
-      plans de CAO, passe-le au CFD et cale le calcul sur tes vraies mesures.</p>
-
     <div class="fonction">
       <div>
-        <span class="badge">Châssis prototype</span>
-        <h3>Ton châssis, coté à l'échelle</h3>
+        <span class="badge">Panier smart · Free</span>
+        <h3>Ta liste d'achat, groupée par revendeur</h3>
         <ul>
-          <li><b>5 formes</b> : X, Dead Cat, Squished X, Stretch X, H-Frame, en Quad ou en X8 coaxial.</li>
-          <li><b>Esquisse cotée</b> redessinée à chaque saisie, vue de dessus et de face.</li>
-          <li><b>Maquette 3D</b> inclinable, avec sa surface frontale exacte à chaque inclinaison.</li>
+          <li>Chaque pièce choisie arrive dans la <b>nomenclature</b>, avec son prix et son lien d'achat.</li>
+          <li>Le panier <b>regroupe les pièces par boutique</b> : tu ouvres chaque site une seule fois.</li>
+          <li><b>Quantités réelles</b> : 4 moteurs, hélices, antennes vendues par paire comptées par lot.</li>
+          <li>Prix en <b>EUR ou USD</b>, export <b>PDF / CSV</b> de la liste.</li>
         </ul>
+        <p class="note">Aucun site marchand ne permet d'ajouter un article à son panier depuis l'extérieur : le regroupement par boutique est la façon la plus rapide d'acheter sans rien oublier.</p>
       </div>
-      <div>
-        <figure class="visuel sombre"><img src="assets/guide/rendu_proto.webp" width="1200" height="900" loading="lazy" alt="Maquette 3D d'un drone FPV inclinée à 35 degrés avec sa surface frontale"></figure>
-        <figure class="visuel sombre"><img src="assets/guide/05_prototype_x.webp" loading="lazy" alt="Géométrie du châssis prototype FPV avec esquisse cotée"><figcaption>Esquisse cotée du châssis X</figcaption></figure>
-        <div class="trio">
-          <figure class="visuel sombre"><img src="assets/guide/06_proto_deadcat.webp" loading="lazy" alt="Esquisse d'un châssis Dead Cat"><figcaption>Dead Cat</figcaption></figure>
-          <figure class="visuel sombre"><img src="assets/guide/07_proto_hframe.webp" loading="lazy" alt="Esquisse d'un châssis H-Frame"><figcaption>H-Frame</figcaption></figure>
-          <figure class="visuel sombre"><img src="assets/guide/08_proto_stretch.webp" loading="lazy" alt="Esquisse d'un châssis Stretch X"><figcaption>Stretch X</figcaption></figure>
-        </div>
-      </div>
+      <figure class="visuel" style="max-width:430px;justify-self:center"><img src="assets/guide/panier.webp" width="535" height="650" loading="lazy" alt="Panier d'achat du simulateur FPV groupé par revendeur, avec quantités, prix et liens"><figcaption>Un 5″ freestyle 6S : 4 boutiques, chaque pièce avec son lien</figcaption></figure>
     </div>
+  </div>
+</section>
 
+<section id="garage">
+  <div class="conteneur">
     <div class="fonction inverse">
       <div>
-        <span class="badge">Quad Speeder</span>
-        <h3>Le drone de vitesse, propulsif ou tractif</h3>
+        <span class="badge">Garage virtuel · Free 3 · PRO 10</span>
+        <h3>Sauvegarde, compare, partage</h3>
         <ul>
-          <li><b>Fuselage goutte d'eau</b>, Cx calculé depuis sa finesse (Hoerner).</li>
-          <li><b>Propulsif</b> (type SPEEDER V2) ou <b>tractif</b> sur nacelles (type Blackbird).</li>
-          <li><b>Angle du fuselage</b> : 0° en vol rapide face au vent, 90° au décollage.</li>
-          <li><b>Ton Speeder en STL</b> : cotes reprises du modèle, batterie et centre de gravité réglables.</li>
+          <li><b>Enregistre</b> tes configurations et <b>compare-les côte à côte</b> : moteur, hélice, batterie, masse, poussée, vitesse, coût.</li>
+          <li><b>Recharge</b> une configuration dans les réglages en un clic.</li>
+          <li><b>Free</b> : 3 configurations gardées dans le lien de la page (favori = sauvegarde, lien = partage). <b>PRO</b> : 10 configurations en ligne, sur tous tes appareils.</li>
+          <li><b>Export</b> Markdown (Discord, forum), CSV (Excel) ou PDF.</li>
         </ul>
       </div>
-      <div>
-        <div class="duo">
-          <figure class="visuel sombre"><img src="assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV propulsif en 3D"><figcaption>Propulsif</figcaption></figure>
-          <figure class="visuel sombre"><img src="assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV tractif sur nacelles en 3D"><figcaption>Tractif (nacelles)</figcaption></figure>
-        </div>
-        <div class="duo" style="margin-top:14px">
-          <figure class="visuel"><img src="assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="Fuselages imprimés 3D du Speeder V2 et prototype"><figcaption>Speeder V2 : fuselages imprimés 3D</figcaption></figure>
-          <figure class="visuel"><img src="assets/constructions/v2v_solidworks.webp" width="780" height="570" loading="lazy" alt="Speeder V2V 3 pouces modélisé dans SolidWorks"><figcaption>Speeder V2V dans SolidWorks : le STL du calcul CFD</figcaption></figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">Import CAO</span>
-        <h3>Tes plans SolidWorks, Fusion 360 ou Onshape</h3>
-        <ul>
-          <li><b>STL</b> : vue 3D, silhouette réelle à chaque inclinaison, et <b>calcul CFD</b>.</li>
-          <li><b>DXF</b> : ta vue de dessus et ta vue de face remplacent l'esquisse, avec les mêmes cotes.</li>
-          <li><b>Volume 3D depuis tes plans</b> : dessus + face (+ côté) suffisent pour reconstruire ton drone.</li>
-        </ul>
-      </div>
-      <figure class="visuel"><img src="assets/dxf/stl_v2v.webp" loading="lazy" alt="Import STL : contrôle de l'orientation sur 3 vues"><figcaption>Ton STL : orientation contrôlée sur 3 vues</figcaption></figure>
-    </div>
-
-    <h3 class="titre-etapes" style="margin-top:0">Des plans DXF au modèle 3D, en 3 étapes</h3>
-    <div class="etapes-dxf">
-      <figure class="visuel"><img src="assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Tableau des plans DXF chargés : vue de dessus, vue de face, volume 3D"><figcaption>1 · Tes plans DXF</figcaption></figure>
-      <figure class="visuel sombre"><img src="assets/dxf/2_esquisse_towa.webp" width="254" height="288" loading="lazy" alt="Esquisse cotée remplacée par les plans DXF de dessus et de face d'un TOWA 5 pouces"><figcaption>2 · Ils remplacent l'esquisse, mêmes cotes</figcaption></figure>
-      <figure class="visuel"><img src="assets/dxf/3_volume.webp" width="890" height="482" loading="lazy" alt="Volume 3D d'un drone FPV reconstruit à partir de ses plans DXF"><figcaption>3 · Le volume 3D reconstruit</figcaption></figure>
-    </div>
-
-    <div class="fonction inverse">
-      <div>
-        <span class="badge">Soufflerie virtuelle</span>
-        <h3>L'estimation instantanée, avant le CFD</h3>
-        <ul>
-          <li><b>Inclinaison d'équilibre</b>, traînée, puissance absorbée par l'air et poussée nécessaire, en direct.</li>
-          <li><b>Hélices au bon modèle</b> qui tournent, avec leur jet : poussée perdue sur le châssis, répartition avant / arrière.</li>
-          <li>Réponse immédiate pour explorer ; le <b>calcul CFD</b> pour trancher.</li>
-        </ul>
-        <p class="note">La soufflerie applique les formules du simulateur, calées sur les vols GPS ; ses particules illustrent l'écoulement.
-          Le calcul CFD, lui, résout réellement l'écoulement autour de ton STL.</p>
-      </div>
-      <div>
-        <figure class="visuel"><video autoplay loop muted playsinline poster="assets/soufflerie/combinee.jpg"
-        aria-label="Soufflerie virtuelle : Speeder V2V dans le vent, écoulement et jets des hélices"><source src="assets/soufflerie/combinee.webm" type="video/webm"><source src="assets/soufflerie/combinee.mp4" type="video/mp4"></video>
-        <figcaption>Soufflerie virtuelle : l'air autour du drone et le jet des hélices</figcaption></figure>
-        <div class="duo" style="margin-top:14px">
-          <figure class="visuel"><img src="assets/soufflerie/quad_x_helices.webp" width="1170" height="635" loading="lazy" alt="Soufflerie virtuelle d'un Quad X 5 pouces : hélices et jets d'air"><figcaption>Quad X 5″ (Ethix S5)</figcaption></figure>
-          <figure class="visuel"><img src="assets/soufflerie/quad_x8_helices.webp" width="800" height="330" loading="lazy" alt="Soufflerie virtuelle d'un X8 coaxial : vue combinée traînée et poussée"><figcaption>X8 coaxial : vue combinée, air du vent + jets des 8 hélices</figcaption></figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">Recalage GPS &amp; garage en ligne</span>
-        <h3>Ta mesure devient la référence</h3>
-        <ul>
-          <li><b>Recalage GPS</b> : saisis la vitesse mesurée, le calcul s'ajuste et garde ce réglage.</li>
-          <li><b>Garage en ligne</b> : 10 configurations et tes calculs CFD, sur tous tes appareils.</li>
-        </ul>
-      </div>
-      <figure class="visuel"><img src="assets/guide/04_recalage_gps.webp" loading="lazy" alt="Recalage de la vitesse calculée sur une mesure GPS"></figure>
+      <figure class="visuel"><img src="assets/guide/garage.webp" width="1055" height="620" loading="lazy" alt="Garage virtuel : trois configurations de drone FPV comparées côte à côte"><figcaption>Trois variantes du même 5″ comparées dans le garage</figcaption></figure>
     </div>
   </div>
 </section>
-
-<section id="cfd">
-  <div class="conteneur">
-    <span class="sur">Nouveau · Premium · Calcul CFD OpenFOAM</span>
-    <h2>Un calcul CFD complet, <span class="neon">sans être ingénieur CFD</span></h2>
-    <p class="intro">D'habitude, un calcul d'écoulement demande des jours de réglages : domaine, maillage,
-      conditions aux limites, solveur, contrôle de convergence. Ici, tout est automatisé et vérifié.
-      Tu choisis l'inclinaison et la vitesse, le reste se fait sur le serveur de calcul.</p>
-
-    <figure class="ecran-cfd" style="margin:0 0 48px">
-      <video autoplay loop muted playsinline poster="assets/cfd/flux_hero.jpg" aria-label="Calcul CFD OpenFOAM : l'air défile autour du Speeder V2V">
-        <source src="assets/cfd/flux_hero.mp4" type="video/mp4"></video>
-      <figcaption><span class="point"></span>Speeder V2V 3″ · 120 km/h · lignes de courant OpenFOAM, drone coloré par la pression</figcaption>
-    </figure>
-    <ol class="sequence">
-      <li>
-        <figure class="visuel"><img src="assets/dxf/stl_v2v.webp" loading="lazy" alt="Import du STL d'un Speeder FPV : contrôle de l'orientation sur trois vues"></figure>
-        <div><b>1 · Ton STL</b><p>Exporté depuis SolidWorks, Fusion 360 ou Onshape. Orientation contrôlée sur 3 vues, comme dans un slicer.</p></div>
-      </li>
-      <li>
-        <figure class="visuel sombre"><img src="assets/cfd/maillage_v2v.webp" loading="lazy" alt="Maillage OpenFOAM autour d'un drone FPV : mailles de plus en plus fines près des surfaces"></figure>
-        <div><b>2 · Maillage automatique</b><p>STL réparé, domaine taillé à la taille du drone, ≈ 1 million de mailles, fines près des surfaces et dans le sillage.</p></div>
-      </li>
-      <li>
-        <figure class="visuel sombre"><video autoplay loop muted playsinline poster="assets/cfd/flux_v2v45.jpg" aria-label="Écoulement calculé autour du Speeder incliné à 45 degrés"><source src="assets/cfd/flux_v2v45.mp4" type="video/mp4"></video></figure>
-        <div><b>3 · Calcul OpenFOAM</b><p>simpleFoam, turbulence k-ω SST, jusqu'à une traînée stable. Si ça ne converge pas, le calcul continue ou le signale.</p></div>
-      </li>
-      <li>
-        <figure class="visuel sombre"><img src="assets/cfd/cp_v2v_45.webp" loading="lazy" alt="Carte de pression 3D sur un drone FPV : rouge en surpression, bleu en dépression"></figure>
-        <div><b>4 · Résultats dans l'app</b><p>S·Cx mesuré, Cx équivalent, portance, comparaison avec le calcul rapide, carte de pression 3D.</p></div>
-      </li>
-      <li>
-        <figure class="visuel sombre"><video autoplay loop muted playsinline poster="assets/cfd/paraview_v2v.jpg" aria-label="Animation du flux d'air dans ParaView"><source src="assets/cfd/paraview_v2v.mp4" type="video/mp4"></video></figure>
-        <div><b>5 · ParaView</b><p>Surface, coupes et lignes de courant à télécharger, avec la macro qui fait défiler l'air.</p></div>
-      </li>
-    </ol>
-
-    <div class="cartes" style="margin-top:56px">
-      <div class="carte"><div class="icone">🧩</div><h3>Ton propre modèle</h3><p>Pas une forme générique : ton châssis, ton fuselage, ta batterie, tels que tu les as dessinés.</p></div>
-      <div class="carte"><div class="icone">🛡️</div><h3>Contrôlé à chaque étape</h3><p>Maillage vérifié (checkMesh), 3 essais s'il échoue, convergence à 3 %. Jamais de chiffre faux affiché : une erreur est signalée comme telle.</p></div>
-      <div class="carte"><div class="icone">📐</div><h3>Plusieurs inclinaisons</h3><p>Compare en un seul envoi le vol lent et le vol rapide, jusqu'à 800 km/h pour un Speeder.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="resultats" class="alterne">
-  <div class="conteneur">
-    <span class="sur">Ce que le CFD révèle</span>
-    <h2>Là où l'air appuie, là où il décroche</h2>
-    <p class="intro">La pression sur chaque surface montre d'où vient la traînée : rouge, l'air bute sur le drone ;
-      bleu, il est aspiré. Derrière, le sillage montre l'air freiné que le drone traîne avec lui.</p>
-    <div class="trio-cfd duo-cfd">
-      <figure class="visuel sombre"><img src="assets/cfd/cp_v2v_0.webp" loading="lazy" alt="Pression sur le Speeder V2V, fuselage dans l'axe du vent"><figcaption>Speeder V2V · fuselage 0° (vol rapide)</figcaption></figure>
-      <figure class="visuel sombre"><img src="assets/cfd/cp_v2v_45.webp" loading="lazy" alt="Pression sur le Speeder V2V incliné à 45 degrés"><figcaption>Speeder V2V · fuselage 45°</figcaption></figure>
-    </div>
-    <div class="coupe-cfd" style="margin-top:18px">
-      <figure class="visuel sombre"><img src="assets/cfd/coupe_v2v_45.webp" loading="lazy" alt="Coupe de vitesse : sillage derrière le Speeder V2V"><figcaption>Sillage du Speeder V2V à 45° : bleu = air freiné que le drone traîne derrière lui</figcaption></figure>
-    </div>
-
-    <div class="fonction" style="margin-top:64px">
-      <div>
-        <span class="badge">Chiffres réels</span>
-        <h3>Fuselage dans le vent : 5 fois moins de traînée</h3>
-        <ul>
-          <li>À plat dans le vent, le Speeder V2V n'offre que <b>9 cm²</b> de S·Cx : un Cx équivalent de <b>0,22</b>, celui d'une goutte d'eau imparfaite.</li>
-          <li>Incliné à 45°, le même drone monte à <b>45 cm²</b> : cinq fois plus. Garder le fuselage dans le vent, c'est la clé de la vitesse.</li>
-          <li>Le calcul rapide de l'app (Cx fixe 0,68 pour un STL) <b>surestime</b> la traînée d'un Speeder bien profilé : le CFD le corrige.</li>
-        </ul>
-        <p class="note">RANS stationnaire, sans les hélices ni leur souffle, lois de paroi : ordre de grandeur ±15 à 25 %. À confirmer par un vol GPS, comme tout le reste du simulateur.</p>
-      </div>
-      <div class="mesure">
-        <table>
-          <tr><th>Cas (120 km/h)</th><th>Calcul rapide</th><th>CFD OpenFOAM</th><th>Cx</th></tr>
-          <tr><td>Speeder V2V · fuselage 0°</td><td>28,8 cm²</td><td class="neon">9,2 cm²</td><td>0,22</td></tr>
-          <tr><td>Speeder V2V · fuselage 45°</td><td>59,8 cm²</td><td class="neon">45,5 cm²</td><td>0,52</td></tr>
-        </table>
-        <p style="color:var(--doux);font-size:.85rem;margin:12px 0 0">S·Cx = traînée ÷ (½ ρ V²). Maillages 1,0 à 1,3 M de cellules, convergence &lt; 0,3 %.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="paraview">
-  <div class="conteneur">
-    <span class="sur">Marche à suivre · du STL à la vidéo</span>
-    <h2>Lancer un calcul CFD et voir l'air autour de <span class="neon">ton</span> drone</h2>
-    <p class="intro">Trois étapes : lancer le calcul dans l'app, lire les résultats, puis animer l'écoulement dans
-      <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a> (gratuit). Suis-les dans l'ordre, sans en sauter.</p>
-
-    <h3 class="titre-guide"><span>A</span> Lancer le calcul dans l'app</h3>
-    <div class="fonction">
-      <ol class="pas-a-pas">
-        <li><b>Choisis la bonne architecture</b> tout en haut de l'app : <b>Quad X</b> pour un drone classique, <b>Quad Speeder</b> pour un drone à fuselage. C'est elle qui fixe la façon de compter les angles.</li>
-        <li><b>Charge ton STL</b> : 📦 Import de plan &gt; onglet <b>📦 Modèle 3D (STL)</b>. Règle <b>l'unité</b> (mm, cm ou m, comme dans ta CAO), <b>l'axe avant</b> et <b>l'axe haut</b>.</li>
-        <li><b>Contrôle les 3 vues</b> : le nez doit pointer vers l'avant, le dessus du drone vers le haut. Coche « exporté en attitude de vol » <b>seulement</b> pour un Speeder dessiné à l'horizontale, comme un avion.</li>
-        <li>Onglet <b>🌀 Calcul CFD</b> : choisis l'<b>inclinaison</b> (Quad X : angle du drone, par exemple 35°) ou l'<b>angle du fuselage</b> (Speeder : 0° = vol rapide), puis la <b>vitesse</b>. Un ou deux angles suffisent : chaque angle prend 30 à 60 min.</li>
-        <li>Clique <b>« 🚀 Lancer le calcul CFD »</b>. La demande apparaît dans <b>Mes calculs CFD</b> : ⏳ en attente, ⚙️ en cours (maillage, puis calcul), ✅ terminé. Tu peux fermer l'app, le calcul continue.</li>
-      </ol>
-      <figure class="visuel"><img src="assets/dxf/stl_v2v.webp" loading="lazy" alt="Contrôle de l'orientation du STL sur trois vues"><figcaption>Vérifie les 3 vues avant de lancer : le serveur calcule exactement ce que tu vois</figcaption></figure>
-    </div>
-
-    <h3 class="titre-guide"><span>B</span> Lire les résultats</h3>
-    <div class="fonction inverse">
-      <ol class="pas-a-pas">
-        <li>Ouvre ton calcul <b>✅ terminé</b> dans <b>Mes calculs CFD</b> : le tableau donne pour chaque angle le <b>S·Cx</b> (traînée), le <b>Cx équivalent</b>, l'écart avec le calcul rapide de l'app, et la convergence.</li>
-        <li>Active <b>« Afficher la carte de pression 3D »</b> et choisis l'angle : rouge = l'air appuie, bleu = aspiration. Tourne la vue à la souris.</li>
-        <li>Active <b>« Préparer le téléchargement ParaView »</b>, puis clique <b>« Fichiers ParaView (.zip) »</b>. Le zip arrive dans tes <b>Téléchargements</b> : dézippe-le dans un dossier à toi.</li>
-        <li>Pour que l'app colle à la CFD : reporte le <b>Cx équivalent</b> dans « Cx appliqué » de l'onglet STL.</li>
-      </ol>
-      <figure class="visuel"><img src="assets/cfd/app_resultats.webp" loading="lazy" alt="Résultats du calcul CFD dans l'app : tableau, carte de pression, téléchargement ParaView"><figcaption>Le retour du calcul dans l'app : tableau, carte de pression 3D et bouton « Fichiers ParaView »</figcaption></figure>
-    </div>
-
-    <h3 class="titre-guide"><span>C</span> Animer l'air dans ParaView</h3>
-    <div class="fonction">
-      <ol class="pas-a-pas">
-        <li><b>Installe ParaView</b> : <a href="https://www.paraview.org/download/" rel="noopener">paraview.org/download</a> &gt; onglet <b>Windows</b> (ou macOS / Linux) &gt; le fichier <code>…-Windows-Python3.12-…-AMD64.msi</code> (<b>sans</b> « MPI »). Installe avec les options par défaut.</li>
-        <li><b>Importe la macro</b>, une seule fois : <i>Macros</i> &gt; <i>Import new macro…</i> &gt; <code>animer_flux.py</code> (dans ton zip). Un bouton <b>animer_flux</b> apparaît en haut à droite.</li>
-        <li><b>Ouvre deux fichiers du même angle</b> : <i>File</i> &gt; <i>Open</i>, puis <b>Ctrl+clic</b> sur <code>v2v90_surface_drone.vtp</code> <b>et</b> <code>v2v90_lignes_courant.vtp</code> (« 90 » = même angle), <i>OK</i>, puis le bouton vert <b>Apply</b>.</li>
-        <li><b>Ne coche pas les coupes</b> (<code>coupe_laterale</code>, <code>coupe_verticale</code>) : ce sont des plans opaques qui cachent tout (capture rouge ci-dessous).</li>
-        <li>Clique <b>animer_flux</b> : fond bleu nuit, drone coloré, ligne « <b>Traits d'air</b> » dans le Pipeline Browser. Puis <b>▶ Play</b> : l'air défile.</li>
-        <li><b>Tourne la vue</b> (clic gauche), <b>zoome</b> (molette), puis <i>File</i> &gt; <i>Save Animation</i> : <b>Frame Rate 30</b>, 1920 × 1080, format MP4 ou AVI. <i>Save State</i> garde la scène pour plus tard.</li>
-      </ol>
-      <div>
-        <figure class="visuel sombre"><img src="assets/cfd/pv_macro_ok.webp" loading="lazy" alt="ParaView avec la macro animer_flux : Traits d'air dans le pipeline, drone dans le flux"><figcaption>✅ Correct : surface + lignes de courant du même angle, « Traits d'air » créé par la macro</figcaption></figure>
-        <figure class="visuel sombre erreur" style="margin-top:14px"><img src="assets/cfd/pv_erreur_coupe.webp" loading="lazy" alt="ParaView avec la coupe latérale ouverte : un plan orange cache le flux"><figcaption>❌ À éviter : la coupe latérale ouverte forme un mur orange qui cache le flux</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="cartes" style="margin-top:40px">
-      <div class="carte"><div class="icone">🧩</div><h3>Ça ne marche pas ?</h3><p>Erreur à la ligne 13, 23 ou 34 : ParaView utilise une <b>ancienne copie</b> de la macro. <i>Macros</i> &gt; <i>Delete</i> &gt; animer_flux, puis réimporte celle du zip.</p></div>
-      <div class="carte"><div class="icone">🎨</div><h3>Couleurs</h3><p><b>vitesse</b> pour les lignes (bleu = air freiné, rouge = air accéléré), <b>p</b> pour la surface du drone (× 1,2 = Pa).</p></div>
-      <div class="carte"><div class="icone">🎞️</div><h3>Vidéo saccadée ?</h3><p>Le <b>Frame Rate</b> était à 1 : remets <b>30</b> dans Save Animation. 90 images = 3 secondes fluides.</p></div>
-    </div>
-  </div>
-</section>
-
 
 <section id="calage" class="alterne">
   <div class="conteneur calage">
@@ -456,6 +264,193 @@
   </div>
 </section>
 
+<section id="premium" class="alterne">
+  <div class="conteneur">
+    <span class="sur">PRO · l'atelier de conception</span>
+    <h2>Passe du calculateur à l'<span class="or">atelier de conception</span></h2>
+    <p class="intro">Conception paramétrique de châssis et de drones haute vitesse, modélisation 3D, import de vos plans CAO, validation aérodynamique (soufflerie virtuelle, CFD) et recalage du modèle sur vos mesures de vol.</p>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">Châssis prototype</span>
+        <h3>Modélisation à l'échelle</h3>
+        <ul>
+          <li><b>5 architectures supportées</b> : X, Dead Cat, Squished X, Stretch X, H-Frame, en configuration Quad ou X8 coaxial.</li>
+          <li><b>Esquisse paramétrique</b> : génération automatique de la géométrie 2D (projections dessus et face) à chaque modification des variables saisies.</li>
+          <li><b>Maquette 3D</b> : modèle volumique inclinable, avec la surface frontale projetée calculée à chaque incidence.</li>
+        </ul>
+      </div>
+      <div>
+        <figure class="visuel sombre"><img src="assets/guide/rendu_proto.webp" width="1200" height="900" loading="lazy" alt="Maquette 3D d'un drone FPV inclinée à 35 degrés avec sa surface frontale"></figure>
+        <figure class="visuel sombre"><img src="assets/guide/05_prototype_x.webp" loading="lazy" alt="Géométrie du châssis prototype FPV avec esquisse cotée"><figcaption>Esquisse cotée du châssis X</figcaption></figure>
+        <div class="trio">
+          <figure class="visuel sombre"><img src="assets/guide/06_proto_deadcat.webp" loading="lazy" alt="Esquisse d'un châssis Dead Cat"><figcaption>Dead Cat</figcaption></figure>
+          <figure class="visuel sombre"><img src="assets/guide/07_proto_hframe.webp" loading="lazy" alt="Esquisse d'un châssis H-Frame"><figcaption>H-Frame</figcaption></figure>
+          <figure class="visuel sombre"><img src="assets/guide/08_proto_stretch.webp" loading="lazy" alt="Esquisse d'un châssis Stretch X"><figcaption>Stretch X</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Quad Speeder</span>
+        <h3>UAV haute vitesse : configurations propulsive (pusher) ou tractive (tractor)</h3>
+        <ul>
+          <li><b>Profil aérodynamique</b> : fuselage de type « goutte d'eau ». Optimisation du coefficient de traînée (C<sub>x</sub>) basée sur la finesse, d'après la méthodologie Hoerner.</li>
+          <li><b>Architecture de propulsion</b> : configuration propulsive intégrée (type SPEEDER V2) ou tractive sur nacelles dédiées (architecture type Blackbird).</li>
+          <li><b>Incidence du fuselage</b> : assiette de 0° en régime de vol rapide face au vent (traînée minimale) et calage à 90° lors des phases de décollage / stationnaire.</li>
+          <li><b>Modélisation STL</b> : intégration géométrique à échelle nominale incluant le volume de la batterie et le positionnement paramétrable du centre de gravité (CoG).</li>
+        </ul>
+      </div>
+      <div>
+        <div class="duo">
+          <figure class="visuel sombre"><img src="assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV propulsif en 3D"><figcaption>Propulsif</figcaption></figure>
+          <figure class="visuel sombre"><img src="assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Quad Speeder FPV tractif sur nacelles en 3D"><figcaption>Tractif (nacelles)</figcaption></figure>
+        </div>
+        <div class="duo" style="margin-top:14px">
+          <figure class="visuel"><img src="assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="Fuselages imprimés 3D du Speeder V2 et prototype"><figcaption>Speeder V2 : fuselages imprimés 3D</figcaption></figure>
+          <figure class="visuel"><img src="assets/constructions/v2v_solidworks.webp" width="780" height="570" loading="lazy" alt="Speeder V2V 3 pouces modélisé dans SolidWorks"><figcaption>Speeder V2V dans SolidWorks : le STL du calcul CFD</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">Importation CAO</span>
+        <h3>Vos modèles SolidWorks, Fusion 360 ou Onshape</h3>
+        <ul>
+          <li><b>STL</b> : maillage 3D surfacique pour la simulation aérodynamique et le calcul CFD multi-angles.</li>
+          <li><b>DXF</b> : projections orthogonales (vues de dessus et de face) substituant l'esquisse native, avec conservation des cotes initiales.</li>
+          <li><b>Modélisation volumique 3D</b> : les vues en plan (dessus + face ± profil) suffisent à l'extrudeur pour la reconstruction géométrique de votre drone.</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="assets/dxf/stl_v2v.webp" loading="lazy" alt="Import STL : contrôle de l'orientation sur 3 vues"><figcaption>Ton STL : orientation contrôlée sur 3 vues</figcaption></figure>
+    </div>
+
+    <h3 class="titre-etapes" style="margin-top:0">Des plans DXF au modèle 3D, en 3 étapes</h3>
+    <div class="etapes-dxf">
+      <figure class="visuel"><img src="assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Tableau des plans DXF chargés : vue de dessus, vue de face, volume 3D"><figcaption>1 · Tes plans DXF</figcaption></figure>
+      <figure class="visuel sombre"><img src="assets/dxf/2_esquisse_towa.webp" width="254" height="288" loading="lazy" alt="Esquisse cotée remplacée par les plans DXF de dessus et de face d'un TOWA 5 pouces"><figcaption>2 · Ils remplacent l'esquisse, mêmes cotes</figcaption></figure>
+      <figure class="visuel"><img src="assets/dxf/3_volume.webp" width="890" height="482" loading="lazy" alt="Volume 3D d'un drone FPV reconstruit à partir de ses plans DXF"><figcaption>3 · Le volume 3D reconstruit</figcaption></figure>
+    </div>
+
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Soufflerie virtuelle</span>
+        <h3>L'estimation instantanée, en amont de la résolution CFD</h3>
+        <ul>
+          <li><b>Équilibre aérodynamique</b> : calcul immédiat de l'inclinaison d'équilibre, de la traînée, de la puissance aérodynamique absorbée et de la poussée requise.</li>
+          <li><b>Modélisation dynamique des rotors</b> : intégration du sillage aérodynamique des hélices en rotation, calcul de la perte de poussée par interaction avec le châssis (effet de sillage) et répartition de charge avant / arrière.</li>
+          <li><b>Génération instantanée</b> : rendu en temps réel pour l'exploration de concepts ; validation finale par résolution des équations CFD.</li>
+        </ul>
+        <p class="note">Le module de soufflerie applique les formulations analytiques du simulateur, calées sur des données de vol réelles. Les lignes de courant et les particules illustrent l'écoulement. Le calcul CFD, quant à lui, résout numériquement les équations de Navier-Stokes autour de votre maillage STL.</p>
+      </div>
+      <div>
+        <figure class="visuel"><video autoplay loop muted playsinline poster="assets/soufflerie/combinee.jpg"
+        aria-label="Soufflerie virtuelle : Speeder V2V dans le vent, écoulement et jets des hélices"><source src="assets/soufflerie/combinee.webm" type="video/webm"><source src="assets/soufflerie/combinee.mp4" type="video/mp4"></video>
+        <figcaption>Soufflerie virtuelle : l'air autour du drone et le jet des hélices</figcaption></figure>
+        <div class="duo" style="margin-top:14px">
+          <figure class="visuel"><img src="assets/soufflerie/quad_x_helices.webp" width="1170" height="635" loading="lazy" alt="Soufflerie virtuelle d'un Quad X 5 pouces : hélices et jets d'air"><figcaption>Quad X 5″ (Ethix S5)</figcaption></figure>
+          <figure class="visuel"><img src="assets/soufflerie/quad_x8_helices.webp" width="800" height="330" loading="lazy" alt="Soufflerie virtuelle d'un X8 coaxial : vue combinée traînée et poussée"><figcaption>X8 coaxial : vue combinée, air du vent + jets des 8 hélices</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">Recalage des données d'essais &amp; Cloud</span>
+        <h3>Vos mesures réelles comme référentiel d'étalonnage</h3>
+        <ul>
+          <li><b>Calibration par données GPS</b> : saisissez la vitesse maximale mesurée lors de vos essais ; l'algorithme ajuste instantanément le coefficient de traînée et mémorise ce profil d'étalonnage.</li>
+          <li><b>Bibliothèque Cloud</b> : centralisez jusqu'à 10 configurations matérielles et l'historique de vos simulations CFD pour l'ensemble de votre flotte de drones.</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="assets/guide/04_recalage_gps.webp" loading="lazy" alt="Recalage de la vitesse calculée sur une mesure GPS"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="cfd">
+  <div class="conteneur">
+    <span class="sur">Nouveau · PRO · Simulation CFD OpenFOAM</span>
+    <h2>La puissance d'une résolution CFD complète, <span class="neon">l'accessibilité en plus</span></h2>
+    <p class="intro">Traditionnellement, une analyse CFD complète impose des phases de pré-traitement complexes (domaine de calcul, discrétisation du maillage, conditions aux limites, convergence des solveurs). Notre solution intègre un pipeline entièrement automatisé et vérifié. Saisissez vos paramètres opérationnels (assiette et vitesse) : la résolution numérique est déportée et exécutée de manière transparente sur notre serveur de calcul dédié.</p>
+
+    <figure class="ecran-cfd" style="margin:0 0 48px">
+      <video autoplay loop muted playsinline poster="assets/cfd/flux_hero.jpg" aria-label="Calcul CFD OpenFOAM : l'air défile autour du Speeder V2V">
+        <source src="assets/cfd/flux_hero.mp4" type="video/mp4"></video>
+      <figcaption><span class="point"></span>Speeder V2V 3″ · 120 km/h · lignes de courant OpenFOAM, drone coloré par la pression</figcaption>
+    </figure>
+    <ol class="sequence">
+      <li>
+        <figure class="visuel"><img src="assets/dxf/stl_v2v.webp" loading="lazy" alt="Import du STL d'un Speeder FPV : contrôle de l'orientation sur trois vues"></figure>
+        <div><b>1 · Exportation STL</b><p>Exporté depuis SolidWorks, Fusion 360 ou Onshape. Orientation géométrique contrôlée sur 3 vues orthogonales (comme dans un slicer).</p></div>
+      </li>
+      <li>
+        <figure class="visuel sombre"><img src="assets/cfd/maillage_v2v.webp" loading="lazy" alt="Maillage OpenFOAM autour d'un drone FPV : mailles de plus en plus fines près des surfaces"></figure>
+        <div><b>2 · Maillage automatisé</b><p>Réparation du maillage STL et dimensionnement du domaine fluide à l'échelle de l'aéronef : discrétisation snappyHexMesh d'environ 1 million de mailles, raffinement progressif près des parois et dans le sillage ; en exigence maximale, 5 couches limites prismatiques plaquées sur la paroi.</p></div>
+      </li>
+      <li>
+        <figure class="visuel sombre"><video autoplay loop muted playsinline poster="assets/cfd/flux_v2v45.jpg" aria-label="Écoulement calculé autour du Speeder incliné à 45 degrés"><source src="assets/cfd/flux_v2v45.mp4" type="video/mp4"></video></figure>
+        <div><b>3 · Résolution OpenFOAM</b><p>Solveur <code>simpleFoam</code>, modèle de turbulence k-ω SST avec loi de paroi de Spalding, jusqu'à stabilisation de la traînée. Sans convergence, la résolution est prolongée (+50 % d'itérations), puis le résultat est explicitement signalé « non convergé ».</p></div>
+      </li>
+      <li>
+        <figure class="visuel sombre"><img src="assets/cfd/cp_v2v_45.webp" loading="lazy" alt="Carte de pression 3D sur un drone FPV : rouge en surpression, bleu en dépression"></figure>
+        <div><b>4 · Post-traitement intégré</b><p>Traînée S·C<sub>x</sub>, coefficient de traînée équivalent C<sub>x</sub>, portance, corrélation avec le modèle analytique et cartographie des pressions 3D.</p></div>
+      </li>
+      <li>
+        <figure class="visuel sombre"><video autoplay loop muted playsinline poster="assets/cfd/paraview_v2v.jpg" aria-label="Animation du flux d'air dans ParaView"><source src="assets/cfd/paraview_v2v.mp4" type="video/mp4"></video></figure>
+        <div><b>5 · Export ParaView</b><p>Données de surface, plans de coupe et lignes de courant au format VTK, avec une macro d'automatisation pour la visualisation des flux.</p></div>
+      </li>
+    </ol>
+
+    <div class="cartes" style="margin-top:56px">
+      <div class="carte"><div class="icone">🧩</div><h3>Géométrie personnalisée</h3><p>Affranchissez-vous des formes génériques : soumettez l'architecture exacte de votre châssis, fuselage et batterie tels que vous les avez modélisés.</p></div>
+      <div class="carte"><div class="icone">🛡️</div><h3>Validation à chaque étape</h3><p>Contrôle qualité du maillage (<code>checkMesh</code>), jusqu'à 3 tentatives de maillage, critère de convergence : variation de la traînée inférieure à 3 % sur les 100 dernières itérations (1 % en exigence maximale, avec couches limites, au choix de l'utilisateur). Exclusion stricte des valeurs aberrantes : toute anomalie lève une alerte explicite.</p></div>
+      <div class="carte"><div class="icone">📐</div><h3>Simulations multi-incidences</h3><p>Évaluez en un seul envoi jusqu'à 3 incidences : régimes stationnaire, de transition et haute vitesse (jusqu'à 800 km/h pour les profils Speeder).</p></div>
+    </div>
+    <p class="note" style="margin-top:28px">La marche à suivre complète (lancer le calcul, lire les résultats, animer l'air dans ParaView) est détaillée pas à pas dans le <b>Mode d'emploi</b> de l'app.</p>
+  </div>
+</section>
+
+<section id="resultats" class="alterne">
+  <div class="conteneur">
+    <span class="sur">Ce que le CFD révèle</span>
+    <h2>Là où l'air appuie, là où il décroche</h2>
+    <p class="intro">La pression sur chaque surface montre d'où vient la traînée : rouge, l'air bute sur le drone ;
+      bleu, il est aspiré. Derrière, le sillage montre l'air freiné que le drone traîne avec lui.</p>
+    <div class="trio-cfd duo-cfd">
+      <figure class="visuel sombre"><img src="assets/cfd/cp_v2v_0.webp" loading="lazy" alt="Pression sur le Speeder V2V, fuselage dans l'axe du vent"><figcaption>Speeder V2V · fuselage 0° (vol rapide)</figcaption></figure>
+      <figure class="visuel sombre"><img src="assets/cfd/cp_v2v_45.webp" loading="lazy" alt="Pression sur le Speeder V2V incliné à 45 degrés"><figcaption>Speeder V2V · fuselage 45°</figcaption></figure>
+    </div>
+    <div class="coupe-cfd" style="margin-top:18px">
+      <figure class="visuel sombre"><img src="assets/cfd/coupe_v2v_45.webp" loading="lazy" alt="Coupe de vitesse : sillage derrière le Speeder V2V"><figcaption>Sillage du Speeder V2V à 45° : bleu = air freiné que le drone traîne derrière lui</figcaption></figure>
+    </div>
+
+    <div class="fonction" style="margin-top:64px">
+      <div>
+        <span class="badge">Chiffres réels</span>
+        <h3>Fuselage dans le vent : 5 fois moins de traînée</h3>
+        <ul>
+          <li>À plat dans le vent, le Speeder V2V n'offre que <b>9 cm²</b> de S·Cx : un Cx équivalent de <b>0,22</b>, celui d'une goutte d'eau imparfaite.</li>
+          <li>Incliné à 45°, le même drone monte à <b>45 cm²</b> : cinq fois plus. Garder le fuselage dans le vent, c'est la clé de la vitesse.</li>
+          <li>Recalculé à <b>500 km/h</b> par le serveur TALKTRUE : <b>8,3</b> et <b>44 cm²</b>, le Cx reste quasi identique.</li>
+          <li>Le calcul rapide de l'app (Cx fixe 0,68 pour un STL) <b>surestime</b> la traînée d'un Speeder bien profilé : le CFD le corrige.</li>
+        </ul>
+        <p class="note">RANS stationnaire, sans les hélices ni leur souffle, lois de paroi : ordre de grandeur ±15 à 25 %. À confirmer par un vol GPS, comme tout le reste du simulateur.</p>
+      </div>
+      <div class="mesure">
+        <table>
+          <tr><th>Cas (120 km/h)</th><th>Calcul rapide</th><th>CFD OpenFOAM</th><th>Cx</th></tr>
+          <tr><td>Speeder V2V · fuselage 0°</td><td>28,8 cm²</td><td class="neon">9,2 cm²</td><td>0,22</td></tr>
+          <tr><td>Speeder V2V · fuselage 45°</td><td>59,8 cm²</td><td class="neon">45,5 cm²</td><td>0,52</td></tr>
+        </table>
+        <p style="color:var(--doux);font-size:.85rem;margin:12px 0 0">S·Cx = traînée ÷ (½ ρ V²). Maillages 1,0 à 1,3 M de cellules, convergence &lt; 0,3 %.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="ateliers" class="alterne">
   <div class="conteneur">
     <span class="sur">L'atelier</span>
@@ -474,29 +469,31 @@
   </div>
 </section>
 
-<section>
+<section id="offres">
   <div class="conteneur">
-    <span class="sur">Offres</span>
-    <h2>Free ou Premium</h2>
+    <span class="sur">Tarifs</span>
+    <h2>Free ou PRO</h2>
     <div class="offres">
       <div class="offre">
-        <h3>Free</h3><div class="prix">Gratuit</div>
+        <h3>Free</h3><div class="prix">0 €</div>
         <ul>
-          <li>Poussée, vitesse, autonomie, 0 → 100 km/h</li>
-          <li>Traînée selon l'inclinaison et la batterie</li>
-          <li>Alertes de sécurité et nomenclature d'achat</li>
+          <li>Calculateur complet : poussée, vitesse, autonomie, 0 → 100 km/h</li>
+          <li>Plus de 1 000 composants et plus de 200 châssis</li>
+          <li>Alertes de sécurité</li>
+          <li>Panier groupé par revendeur, export PDF / CSV</li>
           <li>Garage de 3 configurations</li>
         </ul>
+        <a class="bouton secondaire" style="margin-top:22px" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Débuter gratuitement</a>
       </div>
       <div class="offre premium">
-        <h3 class="or">Premium · Offre Fondateur</h3><div class="prix">24 € à vie</div>
+        <h3 class="or">PRO · Offre Fondateur</h3><div class="prix">24 € à vie</div>
         <ul>
-          <li><b>Calcul CFD OpenFOAM</b> de ton STL, jusqu'à 10 par mois</li>
-          <li>Fichiers ParaView + macro d'animation du flux</li>
-          <li>Châssis prototype 5 formes + esquisse + 3D</li>
-          <li>Quad Speeder propulsif / tractif + 3D</li>
-          <li>Import STL et DXF, soufflerie virtuelle</li>
-          <li>Recalage sur ta mesure GPS, garage en ligne</li>
+          <li><b>Tout le Free</b>, plus :</li>
+          <li>Garage de 10 configurations en ligne, tous appareils</li>
+          <li>Soufflerie virtuelle</li>
+          <li><b>Calcul CFD OpenFOAM</b> de ton modèle (10 par mois) + fichiers ParaView</li>
+          <li>Châssis prototype et Quad Speeder en 3D</li>
+          <li>Import STL / DXF de ta CAO, recalage GPS</li>
         </ul>
         <a class="bouton principal" style="margin-top:22px" href="https://ko-fi.com/s/b5378f58b1">⭐ Devenir Fondateur — 24 €</a>
         <p style="color:var(--doux);font-size:.85rem;margin:12px 0 0">Réservé aux 100 premiers. Paiement unique sur Ko-fi : indique ton e-mail dans le message, tu reçois ton code personnel sous 24 h. Question : <a href="mailto:talktruefpv@gmail.com">talktruefpv@gmail.com</a></p>
@@ -509,24 +506,24 @@
   <div class="conteneur">
     <span class="sur">FAQ</span>
     <h2>Questions fréquentes</h2>
-    <details open><summary>Qu'est-ce que le calcul CFD ?</summary><p>Un vrai calcul d'écoulement de l'air autour de ton drone, fait avec <b>OpenFOAM</b> (le logiciel CFD libre utilisé dans l'industrie) à partir de ton fichier STL. Tu obtiens la traînée mesurée (S·Cx), le Cx équivalent, la portance, une carte de pression 3D et un paquet de fichiers pour ParaView.</p></details>
+    <details open><summary>Le simulateur est-il gratuit ?</summary><p>Oui. Le calculateur complet (poussée, vitesse, autonomie, accélération), plus de 200 châssis, les alertes de sécurité, le panier groupé par revendeur et un garage de 3 configurations sont gratuits et sans inscription. Le PRO ajoute le garage de 10 configurations en ligne, la soufflerie, le calcul CFD, le châssis prototype, le Quad Speeder, la 3D, l'import STL/DXF et le recalage GPS.</p></details>
+    <details><summary>Qu'est-ce que le calcul CFD ?</summary><p>Un vrai calcul d'écoulement de l'air autour de ton drone, fait avec <b>OpenFOAM</b> (le logiciel CFD libre utilisé dans l'industrie) à partir de ton fichier STL. Tu obtiens la traînée mesurée (S·Cx), le Cx équivalent, la portance, une carte de pression 3D et un paquet de fichiers pour ParaView.</p></details>
     <details><summary>Faut-il savoir utiliser OpenFOAM ?</summary><p>Non. Tu charges ton STL, tu choisis l'inclinaison et la vitesse, et le serveur de calcul fait tout : réparation du STL, domaine, maillage snappyHexMesh, calcul k-ω SST jusqu'à convergence, contrôles. Rien à installer sur ton ordinateur.</p></details>
     <details><summary>Combien de temps dure un calcul ?</summary><p>Quelques dizaines de minutes par inclinaison, selon la taille du modèle et la file d'attente. Tu peux fermer l'app : le calcul continue et le résultat t'attend dans l'onglet 🌀 Calcul CFD.</p></details>
-    <details><summary>Comment voir les résultats dans ParaView ?</summary><p>Installe <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a> (gratuit), télécharge le zip de ton calcul, importe la macro <code>animer_flux.py</code> (Macros &gt; Import new macro), ouvre <code>surface_drone.vtp</code> et <code>lignes_courant.vtp</code> du même angle, clique sur la macro puis ▶. Détail pas à pas dans la <a href="#paraview">section ParaView</a>.</p></details>
+    <details><summary>Comment voir les résultats dans ParaView ?</summary><p>Chaque calcul fournit un zip pour <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a> (gratuit) : surface du drone, lignes de courant et une macro qui fait défiler l'air. Le pas à pas illustré est dans le Mode d'emploi de l'app.</p></details>
     <details><summary>Le CFD est-il exact ?</summary><p>C'est un calcul stationnaire (RANS) sans les hélices ni leur souffle, avec des lois de paroi : compte ±15 à 25 %. Il est idéal pour <b>comparer des formes</b> et voir d'où vient la traînée. La vitesse réelle se confirme par un vol GPS, sur laquelle tu peux recaler le simulateur.</p></details>
     <details><summary>Et la soufflerie virtuelle ?</summary><p>C'est l'estimation instantanée : mêmes formules que la vitesse max, calées sur des vols GPS, avec l'écoulement et le jet des hélices illustrés. Utilise-la pour explorer, puis le calcul CFD pour trancher.</p></details>
-    <details><summary>Le simulateur est-il gratuit ?</summary><p>Oui. Le calcul de poussée, vitesse, autonomie, accélération et les alertes de sécurité sont gratuits et sans inscription. Le Premium ajoute le calcul CFD, le châssis prototype, le Quad Speeder, la 3D, l'import STL/DXF, le recalage GPS et le garage en ligne.</p></details>
     <details><summary>Quelle différence avec eCalc ?</summary><p>eCalc est une référence pour le calcul pur. TALKTRUE FPV est une plateforme de conception : calcul CFD de ton propre modèle, composants réels avec prix et liens d'achat, garage de configurations, esquisses cotées, maquettes 3D et import de tes plans de CAO.</p></details>
     <details><summary>Qui est BOB ?</summary><p>BOB le Racer, c'est le drone de course à canopée jaune qui a inspiré le logo TALKTRUE FPV : sa silhouette est au centre de la sphère. L'effigie de la marque, et un vrai drone qui vole.</p></details>
-    <details><summary>Comment obtenir un accès Premium ?</summary><p>Avec l'offre Fondateur : <b>24 € une seule fois, accès Premium à vie</b>, réservée aux 100 premiers. Paie sur <a href="https://ko-fi.com/s/b5378f58b1">Ko-fi</a> en indiquant ton e-mail dans le message, et tu reçois ton code personnel sous 24 h. Une question : <a href="mailto:talktruefpv@gmail.com">talktruefpv@gmail.com</a> ou Instagram <a href="https://www.instagram.com/talktruefpv/">@talktruefpv</a>.</p></details>
+    <details><summary>Comment obtenir un accès PRO ?</summary><p>Avec l'offre Fondateur : <b>24 € une seule fois, accès PRO à vie</b>, réservée aux 100 premiers. Paie sur <a href="https://ko-fi.com/s/b5378f58b1">Ko-fi</a> en indiquant ton e-mail dans le message, et tu reçois ton code personnel sous 24 h. Une question : <a href="mailto:talktruefpv@gmail.com">talktruefpv@gmail.com</a> ou Instagram <a href="https://www.instagram.com/talktruefpv/">@talktruefpv</a>.</p></details>
   </div>
 </section>
 
 <section class="appel">
   <div class="conteneur">
-    <h2>Prêt à voir ce que ton drone a dans le ventre ?</h2>
-    <p>Choisis tes pièces, lis ta vitesse, puis passe ton modèle au CFD.</p>
-    <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Lancer le simulateur</a>
+    <h2>De l'idée au vol, sans rien perdre en route</h2>
+    <p>Choisis tes pièces, lis ta vitesse, compare dans ton garage, puis achète boutique par boutique.</p>
+    <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Débuter gratuitement</a>
   </div>
 </section>
 </main>

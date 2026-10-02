@@ -83,7 +83,7 @@ section { padding: 84px 0; }
 .cartes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .carte { background: var(--carte); border: 1px solid var(--bord); border-radius: var(--rayon); padding: 24px; transition: border-color .2s, transform .2s; }
 .carte:hover { border-color: rgba(207, 232, 63, .45); transform: translateY(-2px); }
-.carte .icone { font-size: 1.6rem; margin-bottom: 10px; }
+.carte .icone { font-size: .8rem; margin-bottom: 10px; }
 .carte p { color: var(--doux); margin: 0; font-size: .96rem; }
 
 .fonction { display: grid; grid-template-columns: 1fr 1.15fr; gap: 48px; align-items: center; margin-bottom: 84px; }
@@ -250,3 +250,9 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .86em; backgro
 .visuel.erreur { border-color: rgba(255, 90, 90, .6); }
 .visuel.erreur figcaption { color: #ff9a9a; }
 #paraview .fonction { margin-bottom: 20px; align-items: start; }
+
+/* ---------- Parcours en 4 étapes, sous-titre du héros ---------- */
+.etapes.quatre { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .etapes.quatre { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .etapes.quatre { grid-template-columns: 1fr; } }
+.heros .sous-titre { display: block; color: var(--texte); font-size: 1.3rem; margin-bottom: 10px; }
