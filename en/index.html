@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TALKTRUE FPV — From idea to flight: FPV drone calculator, grouped cart, garage and CFD</title>
-<meta name="description" content="Calculate your FPV drone in 30 s: top speed, thrust, flight time, with over 1,000 real components and over 200 frames, calibrated on real GPS flights. Cart grouped by retailer, build garage, and in PRO the wind tunnel and OpenFOAM CFD.">
+<title>TALKTRUE FPV — Design your FPV drone: speed, power, flight time and CFD</title>
+<meta name="description" content="Design your FPV drone and assess its top speed, thrust and flight time in 30 s, with over 1,000 indexed components and over 200 frames, validated with GPS flight data. Cart grouped by retailer, build garage, and in PRO the wind tunnel and OpenFOAM CFD.">
 <meta name="keywords" content="FPV calculator, FPV drone simulator, FPV drone speed, drone battery flight time, motor prop thrust, FPV drone CFD, OpenFOAM drone, FPV drone drag, drone drag coefficient, ParaView, drone wind tunnel, FPV calculator, FPV drone simulator, FPV drone speed, FPV speeder, eCalc alternative">
 <link rel="canonical" href="https://jschmiedd.github.io/en/">
 <link rel="alternate" hreflang="fr" href="https://jschmiedd.github.io/">
@@ -14,8 +14,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TALKTRUE FPV">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="TALKTRUE FPV — From idea to flight. No wasted hours, money or mistakes.">
-<meta property="og:description" content="Calculate in 30 s. Auto-grouped cart. Optional CFD. Over 1,000 real components, calibrated on GPS flights.">
+<meta property="og:title" content="TALKTRUE FPV — Design your FPV drone. Assess it before you build it.">
+<meta property="og:description" content="Speed, power and flight time of your FPV drone with over 1,000 indexed components, validated with GPS data. Plus the OpenFOAM CFD module on your STL.">
 <meta property="og:url" content="https://jschmiedd.github.io/en/">
 <meta property="og:image" content="https://jschmiedd.github.io/assets/og_en.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -103,18 +103,19 @@
   <div class="conteneur grille">
     <div>
       <span class="sur">FPV performance simulator · V4</span>
-      <h1>From idea to flight. <span class="neon">No wasted 5 hours. No wasted €350. No mistakes.</span></h1>
-      <p class="accroche"><b class="sous-titre">Calculate in 30 s. Auto-grouped cart. Optional CFD. Build with confidence.</b>
-        Over 1,000 real components and over 200 listed frames, formulas calibrated on real GPS
-        flights, and a shopping cart that groups itself by retailer.</p>
+      <h1>Design your FPV drone. <span class="neon">Assess its speed, power and flight time</span> before you build it.</h1>
+      <p class="accroche">Thrust, top speed, flight time and transient acceleration (0 → 100 km/h) computed from
+        real market components and validated in real-world conditions with GPS data. From 3-inch frames to
+        X8 cinelifters and the streamlined Quad Speeder, model in 2D and 3D, and now access
+        <b>OpenFOAM CFD</b>.</p>
       <div class="actions">
-        <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Start for free</a>
-        <a class="bouton secondaire" href="#offres">Free or PRO?</a>
+        <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Launch the simulator — Free</a>
+        <a class="bouton secondaire" href="#cfd">🌀 New: CFD module</a>
       </div>
       <div class="chiffres">
-        <div><b>1,000+</b><span>real components</span></div>
-        <div><b>200+</b><span>listed frames</span></div>
+        <div><b>1,000+</b><span>Indexed components</span></div>
         <div><b>121 km/h</b><span>Top speed validated by GPS</span></div>
+        <div><b>CFD</b><span>OpenFOAM on your STL</span></div>
       </div>
     </div>
     <div class="sphere">
@@ -128,11 +129,11 @@
 <section id="piliers" class="alterne">
   <div class="conteneur">
     <span class="sur">Why TALKTRUE FPV</span>
-    <h2>No wasted time, no wasted money, <span class="neon">no bad surprises</span></h2>
+    <h2>The assurance of a <span class="neon">high-performance, optimised build</span></h2>
     <div class="cartes">
-      <div class="carte"><div class="icone">⏱️</div><h3>Time: not 2 hours of maths</h3><p>Pick your parts: thrust, top speed, flight time and 0 → 100 km/h update live. A complete build in 30 seconds.</p></div>
-      <div class="carte"><div class="icone">🎯</div><h3>Quality: tested in real flight</h3><p>The formulas are calibrated on GPS-measured flights (121 and 126 km/h) and account for tilt, air density and the battery's real shape.</p></div>
-      <div class="carte"><div class="icone">💶</div><h3>Money: no buying mistakes</h3><p>Motors vs ESC, connector, prop, voltage: incompatibilities are flagged before you buy, and the cart groups itself by retailer.</p></div>
+      <div class="carte"><div class="icone">⏱️</div><h3>Instant calculation</h3><p>Configure your complete architecture in 30 seconds. Select your components and instantly see the impact on top speed, flight time and transient acceleration (0 → 100 km/h).</p></div>
+      <div class="carte"><div class="icone">🎯</div><h3>Physical reliability</h3><p>A predictive model validated by GPS-measured flight tests. The algorithms include aerodynamic drag, the aircraft's attitude, air density variations and your battery's real discharge profile.</p></div>
+      <div class="carte"><div class="icone">💶</div><h3>Verified compatibility</h3><p>Strict technical validation before you order. The system automatically checks electrical and mechanical consistency (motor / ESC / prop matching) and builds your bill of materials (BOM), optimised by retailer.</p></div>
     </div>
   </div>
 </section>
@@ -423,6 +424,9 @@
     </div>
     <div class="coupe-cfd" style="margin-top:18px">
       <figure class="visuel sombre"><img src="../assets/cfd/coupe_v2v_45.webp" loading="lazy" alt="Velocity slice: wake behind the V2V Speeder"><figcaption>V2V Speeder wake at 45°: blue = slowed air the drone drags behind it</figcaption></figure>
+    </div>
+    <div class="coupe-cfd" style="margin-top:18px">
+      <figure class="visuel sombre"><video autoplay loop muted playsinline poster="../assets/cfd/flux_towa5.jpg" aria-label="OpenFOAM CFD: airflow around a TOWA 5-inch freestyle drone tilted 35 degrees at 120 km/h"><source src="../assets/cfd/flux_towa5.mp4" type="video/mp4"></video><figcaption>TOWA 5″ freestyle · 35° tilt · 120 km/h · S·C<sub>x</sub> = 94.7 cm² (bare frame, no battery or motors), computed on the TALKTRUE server</figcaption></figure>
     </div>
 
     <div class="fonction" style="margin-top:64px">
