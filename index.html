@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TALKTRUE FPV — Concevez votre drone FPV : vitesse, puissance, autonomie et calcul CFD</title>
 <meta name="description" content="Concevez votre drone FPV et évaluez en 30 s sa vitesse maximale, sa poussée et son autonomie, avec plus de 1 000 composants indexés et plus de 200 châssis, validés par des données de vol GPS. Panier groupé par revendeur, garage de configurations, et en PRO la soufflerie et le calcul CFD OpenFOAM.">
-<meta name="keywords" content="calculateur FPV, simulateur drone FPV, vitesse drone FPV, autonomie batterie drone, poussée moteur hélice, CFD drone FPV, OpenFOAM drone, traînée drone FPV, Cx drone, ParaView, soufflerie drone, calculateur FPV, simulateur drone FPV, vitesse drone FPV, speeder FPV, eCalc alternative">
+<meta name="keywords" content="calculateur FPV, configurateur drone FPV, simulateur drone FPV, vitesse drone FPV, autonomie batterie drone, poussée moteur hélice, CFD drone FPV, OpenFOAM drone, traînée drone FPV, Cx drone, ParaView, soufflerie drone, calculateur FPV, simulateur drone FPV, vitesse drone FPV, speeder FPV, eCalc alternative">
 <link rel="canonical" href="https://jschmiedd.github.io/">
 <link rel="alternate" hreflang="fr" href="https://jschmiedd.github.io/">
 <link rel="alternate" hreflang="en" href="https://jschmiedd.github.io/en/">
@@ -34,7 +34,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "TALKTRUE FPV",
-  "alternateName": ["TalkTrue FPV", "TALKTRUE FPV Simulateur"],
+  "alternateName": ["TalkTrue FPV", "TALKTRUE FPV Configurateur"],
   "url": "https://jschmiedd.github.io/",
   "inLanguage": "fr"
 }
@@ -43,7 +43,7 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TALKTRUE FPV — Simulateur de performances V4",
+  "name": "TALKTRUE FPV — Configurateur de performances V4",
   "applicationCategory": "EngineeringApplication",
   "operatingSystem": "Web",
   "url": "https://talktrue-simulateur-performences-v4.streamlit.app/",
@@ -64,7 +64,7 @@
      "acceptedAnswer": {"@type": "Answer", "text": "Non. Vous chargez votre STL, vous choisissez l'inclinaison et la vitesse, et le serveur de calcul TALKTRUE fait tout : réparation du STL, domaine, maillage snappyHexMesh, calcul k-ω SST jusqu'à convergence. Rien à installer."}},
     {"@type": "Question", "name": "Comment ouvrir les résultats dans ParaView ?",
      "acceptedAnswer": {"@type": "Answer", "text": "Chaque calcul fournit un zip pour ParaView (gratuit) : surface du drone, lignes de courant et une macro qui fait défiler l'air. Le pas à pas illustré est dans le Mode d'emploi de l'app."}},
-    {"@type": "Question", "name": "Le simulateur TALKTRUE FPV est-il gratuit ?",
+    {"@type": "Question", "name": "Le configurateur TALKTRUE FPV est-il gratuit ?",
      "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le calculateur complet, plus de 200 châssis, les alertes de sécurité, le panier groupé par revendeur et un garage de 3 configurations sont gratuits et sans inscription. Le PRO ajoute le garage en ligne, la soufflerie, le calcul CFD, le châssis prototype, le Quad Speeder, la 3D, l'import STL/DXF et le recalage GPS."}},
     {"@type": "Question", "name": "Les vitesses calculées sont-elles fiables ?",
      "acceptedAnswer": {"@type": "Answer", "text": "Le modèle est calé sur de vrais vols mesurés au GPS (TOWA 5 pouces, 121 et 126 km/h) et tient compte de l'inclinaison du drone, de la densité de l'air et du format réel de la batterie. En PRO, vous pouvez recaler le calcul sur votre propre mesure GPS."}},
@@ -95,7 +95,7 @@
       <a href="#faq">FAQ</a>
     </nav>
     <a class="langue" href="en/" hreflang="en" lang="en">EN</a>
-    <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">Lancer le simulateur</a>
+    <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">Lancer le configurateur</a>
   </div>
 </header>
 
@@ -103,20 +103,23 @@
 <section class="heros">
   <div class="conteneur grille">
     <div>
-      <span class="sur">Simulateur de performances FPV · V4</span>
+      <span class="sur">Configurateur de performances FPV · V4</span>
       <h1>Concevez votre drone FPV. <span class="neon">Évaluez sa vitesse, sa puissance et son autonomie</span> avant de le construire.</h1>
       <p class="accroche">Poussée, vitesse maximale, autonomie et accélération transitoire (0 → 100 km/h) calculées à partir
         de composants réels du marché et validées en situation réelle par des données GPS. Du châssis 3 pouces au
         cinelifter X8, jusqu'au Quad Speeder à fuselage profilé, modélisez en 2D, en 3D, et accédez désormais au
         <b>calcul CFD OpenFOAM</b>.</p>
       <div class="actions">
-        <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Lancer le simulateur — Gratuit</a>
+        <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Lancer le configurateur — Gratuit</a>
         <a class="bouton secondaire" href="#cfd">🌀 Nouveau : module CFD</a>
       </div>
       <div class="chiffres">
-        <div><b>1 000+</b><span>Composants indexés</span></div>
-        <div><b>121 km/h</b><span>Vitesse max. validée par GPS</span></div>
-        <div><b>CFD</b><span>OpenFOAM sur votre STL</span></div>
+        <div><b>1 000+</b><span>Composants réels à configurer</span></div>
+        <div><b>Vols réels</b><span>Calculs calés sur GPS et blackbox</span></div>
+        <div><b>Calculateur</b><span>Formules physiques : poussée, traînée, vitesse, autonomie, intensités</span></div>
+        <div><b>Garage</b><span>Vos configurations comparées côte à côte</span></div>
+        <div><b>Panier</b><span>Vos pièces regroupées par vendeur</span></div>
+        <div><b>CFD</b><span>OpenFOAM + ParaView sur serveur dédié · moteur maison bientôt</span></div>
       </div>
     </div>
     <div class="sphere">
@@ -163,11 +166,11 @@
         <h3>Une interface pensée pour les pilotes</h3>
         <ul>
           <li><b>Filtres multicritères avancés</b> : tri instantané par dimensions de cellule, géométrie de châssis, équipementier, constante de vitesse (KV), pas d'hélice, configuration de cellules (S) et capacité nominale.</li>
-          <li><b>Persistance des données</b> : sauvegarde automatique de l'état de votre configuration lors de la navigation entre le simulateur, la documentation technique et le wiki.</li>
+          <li><b>Persistance des données</b> : sauvegarde automatique de l'état de votre configuration lors de la navigation entre le configurateur, la documentation technique et le wiki.</li>
           <li><b>Modélisation des conditions atmosphériques</b> : intégration des variables d'environnement (altitude-densité, température, hygrométrie et pression calée au niveau de la mer, QNH).</li>
         </ul>
       </div>
-      <figure class="visuel"><img src="assets/guide/01_apercu.webp" width="1500" height="1420" loading="lazy" alt="Interface du simulateur TALKTRUE FPV : sélection des composants et diagnostics"></figure>
+      <figure class="visuel"><img src="assets/guide/01_apercu.webp" width="1500" height="1420" loading="lazy" alt="Interface du configurateur TALKTRUE FPV : sélection des composants et diagnostics"></figure>
     </div>
   
     <div class="cartes">
@@ -194,9 +197,9 @@
           <li><b>Quantités réelles</b> : 4 moteurs, hélices, antennes vendues par paire comptées par lot.</li>
           <li>Prix en <b>EUR ou USD</b>, export <b>PDF / CSV</b> de la liste.</li>
         </ul>
-        <p class="note">Aucun site marchand ne permet d'ajouter un article à son panier depuis l'extérieur : le regroupement par boutique est la façon la plus rapide d'acheter sans rien oublier.</p>
+        <p class="note">Un clic par boutique : chaque site s'ouvre une seule fois, avec la liste complète des pièces à y commander.</p>
       </div>
-      <figure class="visuel" style="max-width:430px;justify-self:center"><img src="assets/guide/panier.webp" width="352" height="822" loading="lazy" alt="Panier d'achat du simulateur FPV groupé par revendeur, avec quantités, prix et liens"><figcaption>Un 5″ freestyle 6S : 6 boutiques, chaque pièce avec son lien</figcaption></figure>
+      <figure class="visuel" style="max-width:430px;justify-self:center"><img src="assets/guide/panier.webp" width="352" height="822" loading="lazy" alt="Panier d'achat du configurateur FPV groupé par revendeur, avec quantités, prix et liens"><figcaption>Un 5″ freestyle 6S : 6 boutiques, chaque pièce avec son lien</figcaption></figure>
     </div>
   </div>
 </section>
@@ -210,7 +213,7 @@
         <ul>
           <li><b>Enregistrez</b> vos configurations et <b>comparez-les côte à côte</b> : moteur, hélice, batterie, masse, poussée, vitesse, coût.</li>
           <li><b>Rechargez</b> une configuration dans les réglages en un clic.</li>
-          <li><b>Free</b> : 3 configurations gardées dans le lien de la page (favori = sauvegarde, lien = partage). <b>PRO</b> : 10 configurations en ligne, sur tous vos appareils.</li>
+          <li><b>Free</b> : jusqu'à 3 configurations. <b>PRO</b> : jusqu'à 10 configurations, retrouvées sur tous vos appareils.</li>
           <li><b>Export</b> Markdown (Discord, forum), CSV (Excel) ou PDF.</li>
         </ul>
       </div>
@@ -251,7 +254,7 @@
   <div class="conteneur">
     <span class="sur">Sur le terrain</span>
     <h2>Des drones qui volent vraiment</h2>
-    <p class="intro">Les mesures qui ont servi à caler le simulateur, et ce que donne le même TOWA 5″ une fois allégé et réglé.</p>
+    <p class="intro">Les mesures qui ont servi à caler le configurateur, et ce que donne le même TOWA 5″ une fois allégé et réglé.</p>
     <div class="terrain">
       <figure class="carte-photo haute"><video id="launch" autoplay loop muted playsinline poster="assets/terrain/launch_control.jpg" aria-label="Launch control d'un drone FPV"><source src="assets/terrain/launch_control.webm" type="video/webm"><source src="assets/terrain/launch_control.mp4" type="video/mp4"></video><button class="son" type="button" onclick="const v=document.getElementById('launch');v.muted=!v.muted;v.play();this.textContent=v.muted?'🔊 Son':'🔇';">🔊 Son</button><figcaption><b>Launch control</b> · départ depuis la caisse, vue FPV et blackbox</figcaption></figure>
       <figure class="carte-photo large"><img src="assets/terrain/towa_5pouces.webp" width="864" height="647" loading="lazy" alt="Drone FPV TOWA 5 pouces freestyle sur un chemin"><figcaption><b>TOWA 5″</b> · la configuration de calage, allégée de 16 g</figcaption></figure>
@@ -261,7 +264,7 @@
       <figure class="carte-photo"><img src="assets/terrain/towa_osd_186.webp" width="1080" height="810" loading="lazy" alt="Statistiques OSD : vitesse max 186 km/h"><figcaption><b class="neon">186 km/h</b> · vent dans le dos (vitesse sol, pas une mesure de référence)</figcaption></figure>
       <figure class="carte-photo avec-son"><video id="decollage3" autoplay loop muted playsinline poster="assets/terrain/decollage_3pouces.jpg" aria-label="Décollage d'un drone FPV 3 pouces"><source src="assets/terrain/decollage_3pouces_son.webm" type="video/webm"><source src="assets/terrain/decollage_3pouces_son.mp4" type="video/mp4"></video><button class="son" type="button" onclick="const v=document.getElementById('decollage3');v.muted=!v.muted;v.play();this.textContent=v.muted?'🔊 Son':'🔇';">🔊 Son</button><figcaption><b>TOWA 3″</b> · décollage plein gaz</figcaption></figure>
     </div>
-    <p class="note">Le simulateur est calé sur les vols de référence à 121 et 126 km/h (configuration d'origine, sans vent). Les 145 km/h ont été atteints après allègement et réglages Betaflight ; les 186 km/h avec le vent dans le dos.</p>
+    <p class="note">Le configurateur est calé sur les vols de référence à 121 et 126 km/h (configuration d'origine, sans vent). Les 145 km/h ont été atteints après allègement et réglages Betaflight ; les 186 km/h avec le vent dans le dos.</p>
   </div>
 </section>
 
@@ -344,7 +347,7 @@
           <li><b>Modélisation dynamique des rotors</b> : intégration du sillage aérodynamique des hélices en rotation, calcul de la perte de poussée par interaction avec le châssis (effet de sillage) et répartition de charge avant / arrière.</li>
           <li><b>Génération instantanée</b> : rendu en temps réel pour l'exploration de concepts ; validation finale par résolution des équations CFD.</li>
         </ul>
-        <p class="note">Le module de soufflerie applique les formulations analytiques du simulateur, calées sur des données de vol réelles. Les lignes de courant et les particules illustrent l'écoulement. Le calcul CFD, quant à lui, résout numériquement les équations de Navier-Stokes autour de votre maillage STL.</p>
+        <p class="note">Le module de soufflerie applique les formulations analytiques du configurateur, calées sur des données de vol réelles. Les lignes de courant et les particules illustrent l'écoulement. Le calcul CFD, quant à lui, résout numériquement les équations de Navier-Stokes autour de votre maillage STL.</p>
       </div>
       <div>
         <figure class="visuel"><video autoplay loop muted playsinline poster="assets/soufflerie/combinee.jpg"
@@ -442,7 +445,7 @@
           <li>Recalculé à <b>500 km/h</b> par le serveur TALKTRUE : <b>8,3</b> et <b>44 cm²</b>, le Cx reste quasi identique.</li>
           <li>Le calcul rapide de l'app (Cx fixe 0,68 pour un STL) <b>surestime</b> la traînée d'un Speeder bien profilé : le CFD le corrige.</li>
         </ul>
-        <p class="note">RANS stationnaire, sans les hélices ni leur souffle, lois de paroi : ordre de grandeur ±15 à 25 %. À confirmer par un vol GPS, comme tout le reste du simulateur.</p>
+        <p class="note">RANS stationnaire, sans les hélices ni leur souffle, lois de paroi : ordre de grandeur ±15 à 25 %. À confirmer par un vol GPS, comme tout le reste du configurateur.</p>
       </div>
       <div class="mesure">
         <table>
@@ -460,7 +463,7 @@
   <div class="conteneur">
     <span class="sur">L'atelier</span>
     <h2>Conçu par un pilote qui construit ses drones</h2>
-    <p class="intro">Châssis découpés, pièces imprimées en 3D, câblage et pesée : le simulateur est né de l'atelier,
+    <p class="intro">Châssis découpés, pièces imprimées en 3D, câblage et pesée : le configurateur est né de l'atelier,
       pour savoir avant de construire.</p>
     <div class="terrain">
       <figure class="carte-photo large"><img src="assets/constructions/bob_le_racer.webp" width="1200" height="900" loading="lazy" alt="BOB le Racer, drone FPV à canopée jaune, effigie de la marque TALKTRUE FPV"><figcaption><b class="neon">BOB le Racer</b> · l'effigie de la marque : sa canopée a donné sa forme au logo TALKTRUE</figcaption></figure>
@@ -511,12 +514,12 @@
   <div class="conteneur">
     <span class="sur">FAQ</span>
     <h2>Questions fréquentes</h2>
-    <details open><summary>Le simulateur est-il gratuit ?</summary><p>Oui. Le calculateur complet (poussée, vitesse, autonomie, accélération), plus de 200 châssis, les alertes de sécurité, le panier groupé par revendeur et un garage de 3 configurations sont gratuits et sans inscription. Le PRO ajoute le garage de 10 configurations en ligne, la soufflerie, le calcul CFD, le châssis prototype, le Quad Speeder, la 3D, l'import STL/DXF et le recalage GPS.</p></details>
+    <details open><summary>Le configurateur est-il gratuit ?</summary><p>Oui. Le calculateur complet (poussée, vitesse, autonomie, accélération), plus de 200 châssis, les alertes de sécurité, le panier groupé par revendeur et un garage de 3 configurations sont gratuits et sans inscription. Le PRO ajoute le garage de 10 configurations en ligne, la soufflerie, le calcul CFD, le châssis prototype, le Quad Speeder, la 3D, l'import STL/DXF et le recalage GPS.</p></details>
     <details><summary>Qu'est-ce que le calcul CFD ?</summary><p>Un vrai calcul d'écoulement de l'air autour de votre drone, fait avec <b>OpenFOAM</b> (le logiciel CFD libre utilisé dans l'industrie) à partir de votre fichier STL. Vous obtenez la traînée mesurée (S·Cx), le Cx équivalent, la portance, une carte de pression 3D et un paquet de fichiers pour ParaView.</p></details>
     <details><summary>Faut-il savoir utiliser OpenFOAM ?</summary><p>Non. Vous chargez votre STL, vous choisissez l'inclinaison et la vitesse, et le serveur de calcul fait tout : réparation du STL, domaine, maillage snappyHexMesh, calcul k-ω SST jusqu'à convergence, contrôles. Rien à installer sur votre ordinateur.</p></details>
     <details><summary>Combien de temps dure un calcul ?</summary><p>Quelques dizaines de minutes par inclinaison, selon la taille du modèle et la file d'attente. Vous pouvez fermer l'app : le calcul continue et le résultat vous attend dans l'onglet 🌀 Calcul CFD.</p></details>
     <details><summary>Comment voir les résultats dans ParaView ?</summary><p>Chaque calcul fournit un zip pour <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a> (gratuit) : surface du drone, lignes de courant et une macro qui fait défiler l'air. Le pas à pas illustré est dans le Mode d'emploi de l'app.</p></details>
-    <details><summary>Le CFD est-il exact ?</summary><p>C'est un calcul stationnaire (RANS) sans les hélices ni leur souffle, avec des lois de paroi : comptez ±15 à 25 %. Il est idéal pour <b>comparer des formes</b> et voir d'où vient la traînée. La vitesse réelle se confirme par un vol GPS, sur laquelle vous pouvez recaler le simulateur.</p></details>
+    <details><summary>Le CFD est-il exact ?</summary><p>C'est un calcul stationnaire (RANS) sans les hélices ni leur souffle, avec des lois de paroi : comptez ±15 à 25 %. Il est idéal pour <b>comparer des formes</b> et voir d'où vient la traînée. La vitesse réelle se confirme par un vol GPS, sur laquelle vous pouvez recaler le configurateur.</p></details>
     <details><summary>Et la soufflerie virtuelle ?</summary><p>C'est l'estimation instantanée : mêmes formules que la vitesse max, calées sur des vols GPS, avec l'écoulement et le jet des hélices illustrés. Utilisez-la pour explorer, puis le calcul CFD pour trancher.</p></details>
     <details><summary>Quelle différence avec eCalc ?</summary><p>eCalc est une référence pour le calcul pur. TALKTRUE FPV est une plateforme de conception : calcul CFD de votre propre modèle, composants réels avec prix et liens d'achat, garage de configurations, esquisses cotées, maquettes 3D et import de vos plans de CAO.</p></details>
     <details><summary>Qui est BOB ?</summary><p>BOB le Racer, c'est le drone de course à canopée jaune qui a inspiré le logo TALKTRUE FPV : sa silhouette est au centre de la sphère. L'effigie de la marque, et un vrai drone qui vole.</p></details>
@@ -535,9 +538,9 @@
 
 <footer>
   <div class="conteneur">
-    <span>© 2026 TALKTRUE FPV — Simulateur de performances V4 et calcul CFD</span>
+    <span>© 2026 TALKTRUE FPV — Configurateur de performances V4 et calcul CFD</span>
     <nav aria-label="Liens">
-      <a href="https://talktrue-simulateur-performences-v4.streamlit.app/">Simulateur</a>
+      <a href="https://talktrue-simulateur-performences-v4.streamlit.app/">Configurateur</a>
       <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a>
       <a href="mailto:talktruefpv@gmail.com">talktruefpv@gmail.com</a>
       <a href="https://www.instagram.com/talktruefpv/">Instagram</a>

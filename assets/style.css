@@ -65,9 +65,10 @@ p { margin: 0 0 1em; }
 .heros .grille { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; position: relative; }
 .heros .accroche { font-size: 1.2rem; color: var(--doux); max-width: 36em; }
 .actions { display: flex; gap: 14px; flex-wrap: wrap; margin: 30px 0 34px; }
-.chiffres { display: flex; gap: 34px; flex-wrap: wrap; }
-.chiffres div { min-width: 120px; }
-.chiffres b { display: block; font: 700 2rem "Rajdhani", sans-serif; color: var(--texte); }
+.chiffres { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 28px; }
+.chiffres div { min-width: 0; }
+.chiffres b { display: block; font: 700 1.7rem "Rajdhani", sans-serif; color: var(--texte); }
+@media (max-width: 520px) { .chiffres { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 20px; } .chiffres b { font-size: 1.45rem; } }
 .chiffres span { color: var(--doux); font-size: .88rem; }
 .sphere { position: relative; justify-self: center; width: min(430px, 88vw); aspect-ratio: 1; }
 .sphere video, .sphere img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; position: relative; z-index: 1;
