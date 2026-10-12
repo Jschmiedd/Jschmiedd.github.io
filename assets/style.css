@@ -257,3 +257,31 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .86em; backgro
 @media (max-width: 900px) { .etapes.quatre { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .etapes.quatre { grid-template-columns: 1fr; } }
 .heros .sous-titre { display: block; color: var(--texte); font-size: 1.3rem; margin-bottom: 10px; }
+
+/* Méthode de calcul (page d'accueil) */
+.methode .carte .num { display: inline-block; font-family: "Rajdhani", sans-serif; font-weight: 700; font-size: 1.05rem; color: #0b0f00; background: var(--neon); border-radius: 8px; padding: 1px 9px; margin-bottom: 10px; }
+.formule { display: block; margin-top: 12px; padding: 8px 10px; border-radius: 8px; background: rgba(207, 232, 63, .07); border: 1px solid rgba(207, 232, 63, .22); color: var(--neon); font-family: ui-monospace, "DejaVu Sans Mono", Consolas, monospace; font-size: .86rem; line-height: 1.45; overflow-x: auto; }
+.methode .liens { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+
+/* ---------- TrueFoam GUI : téléchargement (12 octobre 2026) ---------- */
+.telecharger { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; background: var(--carte); border: 1px solid rgba(63, 167, 245, .35); border-radius: var(--rayon); padding: 34px; box-shadow: 0 20px 60px rgba(63, 167, 245, .06); }
+.telecharger .logo-gui { background: #fff; border-radius: 10px; padding: 8px 12px; max-width: 210px; margin-bottom: 16px; }
+.telecharger .logo-gui img { width: 100%; height: auto; display: block; }
+.telecharger ul { padding-left: 1.1em; color: var(--doux); margin: 0 0 20px; }
+.telecharger li { margin-bottom: 6px; }
+.telecharger li b { color: var(--texte); }
+.telecharger figcaption { padding: 0 8px 8px; }
+.galerie-gui { margin-top: 18px; }
+.galerie-gui img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+@media (max-width: 620px) { .galerie-gui { grid-template-columns: 1fr; } }
+.bouton.bleu { background: var(--bleu); color: #04121f; box-shadow: 0 8px 30px rgba(63, 167, 245, .28); }
+.bouton.bleu:hover { box-shadow: 0 10px 38px rgba(63, 167, 245, .42); }
+@media (max-width: 960px) {
+  .telecharger { grid-template-columns: 1fr; padding: 24px; }
+}
+.menu a { white-space: nowrap; }
+@media (max-width: 1240px) { .menu { gap: 16px; font-size: .9rem; } }
+@media (max-width: 1100px) { .menu { display: none; } }
+
+/* Principe de calcul en une phrase (Johann, 12 octobre 2026) */
+.principe { max-width: 900px; margin: 0 0 42px; padding: 14px 20px; background: var(--carte); border: 1px solid var(--bord); border-left: 4px solid var(--neon); border-radius: 12px; color: var(--texte); font-size: 1.08rem; }
