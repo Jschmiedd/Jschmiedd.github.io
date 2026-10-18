@@ -38,6 +38,7 @@ p { margin: 0 0 1em; }
 .entete .conteneur { display: flex; align-items: center; gap: 18px; height: 68px; }
 .marque { display: flex; align-items: center; gap: 12px; color: var(--texte); font: 700 1.15rem "Rajdhani", sans-serif; letter-spacing: .06em; }
 .marque:hover { text-decoration: none; }
+.marque-texte { display: block; text-align: center; line-height: 1.1; }
 .marque video, .marque img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 18px rgba(207, 232, 63, .25); }
 .menu { display: flex; gap: 22px; margin-left: auto; font-size: .95rem; }
 .menu a { color: var(--doux); }
@@ -53,6 +54,8 @@ p { margin: 0 0 1em; }
 .bouton.secondaire { border-color: var(--bord); color: var(--texte); background: rgba(255, 255, 255, .02); }
 .bouton.secondaire:hover { border-color: var(--neon-sombre); }
 .entete .bouton { padding: 9px 18px; font-size: .9rem; }
+.deux-lignes { display: block; text-align: center; line-height: 1.2; white-space: nowrap; }
+.entete .marque, .entete .bouton { flex-shrink: 0; }
 
 /* ---------- Héros ---------- */
 .heros { position: relative; padding: 88px 0 70px; overflow: hidden; }
@@ -281,7 +284,7 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .86em; backgro
 }
 .menu a { white-space: nowrap; }
 @media (max-width: 1240px) { .menu { gap: 16px; font-size: .9rem; } }
-@media (max-width: 1100px) { .menu { display: none; } }
+@media (max-width: 1100px) { .menu { display: none; } .langue { margin-left: auto; } }
 
 /* Principe de calcul en une phrase (Johann, 12 octobre 2026) */
 .principe { max-width: 900px; margin: 0 0 42px; padding: 14px 20px; background: var(--carte); border: 1px solid var(--bord); border-left: 4px solid var(--neon); border-radius: 12px; color: var(--texte); font-size: 1.08rem; }
