@@ -88,10 +88,12 @@
       <a href="#panier">Cart</a>
       <a href="#garage">Garage</a>
       <a href="#method">Method</a>
-      <a href="#calage">Accuracy</a>
       <a href="#premium">PRO</a>
       <a href="#cfd">CFD</a>
       <a href="#truefoam">TrueFoam GUI</a>
+      <a href="#speeder">Speeder</a>
+      <a href="#calage">Accuracy</a>
+      <a href="#ecosysteme">Software</a>
       <a href="#offres">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -108,7 +110,7 @@
       <h1>Design your FPV drone. <span class="neon">Assess its speed, power and flight time</span> before you build it.</h1>
       <p class="accroche">Thrust, top speed, flight time and transient acceleration (0 → 100 km/h) computed from
         real market components and validated in real-world conditions with GPS data. From 3-inch frames to
-        X8 cinelifters and the streamlined Quad Speeder, model in 2D and 3D, and now access
+        X8 cinelifters, model in 2D and 3D, and now access
         <b>OpenFOAM CFD</b>.</p>
       <div class="actions">
         <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Launch the configurator — Free</a>
@@ -117,12 +119,12 @@
       </div>
       <div class="chiffres">
         <div><b>1,000+</b><span>Real components to configure</span></div>
-        <div><b>200+</b><span>Frames in 3D, with dimensioned drawing</span></div>
+        <div><b>200+</b><span>Listed frames · 3D and dimensioned drawing in PRO</span></div>
         <div><b>Real flights</b><span>Calibrated on GPS and blackbox data</span></div>
         <div><b>Calculator</b><span>Physics formulas: thrust, drag, speed, flight time, currents</span></div>
         <div><b>Garage</b><span>Your builds compared side by side</span></div>
         <div><b>Cart</b><span>Your parts grouped by retailer</span></div>
-        <div><b>CFD</b><span>OpenFOAM + ParaView on a dedicated server · in-house engine coming soon</span></div>
+        <div><b>CFD</b><span>OpenFOAM + ParaView on a dedicated server</span></div>
       </div>
     </div>
     <div class="sphere">
@@ -133,14 +135,100 @@
   </div>
 </section>
 
+<section id="fonctions">
+  <div class="conteneur">
+    <span class="sur">Free, no sign-up · the calculator</span>
+    <h2>Choose right, <span class="neon">in 30 seconds</span></h2>
+    <p class="intro">Pick your motors, props, frame, battery and electronics: performance updates live,
+      with the price and buy link of every part.</p>
+    <div class="fonction" style="margin-bottom:56px">
+      <div>
+        <h3>An interface designed for pilots</h3>
+        <ul>
+          <li><b>Multi-criteria filters</b>: frame size and type, brand, KV, prop pitch, cell count (S) and battery capacity.</li>
+          <li><b>Your settings stay in place</b> when you switch to the user guide, the Wiki or the PRO guide, and a saved build comes back exactly as it was.</li>
+          <li><b>Documentation in the app</b>: step-by-step user guide, full Wiki (what every figure and alert means) and PRO guide.</li>
+          <li><b>Atmospheric modelling</b>: environment variables included (density altitude, temperature, humidity and sea-level pressure, QNH).</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="../assets/guide/01_apercu.webp" width="1480" height="799" loading="lazy" alt="TALKTRUE FPV - XRIG Configurateur interface: component selection and diagnostics"></figure>
+    </div>
+  
+    <div class="cartes">
+      <div class="carte"><div class="icone">🚀</div><h3>Top speed</h3><p>Thrust / drag equilibrium at the flight tilt: thrust that drops with speed down to the propeller's pitch speed, S·C<sub>x</sub> drag depending on attitude, today's air density.</p></div>
+      <div class="carte"><div class="icone">🔋</div><h3>Flight time by flying style</h3><p>Average current weighted by flight profile (cinematic, freestyle, full throttle), discharge curve specific to the chemistry (LiPo, LiHV, Li-ion) and usable capacity before landing. <b>New</b>: endurance at the cruise speed of your choice, drag included, with the moment the OSD warning shows.</p></div>
+      <div class="carte"><div class="icone">⚡</div>\1Compatibility check before buying: motor peak current vs ESC (continuous / burst), battery (C rating) vs total current, voltage (S) vs reference KV, connector, stack and VTX mounting patterns, motor / frame and prop / motor fit, prop diameter vs frame.\2</div>
+      <div class="carte"><div class="icone">⏱️</div><h3>0 → 100 km/h</h3><p>Theoretical horizontal and vertical acceleration, derived from excess thrust and all-up weight (AUW).</p></div>
+      <div class="carte"><div class="icone">🧩</div><h3>Over 200 frames</h3><p>Database of listed frames: weight, motor spacing, size and type (freestyle, cinewhoop, long range…), filterable, in Free and PRO.</p></div>
+      <div class="carte"><div class="icone">🛸</div><h3>Quad X and X8 cinelifter</h3><p>X quadcopter and coaxial X8 cinelifter (dedicated slave electronics), from the Free version.</p></div>
+      <div class="carte"><div class="icone">🌀</div><h3>Motors in flight</h3><p>Frequencies at hover and full throttle (rotation, blade pass, electrical) for the gyro filters, and estimated motor heating at the end of a flight or at full throttle on the spot.</p></div>
+    </div>
+
+    </div>
+</section>
+
+<section id="galerie" class="alterne">
+  <div class="conteneur">
+    <span class="sur">The calculator</span>
+    <h2>Everything the app <span class="neon">works out for you</span></h2>
+    <p class="intro">A 5″ freestyle build on a GEPRC Mark5 frame, as the app shows it: choosing parts, live
+      results, motors in flight and files for TrueGlide XPro. Screenshots of the French interface.</p>
+    <div class="galerie-calc">
+      <figure class="visuel"><a href="../assets/guide/galerie/gal_choix_pieces.webp"><img src="../assets/guide/galerie/gal_choix_pieces.webp" width="1200" height="664" loading="lazy" alt="Choosing the frame by size and type, GEPRC Mark5 frame selected"></a><figcaption>The frame, filtered by size and type</figcaption></figure>
+      <figure class="visuel"><a href="../assets/guide/galerie/gal_moteurs.webp"><img src="../assets/guide/galerie/gal_moteurs.webp" width="1200" height="915" loading="lazy" alt="Choosing the motor by brand, stator size and KV, and the electronics"></a><figcaption>Motors filtered by brand, stator and KV, only those that mount on the frame</figcaption></figure>
+      <figure class="visuel"><a href="../assets/guide/galerie/gal_vitesse_autonomie.webp"><img src="../assets/guide/galerie/gal_vitesse_autonomie.webp" width="1200" height="678" loading="lazy" alt="Estimated top speed on a gauge and estimated flight time, also at the chosen cruise speed"></a><figcaption>Estimated top speed and flight time, also at your cruise speed</figcaption></figure>
+      <figure class="visuel haute"><a href="../assets/guide/galerie/gal_tableau_bord.webp"><img src="../assets/guide/galerie/gal_tableau_bord.webp" width="780" height="1671" loading="lazy" alt="Dashboard: estimated top speed, thrust, thrust-to-weight ratio, weight, flight time, 0 to 100 km/h and safety alerts"></a><figcaption>The live dashboard, with safety alerts</figcaption></figure>
+      <figure class="visuel"><a href="../assets/guide/galerie/gal_moteurs_en_vol.webp"><img src="../assets/guide/galerie/gal_moteurs_en_vol.webp" width="1200" height="651" loading="lazy" alt="Motors in flight: rotation and blade-pass frequencies, estimated motor heating"></a><figcaption>Motors in flight: frequencies for filters, estimated heating</figcaption></figure>
+      <figure class="visuel"><a href="../assets/guide/galerie/gal_fichiers_xpro.webp"><img src="../assets/guide/galerie/gal_fichiers_xpro.webp" width="1200" height="820" loading="lazy" alt="Garage: export the drone to TrueGlide XPro and TrueGlide Studio, import flight measurements"></a><figcaption>Garage: the drone goes to TrueGlide XPro, flight measurements come back</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="panier">
+  <div class="conteneur">
+    <div class="fonction">
+      <div>
+        <span class="badge">Cart · Free</span>
+        <h3>Your shopping list, grouped by retailer</h3>
+        <ul>
+          <li>Every part you pick lands in the <b>bill of materials</b>, with its price and buy link.</li>
+          <li>The cart <b>groups parts by shop</b>: you open each site only once.</li>
+          <li><b>Real quantities</b>: each part is counted the way it is sold (4 motors, props per set, antennas per pair).</li>
+          <li>Prices in <b>EUR or USD</b>; your builds, cost included, export from the garage (Markdown, CSV, PDF).</li>
+        </ul>
+      </div>
+      <figure class="visuel" style="max-width:430px;justify-self:center"><img src="../assets/guide/panier.webp" width="600" height="766" loading="lazy" alt="FPV configurator shopping cart grouped by retailer, with quantities, prices and links"><figcaption>A 4S 5″ freestyle build: parts grouped by shop, each with its link</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="garage" class="alterne">
+  <div class="conteneur">
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Virtual garage · Free 3 · PRO 10</span>
+        <h3>Save, compare, share</h3>
+        <ul>
+          <li><b>Save</b> your builds and <b>compare them side by side</b>: motor, prop, battery, weight, thrust, speed, cost.</li>
+          <li><b>Reload</b> a build into the settings in one click.</li>
+          <li><b>Free</b>: up to 3 builds. <b>PRO</b>: up to 10 builds, available on all your devices, 4 of them favourites reloaded in full; your online data can be erased in one click.</li>
+          <li><b>TrueGlide exchanges</b>: from the garage, one file for TrueGlide Studio, one for TrueGlide XPro, and import of their flight measurements.</li>
+          <li><b>Export</b> to Markdown (Discord, forums), CSV (Excel) or PDF.</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="../assets/guide/garage.webp" width="1100" height="645" loading="lazy" alt="Virtual garage: three FPV drone builds compared side by side"><figcaption>Three variants of the same 5″ compared in the garage</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section id="method" class="methode">
   <div class="conteneur">
     <span class="sur">The method</span>
     <h2>The calculation method: <span class="neon">physics, calibrated on real flights</span></h2>
     <p class="principe"><b>How the calculator works:</b> it starts from the thrust measured on the bench by each
-      motor's manufacturer, with its reference propeller and voltage, scales it to your propeller and your battery,
-      corrects it for the air density of the day (altitude, temperature, humidity, QNH) and lowers it with speed down to the propeller's pitch speed, set by the motor's rpm (KV and voltage) and the pitch; then, at
-      the flying tilt, this thrust must carry the quad's weight and overcome its drag, which grows as it tilts: top speed
+      motor's manufacturer, with its reference propeller and voltage, and scales it to your propeller and your battery.
+      It corrects it for the air density of the day (altitude, temperature, humidity, QNH) and lowers it with speed down to the propeller's pitch speed, set by the motor's rpm (KV and voltage) and the pitch.
+      At the flying tilt, this thrust must carry the quad's weight and overcome its drag, which grows as it tilts: top speed
       is the point where thrust, weight and drag balance.</p>
     <div class="cartes">
       <div class="carte"><span class="num">1</span><h3>Today's air</h3><p>Pressure from QNH and altitude, water vapour
@@ -158,6 +246,7 @@
         of your STL (Navier-Stokes, k-ω SST) and calibration on your own GPS run in PRO.</p></div>
     </div>
     <div class="liens">
+      <a class="bouton secondaire" href="#calage">🎯 The calibration flights</a>
     </div>
   </div>
 </section>
@@ -168,8 +257,8 @@
     <h2>The assurance of a <span class="neon">high-performance, optimised build</span></h2>
     <div class="cartes">
       <div class="carte"><div class="icone">⏱️</div><h3>Instant calculation</h3><p>Configure your complete architecture in 30 seconds. Select your components and instantly see the impact on top speed, flight time and transient acceleration (0 → 100 km/h).</p></div>
-      <div class="carte"><div class="icone">🎯</div><h3>Physical reliability</h3><p>A predictive model validated by GPS-measured flight tests. The algorithms include aerodynamic drag, the aircraft's attitude, air density variations and your battery's real discharge profile.</p></div>
-      <div class="carte"><div class="icone">💶</div><h3>Verified compatibility</h3><p>Strict technical validation before you order. The system automatically checks electrical and mechanical consistency (motor / ESC / prop matching) and builds your bill of materials (BOM), optimised by retailer.</p></div>
+      <div class="carte"><div class="icone">🎯</div>\1A predictive model calibrated on a measured flight (GPS and blackbox) and checked on a second one; more calibration flights will follow. The algorithms include aerodynamic drag, the aircraft's attitude, air density variations and your battery's real discharge profile.</p></div>
+      <div class="carte"><div class="icone">🔌</div><h3>Verified compatibility</h3><p>Strict technical validation before you order. The system automatically checks electrical and mechanical consistency (motor / ESC / prop matching) and builds your bill of materials (BOM), optimised by retailer.</p></div>
     </div>
   </div>
 </section>
@@ -179,77 +268,324 @@
     <span class="sur">From idea to flight</span>
     <h2>Design protocol</h2>
     <div class="etapes quatre">
-      <div class="etape"><h3>Component selection</h3><p>Configure the propulsion chain and critical parts: motors, props, frame, battery and electronics. Access a database of over 1,000 real industrial references with multi-criteria filters.</p></div>
+      <div class="etape"><h3>Component selection</h3><p>Configure the propulsion chain and critical parts: motors, props, frame, battery and electronics. Access a database of over 1,000 real components from the market, with multi-criteria filters.</p></div>
       <div class="etape"><h3>Performance analysis</h3><p>Instantly assess the key indicators: top speed, flight time, thrust curve, acceleration and critical alert thresholds, updated dynamically with every change.</p></div>
       <div class="etape"><h3>Validation <span class="or">PRO</span></h3><p>Optional: aerodynamic check in the virtual wind tunnel, then OpenFOAM CFD of the real model (S·C<sub>x</sub> drag, pressure map, ParaView files).</p></div>
-      <div class="etape"><h3>Benchmark &amp; Export</h3><p>Save your configurations, run a comparative analysis (benchmark) and export your bill of materials (BOM) including the sourcing links.</p></div>
+      <div class="etape"><h3>Compare &amp; export</h3><p>Save your configurations, compare them side by side and export your bill of materials (BOM) with the shop links.</p></div>
     </div>
   </div>
 </section>
 
-<section id="fonctions" class="alterne">
+<section id="premium" class="alterne">
   <div class="conteneur">
-    <span class="sur">Free, no sign-up · the calculator</span>
-    <h2>Choose right, <span class="neon">in 30 seconds</span></h2>
-    <p class="intro">Pick your motors, props, frame, battery and electronics: performance updates live,
-      with the price and buy link of every part.</p>
-    <div class="fonction" style="margin-bottom:56px">
-      <div>
-        <h3>An interface designed for pilots</h3>
-        <ul>
-          <li><b>Advanced multi-criteria filters</b>: instant sorting by airframe size, frame geometry, manufacturer, velocity constant (KV), prop pitch, cell configuration (S) and rated capacity.</li>
-          <li><b>Data persistence</b>: your configuration state is saved automatically as you move between the configurator, the technical documentation and the wiki.</li>
-          <li><b>Atmospheric modelling</b>: environment variables included (density altitude, temperature, humidity and sea-level pressure, QNH).</li>
-        </ul>
-      </div>
-      <figure class="visuel"><img src="../assets/guide/01_apercu.webp" width="1480" height="720" loading="lazy" alt="TALKTRUE FPV - XRIG Configurateur interface: component selection and diagnostics"></figure>
-    </div>
-  
-    <div class="cartes">
-      <div class="carte"><div class="icone">🚀</div><h3>Top speed</h3><p>Thrust / drag equilibrium at the flight tilt: thrust that drops with speed down to the propeller's pitch speed, S·C<sub>x</sub> drag depending on attitude, today's air density.</p></div>
-      <div class="carte"><div class="icone">🔋</div><h3>Flight time by flying style</h3><p>Average current weighted by flight profile (cinematic, freestyle, full throttle), discharge curve specific to the chemistry (LiPo, LiHV, Li-ion) and usable capacity before landing. <b>New</b>: endurance at the cruise speed of your choice, drag included, with the moment the OSD warning shows.</p></div>
-      <div class="carte"><div class="icone">⚡</div><h3>Safety alerts</h3><p>Compatibility check before buying: motor peak current vs ESC continuous / burst current, voltage (S) vs reference KV, connector, prop diameter vs frame.</p></div>
-      <div class="carte"><div class="icone">⏱️</div><h3>0 → 100 km/h</h3><p>Theoretical horizontal and vertical acceleration, derived from excess thrust and all-up weight (AUW).</p></div>
-      <div class="carte"><div class="icone">🧩</div><h3>Over 200 frames</h3><p>Database of listed frames: weight, motor spacing, size and type (freestyle, cinewhoop, long range…), filterable, in Free and PRO.</p></div>
-      <div class="carte"><div class="icone">🛸</div><h3>3 architectures</h3><p>X quadcopter and coaxial X8 cinelifter (dedicated slave electronics) in Free; streamlined Quad Speeder in PRO.</p></div>
-    </div>
+    <span class="sur">PRO · the design workshop</span>
+    <h2>From calculator to <span class="or">design workshop</span></h2>
+    <p class="intro">Parametric design of frames, 3D modelling, import of your CAD plans, aerodynamic validation (virtual wind tunnel, CFD) and calibration of the model on your flight measurements.</p>
 
-    </div>
-</section>
-
-<section id="panier" class="alterne">
-  <div class="conteneur">
     <div class="fonction">
       <div>
-        <span class="badge">Smart cart · Free</span>
-        <h3>Your shopping list, grouped by retailer</h3>
+        <span class="badge">GPS calibration &amp; Cloud</span>
+        <h3>Your real measurements as the calibration reference</h3>
         <ul>
-          <li>Every part you pick lands in the <b>bill of materials</b>, with its price and buy link.</li>
-          <li>The cart <b>groups parts by shop</b>: you open each site only once.</li>
-          <li><b>Real quantities</b>: 4 motors, props, antennas sold in pairs counted by pack.</li>
-          <li>Prices in <b>EUR or USD</b>, <b>PDF / CSV</b> export of the list.</li>
+          <li><b>GPS speed fit</b>: enter the measured top speed, the app adjusts the drag factor to match it and keeps it for this drone, even if you change prop or battery.</li>
+          <li><b>Drag measured in flight</b>: import your flight's blackbox log, the app recalibrates the calculation on your quad.</li>
+          <li><b>Cloud library</b>: keep up to 10 hardware configurations and the history of your CFD runs for your whole drone fleet.</li>
         </ul>
-        <p class="note">One click per shop: each site opens once, with the full list of parts to order there.</p>
       </div>
-      <figure class="visuel" style="max-width:430px;justify-self:center"><img src="../assets/guide/panier.webp" width="352" height="822" loading="lazy" alt="FPV configurator shopping cart grouped by retailer, with quantities, prices and links"><figcaption>A 6S 5″ freestyle build: 6 shops, every part with its link</figcaption></figure>
+      <figure class="visuel"><img src="../assets/guide/04_mesure_gps.webp" width="1000" height="511" loading="lazy" alt="GPS speed fit and drag measured in flight from the blackbox log"><figcaption>GPS speed fit and drag measured in flight (blackbox)</figcaption></figure>
     </div>
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Prototype frame</span>
+        <h3>Scale modelling</h3>
+        <ul>
+          <li><b>7 geometries</b>: X, Dead Cat, Squished X, Stretch X, H-Frame, Racer (Racer 34) and Cinewhoop (CineEX V2), in Quad or coaxial X8 configuration.</li>
+          <li><b>Parametric sketch</b>: dimensioned sketch (top and front) redrawn whenever a dimension changes.</li>
+          <li><b>3D model</b>: tiltable solid model, with the projected frontal area computed at every incidence.</li>
+          <li><b>TALKTRUE reference models</b> (DXF plans, real plates and cut-outs), always the base of the prototype: TALKTRUE X 5″ (TOWA revision, default), TOWA 5″, Racer “Bob” and Racer 34, Dixi 3″ / 3.5″ (X and Dead Cat), Bando 4″ to 5.1″, Dizzi 3.5″, CineEX V2; arms with motor mounts mirrored by symmetry, following your dimensions.</li>
+          <li><b>Real parts at catalogue dimensions</b>: SpeedyBee stack, Walksnail / DJI / Caddx / analog VTX, motors (including the T-Motor F1404 for small sizes), receiver and T antennas.</li>
+          <li><b>Antennas and camera</b>: antenna mount sleeved on the rear standoffs, standard or long-range antennas in the chosen number, camera between two side plates, lens 1 mm proud of the plates, 15° / 35° / 45° tilt or your flight angle.</li>
+          <li><b>TOWA-style plates</b>: eared outline, scalloped sides, 20 × 20 / 25.5 × 25.5 / 30.5 × 30.5 stack holes and VTX holes, TOWA and Dixi cut-outs, at your prototype's dimensions.</li>
+          <li><b>Realistic models</b>: battery and its strap (model and number chosen), props, TPU pads, capacitor and buzzer drawn like the real parts, exactly in place.</li>
+        </ul>
+      </div>
+      <div>
+        <figure class="visuel"><img src="../assets/guide/rendu_proto.webp" width="1200" height="900" loading="lazy" alt="3D model of the TALKTRUE X 5 inch, TOWA revision: plates, arms with motor mounts, antenna mount and camera"><figcaption>TALKTRUE X 5″ (TOWA revision), real parts</figcaption></figure>
+        <div class="trio">
+          <figure class="visuel"><img src="../assets/guide/rendu_racer.webp" width="1200" height="900" loading="lazy" alt="Racer reference frame with its canopy in 3D"><figcaption>Racer</figcaption></figure>
+          <figure class="visuel"><img src="../assets/guide/rendu_details.webp" width="1200" height="900" loading="lazy" alt="Rear of the drone: antenna mount on the standoffs, two DJI O4 antennas, VTX and stack"><figcaption>Antennas, VTX, stack</figcaption></figure>
+          <figure class="visuel"><img src="../assets/guide/rendu_camera.webp" width="1200" height="900" loading="lazy" alt="FPV camera between its two side plates, lens 1 mm proud of the plates"><figcaption>Camera and side plates</figcaption></figure>
+        </div>
+        <figure class="visuel sombre"><img src="../assets/guide/05_prototype_x.webp" width="838" height="1106" loading="lazy" alt="FPV prototype frame geometry with dimensioned sketch"><figcaption>Dimensioned sketch: TALKTRUE X 5″ (TOWA revision)</figcaption></figure>
+        <div class="trio">
+          <figure class="visuel"><img src="../assets/guide/proto3d_deadcat.webp" width="1200" height="900" loading="lazy" alt="Dead Cat prototype generated in 3D, TOWA-style arms and plates, fitted out"><figcaption>Dead Cat</figcaption></figure>
+          <figure class="visuel"><img src="../assets/guide/proto3d_hframe.webp" width="1200" height="900" loading="lazy" alt="H-Frame prototype generated in 3D, TOWA-style arms and plates, fitted out"><figcaption>H-Frame</figcaption></figure>
+          <figure class="visuel"><img src="../assets/guide/proto3d_stretch.webp" width="1200" height="900" loading="lazy" alt="Stretch X prototype generated in 3D, TOWA-style arms and plates, fitted out"><figcaption>Stretch X</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">Referenced frames</span>
+        <h3>200+ frames in 3D, fitted out and dimensioned</h3>
+        <ul>
+          <li><b>200+ frames</b> in 3D, ready to fit out: the catalogue frames, plus the TALKTRUE reference frames and adjustable prototypes.</li>
+          <li><b>Build your quad</b>: motors, props, stack, VTX, camera, receiver, antennas, GPS, battery, buzzer and capacitor place themselves.</li>
+          \1\n          <li><b>Payload</b>: GoPro, Osmo Action or Insta360 in its TPU case, on the 3-finger base or Johann's mount, in place and at their weight.</li>
+          <li><b>Dimensioned 2D drawing (DXF)</b> to download for your CAD.</li>
+          <li><b>Wind tunnel</b> straight on the fitted-out frame.</li>
+        </ul>
+      </div>
+      <div>
+        <figure class="visuel"><img src="../assets/guide/generique_equipe.webp" width="1200" height="900" loading="lazy" alt="Catalogue frame fitted out in 3D"><figcaption>Generic frame with your parts</figcaption></figure>
+        <figure class="visuel"><img src="../assets/guide/generique_plan_cote.webp" width="1592" height="720" loading="lazy" alt="Dimensioned DXF drawing of a generic frame"><figcaption>Dimensioned 2D drawing</figcaption></figure>
+        <div class="duo" style="margin-top:14px">
+          <figure class="visuel"><img src="../assets/nouveautes/bando_accessoires.webp" width="1200" height="900" loading="lazy" alt="Bando 5-inch fitted out in 3D, grey frame: GoPro on its mount, DJI O4 camera in its mounts, VTX, antennas and 6S LiPo held by its strap"><figcaption>Bando 5″ fitted out</figcaption></figure>
+          <figure class="visuel"><img src="../assets/nouveautes/buzzer_condensateur.webp" width="1200" height="900" loading="lazy" alt="Bando 5-inch seen from the rear, grey frame: GoPro, antenna mount, electronics and LiPo held by its strap"><figcaption>Bando from the rear</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Prototypes</span>
+        <h3>Your own 3D models built into the calculator to generate the prototypes</h3>
+        <ul>
+          <li><b>Integration of your CAD models</b>: direct import of your TOWA geometries. The generated prototype faithfully integrates the cutting footprint and the hole pattern taken from your own 3D models.</li>
+          <li><b>Comprehensive hardware fidelity</b>: full modelling of the critical parts (batteries, props, TPU parts), adaptable to 5-inch freestyle and cinewhoop formats.</li>
+          <li><b>Simulation calculations preserved</b>: modelling optimised to guarantee the accuracy and fidelity of the performance calculations, with no interference from aesthetic details or surface rendering.</li>
+        </ul>
+      </div>
+      <div class="duo">
+        <figure class="visuel"><img src="../assets/guide/proto_plaques_towa.webp" width="1200" height="900" loading="lazy" alt="Generated X prototype, grey frame, TOWA-style plates: GoPro on its mount, DJI O4 camera, VTX, antennas and 6S LiPo battery held by its strap"><figcaption>X prototype · TALKTRUE X 5″</figcaption></figure>
+        <figure class="visuel"><img src="../assets/guide/proto_cinewhoop.webp" width="1200" height="900" loading="lazy" alt="CineEX V2 in 3D, cinewhoop type: cinema plate, DJI O4 camera and VTX, antennas, 4S LiPo battery underneath in its TPU cradle"><figcaption>CineEX V2 (cinewhoop)</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="fonction">
+      <div>
+        <span class="badge">CAD import</span>
+        <h3>Your SolidWorks, Fusion 360 or Onshape models</h3>
+        <ul>
+          <li><b>STL</b>: 3D surface mesh for the aerodynamic simulation and multi-angle CFD.</li>
+          <li><b>DXF</b>: orthogonal projections (top and front views) that replace the app's sketch, dimensions kept.</li>
+          <li><b>3D volume modelling</b>: the plan views (top + front ± side) are enough to rebuild your drone in 3D.</li>
+        </ul>
+      </div>
+      <figure class="visuel"><img src="../assets/dxf/stl_towa.webp" width="1000" height="535" loading="lazy" alt="STL import of a 5-inch TOWA: orientation checked on 3 views"><figcaption>Your STL: orientation checked on 3 views</figcaption></figure>
+    </div>
+
+    <h3 class="titre-etapes" style="margin-top:0">From DXF drawings to a 3D model, in 3 steps</h3>
+    <div class="etapes-dxf">
+      <figure class="visuel"><img src="../assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Loaded DXF drawings table: top view, front view, 3D volume"><figcaption>1 · Your DXF drawings</figcaption></figure>
+      <figure class="visuel sombre"><img src="../assets/dxf/2_esquisse_towa.webp" width="508" height="670" loading="lazy" alt="Dimensioned sketch replaced by the top and front DXF drawings of a TOWA 5-inch"><figcaption>2 · They replace the sketch, same dimensions</figcaption></figure>
+      <figure class="visuel"><img src="../assets/dxf/3_volume.webp" width="890" height="482" loading="lazy" alt="3D volume of an FPV drone rebuilt from its DXF drawings"><figcaption>3 · The rebuilt 3D volume</figcaption></figure>
+    </div>
+
+    <div class="fonction inverse">
+      <div>
+        <span class="badge">Virtual wind tunnel</span>
+        <h3>The instant estimate, ahead of the CFD solution</h3>
+        <ul>
+          <li><b>Aerodynamic equilibrium</b>: instant computation of the equilibrium tilt, drag, aerodynamic power absorbed and required thrust.</li>
+          <li><b>Dynamic rotor modelling</b>: wake of the spinning propellers included, thrust loss from interaction with the frame (wake effect) and front / rear load split.</li>
+          <li><b>Instant generation</b>: real-time rendering to explore concepts; final validation by solving the CFD equations.</li>
+        </ul>
+        <p class="note">The wind tunnel module gives an instant estimate. Streamlines and particles illustrate the flow. The CFD run, for its part, numerically solves the Navier-Stokes equations around your STL mesh.</p>
+      </div>
+      <div>
+        <div class="duo">
+          <figure class="visuel"><img src="../assets/soufflerie/quad_x_helices.webp" width="1170" height="635" loading="lazy" alt="Virtual wind tunnel of a 5-inch Quad X: props and slipstreams"><figcaption>5″ Quad X (Ethix S5)</figcaption></figure>
+          <figure class="visuel"><img src="../assets/soufflerie/quad_x8_helices.webp" width="1170" height="547" loading="lazy" alt="Virtual wind tunnel of a coaxial X8: props, slipstreams and thrust per motor"><figcaption>Coaxial X8: combined view, wind + slipstreams of all 8 props</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section id="garage">
+<section id="cfd">
   <div class="conteneur">
+    <span class="sur">New · PRO · OpenFOAM CFD simulation</span>
+    <h2>The power of a full CFD solution, <span class="neon">made accessible</span></h2>
+    <p class="intro">A CFD analysis usually takes a lot of preparation: computational domain, mesh, boundary conditions, convergence. Here everything is automatic and checked: you give the tilt and speed, and the calculation runs on our dedicated server.</p>
+
+    <div class="coupe-cfd" style="margin:0 0 10px">
+      <figure class="visuel sombre"><video autoplay loop muted playsinline poster="../assets/cfd/flux_towa5.jpg" aria-label="OpenFOAM CFD: airflow around a TOWA 5-inch freestyle drone tilted 35 degrees at 120 km/h"><source src="../assets/cfd/flux_towa5.mp4" type="video/mp4"></video><figcaption>TOWA 5″ freestyle · 35° tilt · 120 km/h · S·C<sub>x</sub> = 94.7 cm² (bare frame, no battery or motors), computed on the TALKTRUE server</figcaption></figure>
+    </div>
+    <p class="note" style="margin:0">🎬 <b>Video render of your STL</b>: optional with every CFD run, the server makes this video (1920 × 1080) from your model; watch it and download it as .mp4 from the app. <b>New</b>: a second render to choose from: <b>“tubes”</b> (preview in the Quad Speeder chapter).</p>
+    <div class="cartes" style="margin-top:56px">
+      <div class="carte"><div class="icone">🧩</div><h3>Custom geometry</h3><p>No generic shapes: submit the exact architecture of your frame, fuselage and battery as you modelled them.</p></div>
+      <div class="carte"><div class="icone">🛡️</div>\1Mesh quality check (<code>checkMesh</code>), several fallback meshes (up to 5 attempts, with then without boundary layers; the report says which one was kept). Convergence criterion: drag stable within 3 % over the last 100 iterations (1 % and extra extensions at maximum accuracy). Strict rejection of outliers: any anomaly raises an explicit alert.\2</div>
+      <div class="carte"><div class="icone">📐</div>\1Up to 3 incidences per request, to the degree; speed up to 400 km/h (800 km/h for a Speeder); air box of your choice (automatic, compact or large), blockage checked. Two requests at a time; a cancelled request is not counted.\2</div>
+    </div>
+    <p class="note" style="margin-top:28px"><b>Result margin</b>: a CFD result that carries its margin (95 %) shows a range for drag and top speed. No margin is ever made up: without an interval, the range stays “to be confirmed”.</p>
+    <p class="note" style="margin-top:12px">The full step-by-step guide (launch the run, read the results, animate the air in ParaView) is in the app's <b>user guide</b>.</p>
+  </div>
+</section>
+
+<section id="truefoam" class="alterne">
+  <div class="conteneur">
+    <span class="sur">TrueFoam GUI · CFD on a Windows PC</span>
+    <h2>CFD on your own PC, <span style="color:var(--bleu)">free and offline</span></h2>
+    <p class="intro">TrueFoam GUI computes the airflow around a 3D model (STL file) on your PC, for OpenFOAM v2412,
+      with no command line. It also opens runs made on the online calculator (“Files for TrueFoam GUI” zip), or hands them to the
+      visualisation software of your choice, ParaView for example.</p>
+    <div class="telecharger">
+      <div>
+        <div class="logo-gui"><img src="../assets/truefoam/logo_truefoam_gui.webp" width="600" height="178" alt="TrueFoam GUI logo"></div>
+        <ul>
+          <li><b>Study parameters</b>: STL file integration, set-up of speed, tilt and atmospheric conditions.</li>
+          <li><b>Mesh generation and solving</b>: fully automated process through the graphical interface (GUI), with no command line to type.</li>
+          <li><b>Data post-processing</b>: drag analysis, pressure mapping, slice planes, streamlines and automatic PDF report generation.</li>
+          <li><b>Interoperability</b>: import and centralise your CFD runs computed on the external TALKTRUE compute server (launched from the online calculator, retrieved as a zip file), directly in TrueFoam GUI.</li>
+          <li><b>Advanced physics</b>: internal flows (pipes), hydrodynamics (flotation and waves), turbulence noise estimate and heat transfer (validation in progress).</li>
+          <li><b>Deployment</b>: fully guided, simplified step-by-step installation.</li>
+          <li><b>Technical environment</b>: compatible with Windows 10 or 11 (64-bit) with Docker Desktop. Automated, secure download of OpenFOAM during installation, with your consent (OpenFOAM is not bundled with TrueFoam GUI).</li>
+        </ul>
+        <div class="actions" style="margin:0">
+          <a class="bouton bleu" href="https://github.com/Jschmiedd/TrueFoam-GUI/releases/latest/download/TrueFOAM-Windows.zip">⬇️ Download for Windows (.zip)</a>
+          <a class="bouton secondaire" href="https://github.com/Jschmiedd/TrueFoam-GUI/releases">All versions</a>
+        </div>
+        <div class="multicore">
+          <span class="etiquette-mc">Pre-release</span>
+          <b>TrueFoam GUI Multi-Core</b>: the same interface, for several OpenFOAM versions (openfoam.com and
+          openfoam.org). Windows, Docker Desktop required, OpenFOAM not included.
+          <a class="bouton secondaire" href="https://github.com/Jschmiedd/TrueFoam-GUI-Multi-Core/releases">⬇️ Download Multi-Core (.zip)</a>
+        </div>
+      </div>
+      <div>
+        <figure class="visuel sombre" style="margin:0"><img src="../assets/truefoam/gui_etude_1.webp" width="960" height="540" loading="lazy" alt="TOWA 5-inch under CFD study"><figcaption>TOWA 5″, pressure seen from above</figcaption></figure>
+        <div class="duo" style="margin-top:14px">
+          <figure class="visuel sombre"><img src="../assets/truefoam/gui_etude_2.webp" width="960" height="540" loading="lazy" alt="TOWA 5-inch under CFD study"><figcaption>TOWA 5″, side view</figcaption></figure>
+          <figure class="visuel sombre"><img src="../assets/truefoam/gui_etude_3.webp" width="960" height="540" loading="lazy" alt="TOWA 5-inch under CFD study"><figcaption>TOWA 5″ in the wind, tilted 45°</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <p class="note" style="margin-top:22px">This offering is not approved or endorsed by OpenCFD Limited, producer and
+      distributor of the OpenFOAM software via www.openfoam.com, and owner of the OPENFOAM® and OpenCFD® trade marks.
+      OpenFOAM is free software (GNU GPL v3), run as a separate program, neither bundled nor modified.</p>
+  </div>
+</section>
+
+<section id="speeder">
+  <div class="conteneur">
+    <span class="sur">PRO · high-speed drone</span>
+    <h2>Quad Speeder · <span class="or">high-speed drone</span></h2>
+    <p class="intro">The Quad Speeder is the drone built for speed: a streamlined fuselage drawn in the app,
+      3D-printed, run through the wind tunnel and then CFD.</p>
+
     <div class="fonction inverse">
       <div>
-        <span class="badge">Virtual garage · Free 3 · PRO 10</span>
-        <h3>Save, compare, share</h3>
+        <span class="badge">Quad Speeder</span>
+        <h3>High-speed UAV: pusher or tractor configurations</h3>
         <ul>
-          <li><b>Save</b> your builds and <b>compare them side by side</b>: motor, prop, battery, weight, thrust, speed, cost.</li>
-          <li><b>Reload</b> a build into the settings in one click.</li>
-          <li><b>Free</b>: up to 3 builds. <b>PRO</b>: up to 10 builds, available on all your devices.</li>
-          <li><b>Export</b> to Markdown (Discord, forums), CSV (Excel) or PDF.</li>
+          <li><b>Aerodynamic profile</b>: "teardrop" fuselage. Drag coefficient (C<sub>x</sub>) optimised from the fineness ratio, following the Hoerner method.</li>
+          <li><b>Propulsion architecture</b>: integrated pusher configuration (SPEEDER V2 type) or tractor on dedicated nacelles (Blackbird-type architecture).</li>
+          <li><b>Fuselage incidence</b>: 0° attitude in fast flight facing the wind (minimum drag) and 90° during take-off and hover.</li>
+          <li><b>STL modelling</b>: geometric integration at nominal scale, including the battery volume and an adjustable centre of gravity (CoG).</li>
+          <li><b>Full internal integration</b>: electronic components and antennas laid out inside the fuselage. The app flags any part that does not fit.</li>
+          <li><b>Dimensioned 2D drawings (DXF)</b>: Speeder deliverables in pusher or tractor configuration, ready to export to your CAD software.</li>
         </ul>
       </div>
-      <figure class="visuel"><img src="../assets/guide/garage.webp" width="935" height="644" loading="lazy" alt="Virtual garage: three FPV drone builds compared side by side"><figcaption>Three variants of the same 5″ compared in the garage</figcaption></figure>
+      <div>
+        <div class="duo">
+          <figure class="visuel"><img src="../assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Pusher FPV Quad Speeder in 3D"><figcaption>Pusher</figcaption></figure>
+          <figure class="visuel"><img src="../assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Tractor FPV Quad Speeder on nacelles in 3D"><figcaption>Tractor (nacelles)</figcaption></figure>
+        </div>
+        <div class="duo" style="margin-top:14px">
+          <figure class="visuel"><img src="../assets/constructions/v2v_solidworks.webp" width="780" height="570" loading="lazy" alt="V2V Speeder 3-inch modelled in SolidWorks"><figcaption>V2V Speeder in SolidWorks: the STL used for CFD</figcaption></figure>
+          <figure class="visuel"><video style="width:100%;aspect-ratio:780/570;object-fit:cover" autoplay loop muted playsinline poster="../assets/soufflerie/combinee.jpg" aria-label="Virtual wind tunnel: V2V Speeder in the wind, airflow and prop slipstreams"><source src="../assets/soufflerie/combinee.webm" type="video/webm"><source src="../assets/soufflerie/combinee.mp4" type="video/mp4"></video> <figcaption>Virtual wind tunnel: air around the drone and prop slipstream</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+
+    <h3 class="titre-etapes">OpenFOAM CFD of the V2V Speeder, step by step</h3>
+    <figure class="ecran-cfd" style="margin:0 0 48px">
+      <video autoplay loop muted playsinline poster="../assets/cfd/flux_hero.jpg" aria-label="OpenFOAM CFD: air streaming around the V2V Speeder">
+        <source src="../assets/cfd/flux_hero.mp4" type="video/mp4"></video>
+      <figcaption><span class="point"></span>V2V Speeder 3″ · 120 km/h · OpenFOAM streamlines, drone coloured by pressure</figcaption>
+    </figure>
+    <ol class="sequence">
+      <li>
+        <figure class="visuel"><img src="../assets/dxf/stl_v2v.webp" width="1000" height="555" loading="lazy" alt="STL import of an FPV Speeder: orientation checked on three views"></figure>
+        <div><b>1 · STL export</b><p>Exported from SolidWorks, Fusion 360 or Onshape. Geometric orientation checked on 3 orthogonal views (as in a slicer).</p></div>
+      </li>
+      <li>
+        <figure class="visuel sombre"><img src="../assets/cfd/maillage_v2v.webp" loading="lazy" alt="OpenFOAM mesh around an FPV drone: finer and finer cells near the surfaces"></figure>
+        <div><b>2 · Automated meshing</b><p>STL mesh repair and fluid domain sized to the aircraft: snappyHexMesh discretisation of about 1 million cells, progressive refinement near the walls and in the wake, 5 prismatic boundary layers on the wall.</p></div>
+      </li>
+      <li>
+        <figure class="visuel sombre"><video autoplay loop muted playsinline poster="../assets/cfd/flux_v2v45.jpg" aria-label="Computed airflow around the Speeder tilted at 45 degrees"><source src="../assets/cfd/flux_v2v45.mp4" type="video/mp4"></video></figure>
+        <div><b>3 · OpenFOAM solution</b><p><code>simpleFoam</code> solver, k-ω SST turbulence model with Spalding wall function, until the drag stabilises. Without convergence, the run is extended once (+50 % iterations), twice at maximum accuracy, then the result is explicitly flagged "not converged".</p></div>
+      </li>
+      <li>
+        <figure class="visuel sombre"><img src="../assets/cfd/cp_v2v_45.webp" loading="lazy" alt="3D pressure map on an FPV drone: red overpressure, blue suction"></figure>
+        <div><b>4 · Built-in post-processing</b><p>S·C<sub>x</sub> drag, equivalent drag coefficient C<sub>x</sub>, lift, correlation with the analytical model and 3D pressure map.</p></div>
+      </li>
+      <li>
+        <figure class="visuel sombre"><video autoplay loop muted playsinline poster="../assets/cfd/paraview_v2v.jpg" aria-label="Airflow animation in ParaView"><source src="../assets/cfd/paraview_v2v.mp4" type="video/mp4"></video></figure>
+        <div><b>5 · ParaView export</b><p>Surface data, cut planes and streamlines in VTK format, with an automation macro to visualise the flow.</p></div>
+      </li>
+    </ol>
+    <h3 class="titre-etapes" style="margin-top:64px">Where the air pushes, where it lets go</h3>
+    <p class="intro">The pressure on every surface shows where the drag comes from: red, the air hits the drone;
+      blue, it is sucked away. Behind it, the wake shows the slowed air the drone drags along.</p>
+    <div class="trio-cfd duo-cfd">
+      <figure class="visuel sombre"><img src="../assets/cfd/cp_v2v_0.webp" loading="lazy" alt="Pressure on the V2V Speeder, fuselage aligned with the wind"><figcaption>V2V Speeder · fuselage 0° (fast flight)</figcaption></figure>
+      <figure class="visuel sombre"><img src="../assets/cfd/cp_v2v_45.webp" loading="lazy" alt="Pressure on the V2V Speeder tilted at 45 degrees"><figcaption>V2V Speeder · fuselage 45°</figcaption></figure>
+    </div>
+    <div class="coupe-cfd" style="margin-top:18px">
+      <figure class="visuel sombre"><img src="../assets/cfd/coupe_v2v_45.webp" loading="lazy" alt="Velocity slice: wake behind the V2V Speeder"><figcaption>V2V Speeder wake at 45°: blue = slowed air the drone drags behind it</figcaption></figure>
+    </div>
+
+    <div class="fonction" style="margin-top:64px">
+      <div>
+        <span class="badge">Real numbers</span>
+        <h3>Fuselage into the wind: 5 times less drag</h3>
+        <ul>
+          <li>Flat into the wind, the V2V Speeder has only <b>9 cm²</b> of drag area: an equivalent drag coefficient of <b>0.22</b>, an imperfect teardrop.</li>
+          <li>Tilted at 45°, the same drone reaches <b>45 cm²</b>: five times more. Keeping the fuselage in the wind is the key to speed.</li>
+          <li>Recomputed at <b>500 km/h</b> by the TALKTRUE server: <b>8.3</b> and <b>44 cm²</b>, the drag coefficient stays almost the same.</li>
+          <li>The app's quick estimate, calibrated on a 5″ freestyle quad, <b>overestimates</b> the drag of a streamlined fuselage: CFD corrects it.</li>
+        </ul>
+        <p class="note">Steady RANS, without the propellers or their slipstream, wall functions: ±15 to 25 %. To be confirmed by a GPS flight, like the rest of the configurator.</p>
+      </div>
+      <div class="mesure">
+        <table>
+          <tr><th>Case (120 km/h)</th><th>OpenFOAM CFD</th><th>Cd</th></tr>
+          <tr><td>V2V Speeder · fuselage 0°</td><td class="neon">9.2 cm²</td><td>0.22</td></tr>
+          <tr><td>V2V Speeder · fuselage 45°</td><td class="neon">45.5 cm²</td><td>0.52</td></tr>
+        </table>
+        <p style="color:var(--doux);font-size:.85rem;margin:12px 0 0">S·Cd = drag ÷ (½ ρ V²). Meshes of 1.0 to 1.3 M cells, convergence &lt; 0.3 %.</p>
+      </div>
+    </div>
+    <h3 class="titre-etapes" style="margin-top:64px">New: the “tubes” video render, here the V4V Speeder at 400 km/h</h3>
+    <p class="intro">In the app, with every CFD run, an optional “tubes” video: air streamlines drawn as tubes coloured by speed (scale shown), air particles moving at the pace of the calculation (the slowed air behind the drone moves more slowly), a lit white drone and a rotating camera. Labels on the images are in French.</p>
+    <figure class="ecran-cfd" style="margin:0 0 18px"><video autoplay loop muted playsinline poster="../assets/tubes/tubes_v4v.jpg" aria-label="Tubes video render: the air around the V4V Speeder at 400 km/h, fuselage at 0 then 33 degrees"><source src="../assets/tubes/tubes_v4v.mp4" type="video/mp4"></video>
+      <figcaption><span class="point"></span>V4V Speeder · 400 km/h · fuselage 0° then 33° · OpenFOAM® v2412 run on the TALKTRUE server</figcaption></figure>
+    <div class="duo" style="align-items:start">
+      <figure class="visuel sombre"><img src="../assets/tubes/tubes_v4v_0deg.webp" width="1600" height="900" loading="lazy" alt="Air streamlines as tubes around the V4V Speeder, fuselage at 0 degrees, 400 km/h"><figcaption>V4V Speeder · fuselage 0° · 400 km/h · drag area 21.7 cm², equivalent Cd 0.35</figcaption></figure>
+      <figure class="visuel sombre"><img src="../assets/tubes/tubes_v4v_33deg.webp" width="1600" height="900" loading="lazy" alt="Air streamlines as tubes around the V4V Speeder, fuselage at 33 degrees, 400 km/h"><figcaption>V4V Speeder · fuselage 33° · 400 km/h · drag area 66.1 cm², equivalent Cd 0.60</figcaption></figure>
+    </div>
+    <div class="trio" style="margin-top:14px;align-items:start">
+      <figure class="visuel sombre"><img src="../assets/tubes/tubes_v2v_55deg.webp" width="1600" height="900" loading="lazy" alt="Air streamlines as tubes around the V2V Speeder, fuselage at 55 degrees, 120 km/h"><figcaption>V2V Speeder · fuselage 55° (35° tilt) · 120 km/h · drag area 62.6 cm², Cd 0.63</figcaption></figure>
+      <figure class="visuel sombre"><img src="../assets/tubes/tubes_v2v_0deg_sans.webp" width="1600" height="900" loading="lazy" alt="Air streamlines around the V2V Speeder at 0 degrees, without the dense lines near the drone"><figcaption>V2V Speeder · fuselage 0° · 120 km/h · drag area 9.7 cm², Cd 0.23: usual streamlines</figcaption></figure>
+      <figure class="visuel sombre"><img src="../assets/tubes/tubes_v2v_0deg_serrees.webp" width="1600" height="900" loading="lazy" alt="Air streamlines around the V2V Speeder at 0 degrees, with dense lines near the drone"><figcaption>Same run with the “dense streamlines near the drone” option: 256 more lines, same figures</figcaption></figure>
+    </div>
+
+    <h3 class="titre-etapes" style="margin-top:64px">The Speeder in TrueFoam GUI</h3>
+    <div class="duo" style="align-items:start">
+      <figure class="visuel"><img src="../assets/truefoam/gui_coupe_vitesse.webp" width="1122" height="460" loading="lazy" alt="TrueFoam GUI: air speed around a Speeder, side slice with arrows"><figcaption>Air speed around the Speeder, side slice</figcaption></figure>
+      <figure class="visuel"><img src="../assets/truefoam/gui_coupe_libre.webp" width="850" height="470" loading="lazy" alt="TrueFoam GUI: 3D slice of air speed in the computational box"><figcaption>3D slice, moved with the mouse</figcaption></figure>
+    </div>
+
+    <h3 class="titre-etapes" style="margin-top:64px">The Speeder V2 in the workshop: 3D-printed, then assembled</h3>
+    <div class="duo" style="align-items:start">
+      <figure class="visuel"><img src="../assets/constructions/speeder_v2_impression.webp" width="1200" height="900" loading="lazy" alt="Speeder V2 fuselage on the 3D printer bed"><figcaption>Speeder V2: fuselage on the printer bed</figcaption></figure>
+      <figure class="visuel"><img src="../assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="3D-printed Speeder V2 fuselages"><figcaption>Speeder V2: printed fuselages and assembly</figcaption></figure>
     </div>
   </div>
 </section>
@@ -259,8 +595,8 @@
     <div>
       <span class="sur">Accuracy</span>
       <h2>Calibrated on real flights, not a brochure</h2>
-      <p class="intro" style="margin-bottom:0">The aerodynamic model is tuned and checked on full-throttle flights
-        measured by GPS. It accounts for the drone's real tilt, the thrust drop with speed, air density
+      <p class="intro" style="margin-bottom:0">The aerodynamic model is calibrated on a full-throttle flight measured by GPS and blackbox,
+        then checked on a second flight. It accounts for the drone's real tilt, the thrust drop with speed, air density
         and battery format. CFD complements these measurements for
         shapes that haven't flown yet.</p>
       <button class="yt" type="button" data-id="ztDsRqPz8Mc" aria-label="Play the video of the 121 and 126 km/h flights"
@@ -269,14 +605,14 @@
       </button>
     </div>
     <div class="mesure">
-      <div class="grand">121 km/h</div>
-      <p style="color:var(--doux)">Reference flight measured by GPS</p>
+      <div class="grand">126 km/h</div>
+      <p style="color:var(--doux)">Calibration flight measured by GPS and blackbox</p>
       <table>
         <tr><td>Frame</td><td>TOWA 5″ freestyle, 539 g</td></tr>
         <tr><td>Motors / props</td><td>XING-E 2207 2450KV · Ethix S5</td></tr>
         <tr><td>Battery</td><td>3S 1550 mAh</td></tr>
-        <tr><td>Conditions</td><td>1,046 m · 0 °C · 35°</td></tr>
-        <tr><td>2nd check flight</td><td>126 km/h · 436 m · 10 °C</td></tr>
+        <tr><td>Conditions</td><td>436 m · 10 °C · measured tilt ≈ 51°</td></tr>
+        <tr><td>Check flight</td><td>121 km/h · 1,046 m · 0 °C (computed: 126 km/h, +4 %)</td></tr>
       </table>
     </div>
   </div>
@@ -300,278 +636,6 @@
   </div>
 </section>
 
-<section id="premium" class="alterne">
-  <div class="conteneur">
-    <span class="sur">PRO · the design workshop</span>
-    <h2>From calculator to <span class="or">design workshop</span></h2>
-    <p class="intro">Parametric design of frames and high-speed drones, 3D modelling, import of your CAD plans, aerodynamic validation (virtual wind tunnel, CFD) and calibration of the model on your flight measurements.</p>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">Prototype frame</span>
-        <h3>Scale modelling</h3>
-        <ul>
-          <li><b>5 supported architectures</b>: X, Dead Cat, Squished X, Stretch X, H-Frame, in Quad or coaxial X8 configuration.</li>
-          <li><b>Parametric sketch</b>: 2D geometry (top and front projections) generated automatically whenever an input variable changes.</li>
-          <li><b>3D model</b>: tiltable solid model, with the projected frontal area computed at every incidence.</li>
-          <li><b>Real reference frames</b>: TOWA 5″ freestyle (DXF plan, plates with their cut-outs) or Racer, arms with motor mounts mirrored by symmetry, following your dimensions.</li>
-          <li><b>Real parts at catalogue dimensions</b>: SpeedyBee stack, Walksnail / DJI / Caddx / analog VTX, motors (including the T-Motor F1404 for small sizes), receiver and T antennas.</li>
-          <li><b>Antennas and camera</b>: antenna mount sleeved on the rear standoffs, standard or long-range antennas in the chosen number, camera between two side plates, lens 1 mm proud of the plates, 15° / 35° / 45° tilt or your flight angle.</li>
-          <li><b>TOWA-style plates</b>: eared outline, scalloped sides, 20 × 20 / 25.5 × 25.5 / 30.5 × 30.5 stack holes and VTX holes, TOWA and Dixi cut-outs, at your prototype's dimensions.</li>
-          <li><b>Realistic models</b>: battery, props, TPU pads, capacitor and buzzer drawn like the real parts, exactly in place.</li>
-        </ul>
-      </div>
-      <div>
-        <figure class="visuel"><img src="../assets/guide/rendu_proto.webp" width="1200" height="900" loading="lazy" alt="3D model of the TOWA 5 inch reference frame tilted 35 degrees: plates, arms with motor mounts, antenna mount and camera"><figcaption>TOWA 5″ reference frame, real parts</figcaption></figure>
-        <div class="trio">
-          <figure class="visuel"><img src="../assets/guide/rendu_racer.webp" width="1200" height="900" loading="lazy" alt="Racer reference frame with its canopy in 3D"><figcaption>Racer</figcaption></figure>
-          <figure class="visuel"><img src="../assets/guide/rendu_details.webp" width="1200" height="900" loading="lazy" alt="Rear of the drone: antenna mount on the standoffs, two DJI O4 antennas, VTX and stack"><figcaption>Antennas, VTX, stack</figcaption></figure>
-          <figure class="visuel"><img src="../assets/guide/rendu_camera.webp" width="1200" height="900" loading="lazy" alt="FPV camera between its two side plates, lens 1 mm proud of the plates"><figcaption>Camera and side plates</figcaption></figure>
-        </div>
-        <figure class="visuel sombre"><img src="../assets/guide/05_prototype_x.webp" width="838" height="1106" loading="lazy" alt="FPV prototype frame geometry with dimensioned sketch"><figcaption>Dimensioned sketch: TOWA reference frame</figcaption></figure>
-        <div class="trio">
-          <figure class="visuel sombre"><img src="../assets/guide/06_proto_deadcat.webp" width="838" height="1186" loading="lazy" alt="Dead Cat frame sketch"><figcaption>Dead Cat</figcaption></figure>
-          <figure class="visuel sombre"><img src="../assets/guide/07_proto_hframe.webp" width="838" height="1198" loading="lazy" alt="H-Frame sketch"><figcaption>H-Frame</figcaption></figure>
-          <figure class="visuel sombre"><img src="../assets/guide/08_proto_stretch.webp" width="838" height="1196" loading="lazy" alt="Stretch X frame sketch"><figcaption>Stretch X</figcaption></figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="fonction inverse">
-      <div>
-        <span class="badge">Catalogue frames</span>
-        <h3>200+ frames in 3D, fitted out and dimensioned</h3>
-        <ul>
-          <li><b>200+ frames</b> in 3D, ready to fit out: 187 from the catalogue, plus the TALKTRUE reference frames and adjustable prototypes.</li>
-          <li><b>Build your quad</b>: motors, props, stack, VTX, camera, receiver, antennas, GPS, battery, buzzer and capacitor place themselves.</li>
-          <li><b>Frame accessories</b>: camera, antenna and capacitor mounts, as on the Bando.</li>
-          <li><b>Dimensioned 2D drawing (DXF)</b> to download for your CAD.</li>
-          <li><b>Wind tunnel</b> straight on the fitted-out frame.</li>
-        </ul>
-      </div>
-      <div>
-        <figure class="visuel"><img src="../assets/guide/generique_equipe.webp" width="1200" height="900" loading="lazy" alt="Catalogue frame fitted out in 3D"><figcaption>Generic frame with your parts</figcaption></figure>
-        <figure class="visuel"><img src="../assets/guide/generique_plan_cote.webp" width="1592" height="720" loading="lazy" alt="Dimensioned DXF drawing of a generic frame"><figcaption>Dimensioned 2D drawing</figcaption></figure>
-        <div class="duo" style="margin-top:14px">
-          <figure class="visuel"><img src="../assets/nouveautes/bando_accessoires.webp" width="1200" height="900" loading="lazy" alt="Bando 5-inch fitted out in 3D, grey frame: GoPro on its mount, DJI O4 camera in its mounts, VTX, antennas and 6S LiPo held by its strap"><figcaption>Bando 5″ fitted out</figcaption></figure>
-          <figure class="visuel"><img src="../assets/nouveautes/buzzer_condensateur.webp" width="1200" height="900" loading="lazy" alt="Bando 5-inch seen from the rear, grey frame: GoPro, antenna mount, electronics and LiPo held by its strap"><figcaption>Bando from the rear</figcaption></figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="fonction inverse">
-      <div>
-        <span class="badge">Quad Speeder</span>
-        <h3>High-speed UAV: pusher or tractor configurations</h3>
-        <ul>
-          <li><b>Aerodynamic profile</b>: "teardrop" fuselage. Drag coefficient (C<sub>x</sub>) optimised from fineness ratio, following the Hoerner method.</li>
-          <li><b>Propulsion architecture</b>: integrated pusher configuration (SPEEDER V2 type) or tractor on dedicated nacelles (Blackbird-type architecture).</li>
-          <li><b>Fuselage incidence</b>: 0° attitude in fast flight facing the wind (minimum drag) and 90° during take-off / hover.</li>
-          <li><b>STL modelling</b>: geometry at nominal scale including the battery volume and an adjustable centre of gravity (CoG).</li>
-          <li><b>Everything inside the fuselage</b>: electronics and antennas stowed inside, the app tells you if a part does not fit.</li>
-          <li><b>Dimensioned 2D drawing (DXF)</b> of the Speeder, pusher or tractor, to download for your CAD.</li>
-        </ul>
-      </div>
-      <div>
-        <div class="duo">
-          <figure class="visuel"><img src="../assets/guide/rendu_speeder.webp" width="1200" height="900" loading="lazy" alt="Pusher FPV Quad Speeder in 3D"><figcaption>Pusher</figcaption></figure>
-          <figure class="visuel"><img src="../assets/guide/rendu_speeder_tractif.webp" width="1200" height="900" loading="lazy" alt="Tractor FPV Quad Speeder on nacelles in 3D"><figcaption>Tractor (nacelles)</figcaption></figure>
-        </div>
-        <div class="duo" style="margin-top:14px">
-          <figure class="visuel"><img src="../assets/constructions/speeder_v2_fuselages.webp" width="900" height="1200" loading="lazy" alt="3D-printed Speeder V2 fuselages"><figcaption>Speeder V2: 3D-printed fuselages</figcaption></figure>
-          <figure class="visuel"><img src="../assets/constructions/v2v_solidworks.webp" width="780" height="570" loading="lazy" alt="V2V Speeder 3-inch modelled in SolidWorks"><figcaption>V2V Speeder in SolidWorks: the STL used for CFD</figcaption></figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">CAD import</span>
-        <h3>Your SolidWorks, Fusion 360 or Onshape models</h3>
-        <ul>
-          <li><b>STL</b>: 3D surface mesh for the aerodynamic simulation and multi-angle CFD.</li>
-          <li><b>DXF</b>: orthogonal projections (top and front views) replacing the native sketch, keeping the original dimensions.</li>
-          <li><b>3D volume modelling</b>: the plan views (top + front ± side) are enough for the extruder to rebuild your drone's geometry.</li>
-        </ul>
-      </div>
-      <figure class="visuel"><img src="../assets/dxf/stl_v2v.webp" loading="lazy" alt="STL import: orientation checked on 3 views"><figcaption>Your STL: orientation checked on 3 views</figcaption></figure>
-    </div>
-
-    <h3 class="titre-etapes" style="margin-top:0">From DXF drawings to a 3D model, in 3 steps</h3>
-    <div class="etapes-dxf">
-      <figure class="visuel"><img src="../assets/dxf/1_plans.webp" width="623" height="575" loading="lazy" alt="Loaded DXF drawings table: top view, front view, 3D volume"><figcaption>1 · Your DXF drawings</figcaption></figure>
-      <figure class="visuel sombre"><img src="../assets/dxf/2_esquisse_towa.webp" width="254" height="288" loading="lazy" alt="Dimensioned sketch replaced by the top and front DXF drawings of a TOWA 5-inch"><figcaption>2 · They replace the sketch, same dimensions</figcaption></figure>
-      <figure class="visuel"><img src="../assets/dxf/3_volume.webp" width="890" height="482" loading="lazy" alt="3D volume of an FPV drone rebuilt from its DXF drawings"><figcaption>3 · The rebuilt 3D volume</figcaption></figure>
-    </div>
-
-    <div class="fonction inverse">
-      <div>
-        <span class="badge">Virtual wind tunnel</span>
-        <h3>The instant estimate, ahead of the CFD solution</h3>
-        <ul>
-          <li><b>Aerodynamic equilibrium</b>: instant computation of the equilibrium tilt, drag, aerodynamic power absorbed and required thrust.</li>
-          <li><b>Dynamic rotor modelling</b>: wake of the spinning propellers included, thrust loss from interaction with the frame (wake effect) and front / rear load split.</li>
-          <li><b>Instant generation</b>: real-time rendering to explore concepts; final validation by solving the CFD equations.</li>
-        </ul>
-        <p class="note">The wind tunnel module gives an instant estimate. Streamlines and particles illustrate the flow. The CFD run, for its part, numerically solves the Navier-Stokes equations around your STL mesh.</p>
-      </div>
-      <div>
-        <figure class="visuel"><video autoplay loop muted playsinline poster="../assets/soufflerie/combinee.jpg"
-        aria-label="Virtual wind tunnel: V2V Speeder in the wind, airflow and prop slipstreams"><source src="../assets/soufflerie/combinee.webm" type="video/webm"><source src="../assets/soufflerie/combinee.mp4" type="video/mp4"></video>
-        <figcaption>Virtual wind tunnel: air around the drone and prop slipstream</figcaption></figure>
-        <div class="duo" style="margin-top:14px">
-          <figure class="visuel"><img src="../assets/soufflerie/quad_x_helices.webp" width="1170" height="635" loading="lazy" alt="Virtual wind tunnel of a 5-inch Quad X: props and slipstreams"><figcaption>5″ Quad X (Ethix S5)</figcaption></figure>
-          <figure class="visuel"><img src="../assets/soufflerie/quad_x8_helices.webp" width="800" height="330" loading="lazy" alt="Virtual wind tunnel of a coaxial X8: props, slipstreams and thrust per motor"><figcaption>Coaxial X8: combined view, wind + slipstreams of all 8 props</figcaption></figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="fonction">
-      <div>
-        <span class="badge">Test data calibration &amp; Cloud</span>
-        <h3>Your real measurements as the calibration reference</h3>
-        <ul>
-          <li><b>GPS data calibration</b>: enter the top speed measured during your tests; the algorithm instantly adjusts the drag coefficient and stores this calibration profile.</li>
-          <li><b>Drag measured in flight</b>: import your flight's blackbox log, the app recalibrates the calculation on your quad.</li>
-          <li><b>Cloud library</b>: keep up to 10 hardware configurations and the history of your CFD runs for your whole drone fleet.</li>
-        </ul>
-      </div>
-      <figure class="visuel"><img src="../assets/guide/04_mesure_gps.webp" loading="lazy" alt="Calibrating the calculated speed on a GPS measurement"></figure>
-    </div>
-  </div>
-</section>
-
-<section id="cfd">
-  <div class="conteneur">
-    <span class="sur">New · PRO · OpenFOAM CFD simulation</span>
-    <h2>The power of a full CFD solution, <span class="neon">made accessible</span></h2>
-    <p class="intro">A full CFD analysis traditionally requires complex pre-processing (computational domain, mesh discretisation, boundary conditions, solver convergence). Our solution runs a fully automated and verified pipeline. Enter your operating parameters (attitude and speed): the numerical solution is offloaded and run transparently on our dedicated compute server.</p>
-
-    <figure class="ecran-cfd" style="margin:0 0 48px">
-      <video autoplay loop muted playsinline poster="../assets/cfd/flux_hero.jpg" aria-label="OpenFOAM CFD: air streaming around the V2V Speeder">
-        <source src="../assets/cfd/flux_hero.mp4" type="video/mp4"></video>
-      <figcaption><span class="point"></span>V2V Speeder 3″ · 120 km/h · OpenFOAM streamlines, drone coloured by pressure</figcaption>
-    </figure>
-    <ol class="sequence">
-      <li>
-        <figure class="visuel"><img src="../assets/dxf/stl_v2v.webp" loading="lazy" alt="STL import of an FPV Speeder: orientation checked on three views"></figure>
-        <div><b>1 · STL export</b><p>Exported from SolidWorks, Fusion 360 or Onshape. Geometric orientation checked on 3 orthogonal views (as in a slicer).</p></div>
-      </li>
-      <li>
-        <figure class="visuel sombre"><img src="../assets/cfd/maillage_v2v.webp" loading="lazy" alt="OpenFOAM mesh around an FPV drone: finer and finer cells near the surfaces"></figure>
-        <div><b>2 · Automated meshing</b><p>STL mesh repair and fluid domain sized to the aircraft: snappyHexMesh discretisation of about 1 million cells, progressive refinement near the walls and in the wake; at maximum accuracy, 5 prismatic boundary layers on the wall.</p></div>
-      </li>
-      <li>
-        <figure class="visuel sombre"><video autoplay loop muted playsinline poster="../assets/cfd/flux_v2v45.jpg" aria-label="Computed airflow around the Speeder tilted at 45 degrees"><source src="../assets/cfd/flux_v2v45.mp4" type="video/mp4"></video></figure>
-        <div><b>3 · OpenFOAM solution</b><p><code>simpleFoam</code> solver, k-ω SST turbulence model with Spalding wall function, until the drag stabilises. Without convergence, the run is extended (+50 % iterations), then the result is explicitly flagged "not converged".</p></div>
-      </li>
-      <li>
-        <figure class="visuel sombre"><img src="../assets/cfd/cp_v2v_45.webp" loading="lazy" alt="3D pressure map on an FPV drone: red overpressure, blue suction"></figure>
-        <div><b>4 · Built-in post-processing</b><p>S·C<sub>x</sub> drag, equivalent drag coefficient C<sub>x</sub>, lift, correlation with the analytical model and 3D pressure map.</p></div>
-      </li>
-      <li>
-        <figure class="visuel sombre"><video autoplay loop muted playsinline poster="../assets/cfd/paraview_v2v.jpg" aria-label="Airflow animation in ParaView"><source src="../assets/cfd/paraview_v2v.mp4" type="video/mp4"></video></figure>
-        <div><b>5 · ParaView export</b><p>Surface data, cut planes and streamlines in VTK format, with an automation macro to visualise the flow.</p></div>
-      </li>
-    </ol>
-
-    <div class="cartes" style="margin-top:56px">
-      <div class="carte"><div class="icone">🧩</div><h3>Custom geometry</h3><p>No generic shapes: submit the exact architecture of your frame, fuselage and battery as you modelled them.</p></div>
-      <div class="carte"><div class="icone">🛡️</div><h3>Validated at every step</h3><p>Mesh quality check (<code>checkMesh</code>), up to 3 meshing attempts, convergence criterion: drag variation below 3 % over the last 100 iterations (1 % at maximum accuracy, with boundary layers, the user's choice). Strict exclusion of outliers: any anomaly raises an explicit alert.</p></div>
-      <div class="carte"><div class="icone">📐</div><h3>Multi-incidence runs</h3><p>Assess up to 3 incidences in a single request: hover, transition and high-speed regimes (up to 800 km/h for Speeder profiles).</p></div>
-    </div>
-    <p class="note" style="margin-top:28px"><b>Result margin</b>: a CFD result that carries its margin (95 %) shows a range for drag and top speed. No margin is ever made up: without an interval, the range stays “to be confirmed”.</p>
-    <p class="note" style="margin-top:12px">The full step-by-step guide (launch the run, read the results, animate the air in ParaView) is in the app's <b>user guide</b>.</p>
-  </div>
-</section>
-
-<section id="resultats" class="alterne">
-  <div class="conteneur">
-    <span class="sur">What CFD reveals</span>
-    <h2>Where the air pushes, where it lets go</h2>
-    <p class="intro">The pressure on every surface shows where the drag comes from: red, the air hits the drone;
-      blue, it is sucked away. Behind it, the wake shows the slowed air the drone drags along.</p>
-    <div class="trio-cfd duo-cfd">
-      <figure class="visuel sombre"><img src="../assets/cfd/cp_v2v_0.webp" loading="lazy" alt="Pressure on the V2V Speeder, fuselage aligned with the wind"><figcaption>V2V Speeder · fuselage 0° (fast flight)</figcaption></figure>
-      <figure class="visuel sombre"><img src="../assets/cfd/cp_v2v_45.webp" loading="lazy" alt="Pressure on the V2V Speeder tilted at 45 degrees"><figcaption>V2V Speeder · fuselage 45°</figcaption></figure>
-    </div>
-    <div class="coupe-cfd" style="margin-top:18px">
-      <figure class="visuel sombre"><img src="../assets/cfd/coupe_v2v_45.webp" loading="lazy" alt="Velocity slice: wake behind the V2V Speeder"><figcaption>V2V Speeder wake at 45°: blue = slowed air the drone drags behind it</figcaption></figure>
-    </div>
-    <div class="coupe-cfd" style="margin-top:18px">
-      <figure class="visuel sombre"><video autoplay loop muted playsinline poster="../assets/cfd/flux_towa5.jpg" aria-label="OpenFOAM CFD: airflow around a TOWA 5-inch freestyle drone tilted 35 degrees at 120 km/h"><source src="../assets/cfd/flux_towa5.mp4" type="video/mp4"></video><figcaption>TOWA 5″ freestyle · 35° tilt · 120 km/h · S·C<sub>x</sub> = 94.7 cm² (bare frame, no battery or motors), computed on the TALKTRUE server</figcaption></figure>
-    </div>
-    <p class="note" style="margin-top:10px">🎬 <b>Video render of your STL</b>: optional with every CFD run, the server makes this video (1920 × 1080) from your model; watch it and download it as .mp4 from the app.</p>
-
-    <div class="fonction" style="margin-top:64px">
-      <div>
-        <span class="badge">Real numbers</span>
-        <h3>Fuselage into the wind: 5 times less drag</h3>
-        <ul>
-          <li>Flat into the wind, the V2V Speeder has only <b>9 cm²</b> of drag area: an equivalent drag coefficient of <b>0.22</b>, an imperfect teardrop.</li>
-          <li>Tilted at 45°, the same drone reaches <b>45 cm²</b>: five times more. Keeping the fuselage in the wind is the key to speed.</li>
-          <li>Recomputed at <b>500 km/h</b> by the TALKTRUE server: <b>8.3</b> and <b>44 cm²</b>, the drag coefficient stays almost the same.</li>
-          <li>The app's quick estimate <b>overestimates</b> the drag of a well-streamlined Speeder: CFD corrects it.</li>
-        </ul>
-        <p class="note">Steady RANS, without the propellers or their slipstream, wall functions: ±15 to 25 %. To be confirmed by a GPS flight, like the rest of the configurator.</p>
-      </div>
-      <div class="mesure">
-        <table>
-          <tr><th>Case (120 km/h)</th><th>Quick estimate</th><th>OpenFOAM CFD</th><th>Cd</th></tr>
-          <tr><td>V2V Speeder · fuselage 0°</td><td>28.8 cm²</td><td class="neon">9.2 cm²</td><td>0.22</td></tr>
-          <tr><td>V2V Speeder · fuselage 45°</td><td>59.8 cm²</td><td class="neon">45.5 cm²</td><td>0.52</td></tr>
-        </table>
-        <p style="color:var(--doux);font-size:.85rem;margin:12px 0 0">S·Cd = drag ÷ (½ ρ V²). Meshes of 1.0 to 1.3 M cells, convergence &lt; 0.3 %.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="truefoam">
-  <div class="conteneur">
-    <span class="sur">TrueFoam GUI · CFD on a Windows PC</span>
-    <h2>CFD on your own PC, <span style="color:var(--bleu)">free and offline</span></h2>
-    <p class="intro">TrueFoam GUI computes the airflow around a 3D model (STL file) on your PC, for OpenFOAM v2412,
-      with no command line. It also opens runs made on the online calculator, alongside ParaView if you prefer.</p>
-    <div class="telecharger">
-      <div>
-        <div class="logo-gui"><img src="../assets/truefoam/logo_truefoam_gui.webp" width="600" height="178" alt="TrueFoam GUI logo"></div>
-        <ul>
-          <li><b>Your study</b>: the STL file, speed, tilt and the air of the day.</li>
-          <li><b>Automatic meshing and solving</b>, no command line.</li>
-          <li><b>Results</b>: drag, pressure, slices, streamlines, PDF report.</li>
-          <li><b>Your calculator runs</b> open in TrueFoam GUI.</li>
-          <li><b>Beyond air</b>: pipe flow, flotation and waves, noise, cooling (experimental).</li>
-          <li><b>Guided install</b>, step by step.</li>
-          <li><b>Requirements</b>: Windows 10 or 11 (64-bit) and Docker Desktop. OpenFOAM is not bundled: the installer downloads it with your consent.</li>
-        </ul>
-        <div class="actions" style="margin:0">
-          <a class="bouton bleu" href="https://github.com/Jschmiedd/TrueFoam-GUI/releases/latest/download/TrueFOAM-Windows.zip">⬇️ Download for Windows (.zip)</a>
-          <a class="bouton secondaire" href="https://github.com/Jschmiedd/TrueFoam-GUI/releases">All versions</a>
-        </div>
-        <div class="multicore">
-          <span class="etiquette-mc">Pre-release</span>
-          <b>TrueFoam GUI Multi-Core</b>: the same interface, for several OpenFOAM versions (openfoam.com and
-          openfoam.org). Windows, Docker Desktop required, OpenFOAM not included.
-          <a class="bouton secondaire" href="https://github.com/Jschmiedd/TrueFoam-GUI-Multi-Core/releases">⬇️ Download Multi-Core (.zip)</a>
-        </div>
-      </div>
-      <div>
-        <figure class="visuel" style="margin:0"><img src="../assets/truefoam/gui_coupe_vitesse.webp" width="1122" height="460" loading="lazy" alt="TrueFoam GUI: air speed around a Speeder, side slice with arrows"><figcaption>Air speed around the Speeder, side slice</figcaption></figure>
-      <figure class="visuel" style="margin:14px 0 0"><img src="../assets/truefoam/gui_coupe_libre.webp" width="850" height="470" loading="lazy" alt="TrueFoam GUI: 3D slice of air speed in the computational box"><figcaption>3D slice, moved with the mouse</figcaption></figure>
-      </div>
-    </div>
-    <div class="trio galerie-gui">
-      <figure class="visuel sombre"><img src="../assets/truefoam/gui_etude_1.webp" width="960" height="540" loading="lazy" alt="TOWA 5-inch under CFD study, placeholder image"><figcaption>Placeholder image: TOWA 5″, pressure seen from above</figcaption></figure>
-      <figure class="visuel sombre"><img src="../assets/truefoam/gui_etude_2.webp" width="960" height="540" loading="lazy" alt="TOWA 5-inch under CFD study, placeholder image"><figcaption>Placeholder image: TOWA 5″, side view</figcaption></figure>
-      <figure class="visuel sombre"><img src="../assets/truefoam/gui_etude_3.webp" width="960" height="540" loading="lazy" alt="TOWA 5-inch under CFD study, placeholder image"><figcaption>Placeholder image: TOWA 5″ in the wind, tilted 45°</figcaption></figure>
-    </div>
-    <p class="note" style="margin-top:22px">This offering is not approved or endorsed by OpenCFD Limited, producer and
-      distributor of the OpenFOAM software via www.openfoam.com, and owner of the OPENFOAM® and OpenCFD® trade marks.
-      OpenFOAM is free software (GNU GPL v3), run as a separate program, neither bundled nor modified.</p>
-  </div>
-</section>
-
 <section id="ateliers" class="alterne">
   <div class="conteneur">
     <span class="sur">The workshop</span>
@@ -580,12 +644,90 @@
       to know before you build.</p>
     <div class="terrain">
       <figure class="carte-photo large"><img src="../assets/constructions/bob_le_racer.webp" width="1200" height="900" loading="lazy" alt="BOB the Racer, FPV drone with a yellow canopy, the TALKTRUE FPV mascot"><figcaption><b class="neon">BOB the Racer</b> · the brand's mascot: his canopy gave the TALKTRUE logo its shape</figcaption></figure>
-      <figure class="carte-photo large"><img src="../assets/constructions/speeder_v2_impression.webp" width="1200" height="900" loading="lazy" alt="Speeder V2 fuselage on the 3D printer bed"><figcaption><b>Speeder V2</b> · 3D-printed fuselage, then run through CFD</figcaption></figure>
       <figure class="carte-photo"><img src="../assets/constructions/pesee_405g.webp" width="900" height="1200" loading="lazy" alt="FPV drone weighed at 405 grams"><figcaption><b class="neon">405 g</b> · the real, weighed mass goes into the calculation</figcaption></figure>
       <figure class="carte-photo"><img src="../assets/constructions/chassis_carbone.webp" width="1200" height="900" loading="lazy" alt="Home-made carbon FPV frame with yellow TPU parts"><figcaption><b>Home-made frame</b> · cut carbon and TPU parts</figcaption></figure>
       <figure class="carte-photo"><img src="../assets/constructions/cablage_esc.webp" width="1200" height="900" loading="lazy" alt="4-in-1 ESC soldered on an FPV drone"><figcaption>4-in-1 ESC and soldering</figcaption></figure>
       <figure class="carte-photo"><img src="../assets/constructions/build_3p_terrain.webp" width="1200" height="900" loading="lazy" alt="3-inch FPV drone ready to fly"><figcaption><b>3″</b> ready for take-off</figcaption></figure>
       <figure class="carte-photo"><img src="../assets/constructions/cablage_stack_5p.webp" width="900" height="1200" loading="lazy" alt="Wiring of a 5-inch FPV stack"><figcaption>Wiring a 5″ stack</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="ecosysteme">
+  <div class="conteneur">
+    <span class="sur">One family of software, one drone</span>
+    <h2>Configure, simulate, tune: <span class="neon">the data follows your drone</span></h2>
+    <p class="intro">The drone you design in XRIG Configurator moves from one program to the next without retyping anything. The
+      configurator instantly computes thrust, estimated drag, speed and flight time in its wind tunnel; TrueFoam's full
+      CFD computation is built in. Each TrueGlide program gets its own file, with only what it needs, and your flight
+      measurements come back into your configuration.</p>
+    <div class="triangle">
+      <svg viewBox="0 0 1400 950" role="img" aria-label="Flow: TALKTRUE FPV (and the TrueShot proposal) brings together the TALKTRUE frames, XRIG Configurator (1) and the XPro stack (under construction); TrueFoam range (TrueFoam PC, where the frame design studies are done, and 3 built-in TrueFoam); 2 wind tunnel; TrueGlide range (4 TrueGlide, TrueGlide ESC Configurator); XPro range (5 XPro, XPro ESC Configurator: software and firmware, built into XPro, which tunes the stack)">
+  <defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#9aa7b4"/></marker><marker id="flo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#ffd700"/></marker><marker id="flc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#3fa7f5"/></marker><marker id="flb2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#e8edf2"/></marker><marker id="flv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c084fc"/></marker></defs>
+  <g fill="none" stroke="#e8edf2" stroke-width="1.8" opacity=".75"><path d="M700 78 L700 130"/><path d="M201 104 L1360 104"/><path d="M201 104 L201 130"/><path d="M1360 104 L1360 130"/><path d="M810 44 L930 44"/></g><path d="M332 183 L576 183" fill="none" stroke="#e8edf2" stroke-width="2.5" marker-end="url(#flb2)"/><path d="M80 236 L80 510" fill="none" stroke="#e8edf2" stroke-width="2.5" marker-end="url(#flb2)"/><path d="M150 513 L150 240" fill="none" stroke="#9aa7b4" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#fl)"/><path d="M610 238 L268 510" fill="none" stroke="#9aa7b4" stroke-width="2.5" marker-end="url(#fl)"/><path d="M318 513 L642 242" fill="none" stroke="#9aa7b4" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#fl)"/><path d="M680 240 L505 510" fill="none" stroke="#ffd700" stroke-width="2.5" marker-end="url(#flo)"/><path d="M728 240 L690 510" fill="none" stroke="#ffd700" stroke-width="2.5" marker-end="url(#flo)"/><path d="M735 510 L762 242" fill="none" stroke="#9aa7b4" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#fl)"/><path d="M790 240 L1080 510" fill="none" stroke="#3fa7f5" stroke-width="2.5" marker-end="url(#flc)"/><path d="M1125 510 L812 236" fill="none" stroke="#9aa7b4" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#fl)"/><path d="M822 186 L1232 510" fill="none" stroke="#c084fc" stroke-width="2.5" marker-end="url(#flv)"/><path d="M1320 512 L1320 240" fill="none" stroke="#c084fc" stroke-width="2.5" marker-end="url(#flv)"/><g fill="none" stroke-width="1.8" stroke-dasharray="2 5">
+    <path d="M494 667 L494 735 L700 735 L700 672" stroke="#ffd700" marker-end="url(#flo)"/>
+    <path d="M494 735 L494 790 L1104 790 L1104 672" stroke="#3fa7f5" marker-end="url(#flc)"/></g>
+  <circle cx="494" cy="735" r="3" fill="#ffd700"/>
+  <g font-family="Inter, sans-serif" font-size="14" text-anchor="middle"><text x="454" y="173" transform="rotate(0.0 454 173)" fill="#e8edf2" font-size="13">reference frames (STL)</text><text x="66" y="373" transform="rotate(-90 66 373)" fill="#e8edf2" font-size="13">prototypes in CFD (STL)</text><text x="164" y="373" transform="rotate(-90 164 373)" fill="#e8edf2" font-size="13">design studies</text><text x="433" y="366" transform="rotate(-38.5 433 366)" fill="#e8edf2" font-size="14">study + 3D model</text><text x="490" y="390" transform="rotate(-39.9 490 390)" fill="#3fa7f5" font-size="13">S·Cx drag + thrust loss</text><text x="575" y="383" transform="rotate(-57.1 575 383)" fill="#ffd700" font-size="13">computed in the configurator</text><text x="700" y="374" transform="rotate(-82.0 700 374)" fill="#ffd700" font-size="13">starting-tune file</text><text x="740" y="375" transform="rotate(-84.2 740 375)" fill="#cfe83f" font-size="13">flight measurements</text><text x="940" y="399" transform="rotate(43.0 940 399)" fill="#3fa7f5" font-size="13">configuration / S·Cx study</text><text x="991" y="379" transform="rotate(41.2 991 379)" fill="#cfe83f" font-size="13">flight measurements</text><text x="1013" y="324" transform="rotate(38.3 1013 324)" fill="#c084fc" font-size="13">stack settings (planned)</text><text x="1330" y="390" text-anchor="start" transform="rotate(-90 1330 390)" fill="#c084fc" font-size="13">tunes the stack</text><text x="600" y="757" fill="#ffd700">TrueGlide file: thrust, hover current (wind tunnel)</text><text x="800" y="812" fill="#3fa7f5">XPro file: thrust, speed (wind tunnel), S·Cx drag (CFD or wind tunnel)</text></g>
+  <g font-family="Rajdhani, Inter, sans-serif" text-anchor="middle"><rect x="590" y="12" width="220" height="66" rx="16" fill="#111820" stroke="#e8edf2" stroke-width="2"/><text x="700" y="45" font-size="25" font-weight="700" fill="#e8edf2">TALKTRUE FPV</text><text x="700" y="67" font-size="14" fill="#9aa7b4" font-family="Inter, sans-serif">drones, software and electronics</text><rect x="930" y="12" width="250" height="66" rx="16" fill="#111820" stroke="#ff7aa8" stroke-width="2" stroke-dasharray="8 6"/><rect x="1110" y="2" width="90" height="20" rx="10" fill="#ff7aa8"/><text x="1155" y="16" font-size="12" font-weight="700" fill="#06080b" letter-spacing="1">PROPOSAL</text><text x="1055" y="43" font-size="22" font-weight="700" fill="#ff7aa8">TrueShot</text><text x="1055" y="66" font-size="14" fill="#e8edf2" font-family="Inter, sans-serif">flights and footage of my drones</text><rect x="70" y="130" width="262" height="106" rx="16" fill="#111820" stroke="#e8edf2" stroke-width="2"/><text x="201.0" y="168" font-size="23" font-weight="700" fill="#e8edf2">TALKTRUE frames</text><text x="201.0" y="196" font-size="16" fill="#e8edf2">prototypes and reference</text><text x="201.0" y="220" font-size="14" fill="#9aa7b4" font-family="Inter, sans-serif">TOWA, Dixi, Dizzi, Fonzzi…</text><rect x="580" y="130" width="240" height="106" rx="16" fill="#111820" stroke="#ffd700" stroke-width="2"/><text x="700" y="172" font-size="26" font-weight="700" fill="#ffd700">XRIG Configurator</text><text x="700" y="202" font-size="17" fill="#e8edf2">Configure · Study</text><text x="700" y="223" font-size="14" fill="#9aa7b4" font-family="Inter, sans-serif">online, free</text><rect x="1150" y="130" width="236" height="106" rx="16" fill="#111820" stroke="#c084fc" stroke-width="2" stroke-dasharray="8 6"/><text x="1268.0" y="168" font-size="23" font-weight="700" fill="#c084fc">XPro stack</text><text x="1268.0" y="196" font-size="16" fill="#e8edf2">complete FC + ESC</text><text x="1268.0" y="220" font-size="14" fill="#9aa7b4" font-family="Inter, sans-serif">XPro range · private</text><rect x="1178" y="120" width="180" height="20" rx="10" fill="#c084fc"/><text x="1268" y="135" font-size="12" font-weight="700" fill="#06080b" letter-spacing="0.6">UNDER CONSTRUCTION</text><rect x="15" y="480" width="375" height="236" rx="18" fill="none" stroke="#3fa7f5" stroke-width="1.5" stroke-dasharray="6 6" opacity=".8"/><text x="378" y="702" text-anchor="end" font-size="14" font-weight="700" fill="#3fa7f5" letter-spacing="1.5">TRUEFOAM RANGE · CFD</text><rect x="205" y="515" width="173" height="152" rx="16" fill="#111820" stroke="#3fa7f5" stroke-width="2"/><text x="291.5" y="553" font-size="22" font-weight="700" fill="#3fa7f5">TrueFoam</text><text x="291.5" y="581" font-size="15" fill="#e8edf2">Airflow (CFD)</text><text x="291.5" y="605" font-size="14" fill="#e8edf2" font-family="Inter, sans-serif">built in (PRO)</text><text x="291.5" y="627" font-size="14" fill="#9aa7b4" font-family="Inter, sans-serif">on our server</text><rect x="27" y="515" width="168" height="152" rx="16" fill="#111820" stroke="#3fa7f5" stroke-width="2"/><text x="111.0" y="553" font-size="20" font-weight="700" fill="#3fa7f5">TrueFoam PC</text><text x="111.0" y="588" font-size="14" fill="#e8edf2">GUI v2412 · Multi-Core</text><text x="111.0" y="614" font-size="14" fill="#9aa7b4" font-family="Inter, sans-serif">software to install</text><rect x="404" y="515" width="180" height="152" rx="16" fill="#111820" stroke="#ffd700" stroke-width="2"/><text x="494.0" y="553" font-size="22" font-weight="700" fill="#ffd700">Wind tunnel</text><text x="494.0" y="581" font-size="16" fill="#e8edf2">quick calculation</text><text x="494.0" y="605" font-size="13" fill="#e8edf2" font-family="Inter, sans-serif">thrust, drag, speed</text><text x="494.0" y="627" font-size="13" fill="#9aa7b4" font-family="Inter, sans-serif">flight time, instant</text><rect x="598" y="480" width="390" height="236" rx="18" fill="none" stroke="#cfe83f" stroke-width="1.5" stroke-dasharray="6 6" opacity=".7"/><text x="976" y="702" text-anchor="end" font-size="14" font-weight="700" fill="#cfe83f" letter-spacing="1.5">TRUEGLIDE RANGE · PUBLIC</text><rect x="610" y="515" width="180" height="152" rx="16" fill="#111820" stroke="#cfe83f" stroke-width="2"/><text x="700.0" y="553" font-size="22" font-weight="700" fill="#cfe83f">TrueGlide</text><text x="700.0" y="581" font-size="16" fill="#e8edf2">Firmware · Studio</text><text x="700.0" y="605" font-size="14" fill="#e8edf2" font-family="Inter, sans-serif">starting tune</text><text x="700.0" y="627" font-size="14" fill="#9aa7b4" font-family="Inter, sans-serif">for every drone</text><rect x="800" y="515" width="176" height="152" rx="16" fill="#111820" stroke="#cfe83f" stroke-width="2"/><text x="888.0" y="553" font-size="20" font-weight="700" fill="#cfe83f">TrueGlide ESC</text><text x="888.0" y="581" font-size="16" fill="#e8edf2">Configurator</text><text x="888.0" y="605" font-size="14" fill="#e8edf2" font-family="Inter, sans-serif">ESC settings</text><text x="888.0" y="627" font-size="14" fill="#9aa7b4" font-family="Inter, sans-serif">public</text><rect x="1002" y="480" width="388" height="236" rx="18" fill="none" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="6 6" opacity=".8"/><text x="1378" y="702" text-anchor="end" font-size="14" font-weight="700" fill="#c084fc" letter-spacing="1.5">XPRO RANGE · PRIVATE</text><rect x="1014" y="515" width="180" height="152" rx="16" fill="#111820" stroke="#cfe83f" stroke-width="2"/><text x="1104.0" y="553" font-size="22" font-weight="700" fill="#cfe83f">XPro</text><text x="1104.0" y="581" font-size="16" fill="#e8edf2">Analyse · Optimise</text><text x="1104.0" y="605" font-size="14" fill="#e8edf2" font-family="Inter, sans-serif">after every flight</text><text x="1104.0" y="627" font-size="14" fill="#9aa7b4" font-family="Inter, sans-serif">drone history</text><rect x="1204" y="515" width="174" height="152" rx="16" fill="#111820" stroke="#c084fc" stroke-width="2"/><text x="1291.0" y="553" font-size="20" font-weight="700" fill="#c084fc">XPro ESC</text><text x="1291.0" y="581" font-size="16" fill="#e8edf2">Configurator</text><text x="1291.0" y="605" font-size="13" fill="#e8edf2" font-family="Inter, sans-serif">software + firmware</text><text x="1291.0" y="627" font-size="13" fill="#9aa7b4" font-family="Inter, sans-serif">and built into XPro</text></g>
+  <g><circle cx="580" cy="130" r="15" fill="#ffd700"/><text x="580" y="136" text-anchor="middle" font-family="Rajdhani, Inter, sans-serif" font-size="19" font-weight="700" fill="#06080b">1</text><circle cx="404" cy="515" r="15" fill="#ffd700"/><text x="404" y="521" text-anchor="middle" font-family="Rajdhani, Inter, sans-serif" font-size="19" font-weight="700" fill="#06080b">2</text><circle cx="205" cy="515" r="15" fill="#3fa7f5"/><text x="205" y="521" text-anchor="middle" font-family="Rajdhani, Inter, sans-serif" font-size="19" font-weight="700" fill="#06080b">3</text><circle cx="610" cy="515" r="15" fill="#cfe83f"/><text x="610" y="521" text-anchor="middle" font-family="Rajdhani, Inter, sans-serif" font-size="19" font-weight="700" fill="#06080b">4</text><circle cx="1014" cy="515" r="15" fill="#cfe83f"/><text x="1014" y="521" text-anchor="middle" font-family="Rajdhani, Inter, sans-serif" font-size="19" font-weight="700" fill="#06080b">5</text></g>
+  <text x="700" y="858" text-anchor="middle" font-family="Rajdhani, Inter, sans-serif" font-size="15" font-weight="700" fill="#9aa7b4" letter-spacing="1.5">FINE DOTS: WHAT EACH FILE CONTAINS (WRITTEN BY THE CONFIGURATOR)</text>
+  <text x="700" y="896" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#e8edf2"><tspan fill="#ffd700" font-weight="700">1</tspan> Configure → <tspan fill="#ffd700" font-weight="700">2</tspan> Wind tunnel → <tspan fill="#3fa7f5" font-weight="700">3</tspan> TrueFoam CFD (optional) → <tspan fill="#cfe83f" font-weight="700">4</tspan> Starting tune → <tspan fill="#cfe83f" font-weight="700">5</tspan> Flight and optimisation → back to <tspan fill="#ffd700" font-weight="700">1</tspan></text>
+  <text x="700" y="934" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#9aa7b4">Solid line: sent · dashes: comes back · dashed frame: a range · “UNDER CONSTRUCTION”: not available yet · unknown data stays empty, never guessed.</text>
+</svg>
+    </div>
+    <ol class="parcours-mobile">
+      <li style="--c:var(--texte)"><b>TALKTRUE FPV</b> drones, software and electronics. <span style="color:#ff7aa8">TrueShot</span> (proposal): flights and footage of my drones.</li>
+      <li style="--c:var(--or)"><b>1 · XRIG Configurator</b> configure and study your drone, online and free.</li>
+      <li style="--c:var(--texte)"><b>TALKTRUE frames</b> (TOWA, Dixi, Dizzi, Fonzzi…): prototypes and reference frames (STL) for the configurator. The prototypes go through CFD in TrueFoam PC, and the design studies come back to the frames.</li>
+      <li style="--c:#c084fc"><b>XPro stack · XPro range (private) · under construction</b> complete FC + ESC; stack settings prepared by the configurator: planned.</li>
+      <li style="--c:var(--or)"><b>2 · Wind tunnel</b> (in the configurator): quick calculation of thrust, drag, speed and flight time.</li>
+      <li style="--c:var(--bleu)"><b>3 · TrueFoam · TrueFoam range</b> airflow computation (CFD) built into the configurator (PRO) on our server: S·Cx drag and thrust loss go back into the calculation. TrueFoam PC: GUI v2412 and Multi-Core, software to install.</li>
+      <li style="--c:var(--neon)"><b>4 · TrueGlide · TrueGlide range (public)</b> the firmware and its Studio get the “starting tune” file: thrust and hover current. TrueGlide ESC Configurator: ESC settings.</li>
+      <li style="--c:#c084fc"><b>5 · XPro · XPro range (private)</b> gets the “configuration / study” file: thrust, speed and S·Cx drag; it analyses and optimises after every flight. XPro ESC Configurator: standalone software and firmware, also built into XPro, it tunes the stack.</li>
+      <li style="--c:var(--texte)"><b>Back to 1</b>: the flight measurements from TrueGlide and XPro come back into your Garage configuration.</li>
+    </ol>
+    <h3 class="titre-tableau">The right file for the right program</h3>
+    <div class="tableau-defile">
+    <table class="comparatif">
+      <thead><tr><th></th><th class="tg">TrueGlide · firmware and Studio</th><th class="tg">TrueGlide XPro</th></tr></thead>
+      <tbody>
+        <tr><th>Used for</th><td data-label="TrueGlide · firmware and Studio">Preparing the firmware starting tune, for every drone</td>
+          <td data-label="TrueGlide XPro">Analysing every flight, optimising the tune and tracking the drone over time</td></tr>
+        <tr><th>Drone configuration</th><td data-label="TrueGlide · firmware and Studio">Propeller, KV, cell count, all-up weight, motor poles, motor layout (Quad X, coaxial X8, inverted motors), ESC firmware and rating</td>
+          <td data-label="TrueGlide XPro">All components, wheelbase, all-up weight, poles, position and mass of every part (for inertia), motor max
+          current, flight controller, altitude and temperature</td></tr>
+        <tr><th>Calculator study</th><td data-label="TrueGlide · firmware and Studio">Max thrust per motor, hover current</td>
+          <td data-label="TrueGlide XPro">Max and total thrust, thrust-to-weight ratio, top speed, S·Cx drag by tilt angle (estimate or TrueFoam
+          CFD)</td></tr>
+        <tr><th>Back to the calculator</th><td data-label="TrueGlide · firmware and Studio">Flight measurements from log analysis (poles, hover RPM, throttle, voltage and
+          current, desyncs): the app shows the computed and recalibrated values side by side, you choose to apply them to
+          this drone; battery placement advice from the measured balance</td>
+          <td data-label="TrueGlide XPro">Flight measurements (poles, hover RPM, frame resonances), loaded into the Garage</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="trio">
+      <article class="carte-produit" style="--c:var(--or)">
+        <h3>XRIG Configurator</h3>
+        <p>Real components and 3D frames. Its wind tunnel instantly computes thrust, estimated drag, speed and flight
+          time. From the Garage tab, exports one file for TrueGlide Studio and another for TrueGlide
+          XPro, and loads your flight measurements.</p>
+        <a class="bouton principal" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Launch — Free</a>
+      </article>
+      <article class="carte-produit" style="--c:var(--bleu)">
+        <h3>TrueFoam</h3>
+        <p>Full airflow computation (OpenFOAM CFD) built into the configurator (PRO): the computed drag and the propeller
+          thrust loss replace the wind-tunnel estimate. On your PC: TrueFoam GUI, free.</p>
+        <a class="bouton secondaire" href="#cfd">🌀 CFD computation</a>
+      </article>
+      <article class="carte-produit" style="--c:var(--neon)">
+        <h3>TrueGlide family <span class="pastille">Coming soon</span></h3>
+        <img class="logo-produit" src="../assets/trueglide/logo_trueglide_xpro.webp" width="1812" height="288" loading="lazy" alt="TrueGlide XPro logo, Control &amp; Fly">
+        <p><b>TrueGlide</b>: the flight firmware and its Studio, starting tune computed for your drone.
+          <b>TrueGlide XPro</b>: analysis of every flight and explained corrections.</p>
+        <a class="bouton secondaire" href="https://jschmiedd.github.io/trueglide-xpro-web/">More about XPro</a>
+      </article>
     </div>
   </div>
 </section>
@@ -601,7 +743,7 @@
           <li>Full calculator: thrust, speed, flight time, 0 → 100 km/h</li>
           <li>Over 1,000 components and over 200 frames</li>
           <li>Safety alerts</li>
-          <li>Cart grouped by retailer, PDF / CSV export</li>
+          <li>Cart grouped by retailer</li>
           <li>Garage of 3 builds</li>
         </ul>
         <a class="bouton secondaire" style="margin-top:22px" href="https://talktrue-simulateur-performences-v4.streamlit.app/">🚀 Start for free</a>
@@ -628,10 +770,10 @@
     <span class="sur">FAQ</span>
     <h2>Frequently asked questions</h2>
     <details open><summary>Is the configurator free?</summary><p>Yes. The full calculator (thrust, speed, flight time, acceleration), over 200 frames, safety alerts, the cart grouped by retailer and a garage of 3 builds are free with no sign-up. PRO adds the online garage of 10 builds, the wind tunnel, CFD, the prototype frame, the Quad Speeder, 3D, STL/DXF import and GPS calibration.</p></details>
-    <details><summary>What is the CFD simulation?</summary><p>A real simulation of the airflow around your drone, run with <b>OpenFOAM</b> (the open-source CFD software used in industry) from your STL file. You get the measured drag area (S·Cd), the equivalent drag coefficient, lift, a 3D pressure map and a file pack for ParaView.</p></details>
+    <details><summary>What is the CFD simulation?</summary><p>A real simulation of the airflow around your drone, run with <b>OpenFOAM</b> (the open-source CFD software used in industry) from your STL file. You get the computed drag area (S·Cd), the equivalent drag coefficient, lift, a 3D pressure map and a file pack for ParaView.</p></details>
     <details><summary>Do I need to know OpenFOAM?</summary><p>No. Upload your STL, pick the tilt and speed, and the compute server does everything: STL repair, domain, snappyHexMesh meshing, k-ω SST solve until convergence, checks. Nothing to install on your computer.</p></details>
-    <details><summary>How long does a run take?</summary><p>A few tens of minutes per tilt, depending on the model size and the queue. You can close the app: the run continues and the result waits for you in the 🌀 Calcul CFD tab.</p></details>
-    <details><summary>How do I view the results in ParaView?</summary><p>Every run comes with a zip for <a href="https://www.paraview.org/download/" rel="noopener">ParaView</a> (free): drone surface, streamlines and a macro that makes the air flow. The illustrated step-by-step is in the app's user guide.</p></details>
+    <details><summary>How long does a run take?</summary><p>A few tens of minutes per tilt, depending on the model size and the queue. You can close the app: the run continues, the result waits for you in Prototype › Calcul CFD (“Mes calculs CFD”), and if you leave an e-mail address the server tells you when the results are ready.</p></details>
+    <details><summary>How do I view the results in ParaView?</summary><p>Every run comes with a zip for \1 (free): drone surface, streamlines and a macro that makes the air flow. It also provides a zip for TrueFoam GUI, a study folder (CSV of S·Cx, forces, parameters), the video as .mp4 and an “Apply these results to the calculator” button that replaces the estimated drag with the CFD one. The illustrated step-by-step is in the app's user guide.</p></details>
     <details><summary>Is the CFD exact?</summary><p>It is a steady (RANS) simulation without the propellers or their slipstream, with wall functions: allow ±15 to 25 %. It's ideal to <b>compare shapes</b> and see where drag comes from. Real speed is confirmed by a GPS flight, on which you can recalibrate the configurator.</p></details>
     <details><summary>And the virtual wind tunnel?</summary><p>It's the instant estimate, with the airflow and prop slipstream illustrated. Use it to explore, then CFD to settle it.</p></details>
     <details><summary>How is it different from eCalc?</summary><p>eCalc is a reference for pure calculation. TALKTRUE FPV - XRIG Configurateur is a design platform: CFD of your own model, real parts with prices and shop links, a build garage, dimensioned sketches, 3D models and import of your CAD drawings.</p></details>

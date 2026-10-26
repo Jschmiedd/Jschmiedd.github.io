@@ -40,7 +40,7 @@ p { margin: 0 0 1em; }
 .marque:hover { text-decoration: none; }
 .marque-texte { display: block; text-align: center; line-height: 1.1; }
 .marque video, .marque img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 18px rgba(207, 232, 63, .25); }
-.menu { display: flex; gap: 22px; margin-left: auto; font-size: .95rem; }
+.menu { display: flex; gap: 18px; margin-left: auto; font-size: .95rem; }
 .menu a { color: var(--doux); }
 .menu a:hover { color: var(--texte); text-decoration: none; }
 .langue { color: var(--doux); font-size: .85rem; border: 1px solid var(--bord); border-radius: 999px; padding: 4px 10px; }
@@ -283,8 +283,8 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .86em; backgro
   .telecharger { grid-template-columns: 1fr; padding: 24px; }
 }
 .menu a { white-space: nowrap; }
-@media (max-width: 1240px) { .menu { gap: 16px; font-size: .9rem; } }
-@media (max-width: 1100px) { .menu { display: none; } .langue { margin-left: auto; } }
+@media (max-width: 1380px) { .menu { gap: 14px; font-size: .88rem; } }
+@media (max-width: 1240px) { .menu { display: none; } .langue { margin-left: auto; } }
 
 /* Principe de calcul en une phrase (Johann, 12 octobre 2026) */
 .principe { max-width: 900px; margin: 0 0 42px; padding: 14px 20px; background: var(--carte); border: 1px solid var(--bord); border-left: 4px solid var(--neon); border-radius: 12px; color: var(--texte); font-size: 1.08rem; }
@@ -294,3 +294,49 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .86em; backgro
 .multicore b { color: var(--texte); }
 .multicore .bouton { display: flex; width: fit-content; margin-top: 12px; padding: 9px 18px; font-size: .9rem; }
 .etiquette-mc { display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--bleu); border: 1px solid rgba(63, 167, 245, .45); border-radius: 6px; padding: 2px 7px; margin-right: 6px; }
+
+/* Partie « Une famille de logiciels » (XRIG, TrueFoam, TrueGlide), 23 octobre 2026 */
+.triangle { max-width: 1040px; margin: 10px auto 26px; }
+.triangle svg { width: 100%; height: auto; display: block; }
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.carte-produit { background: var(--carte); border: 1px solid var(--bord); border-top: 3px solid var(--c);
+  border-radius: var(--rayon); padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.carte-produit h3 { color: var(--c); font-size: 1.5rem; margin: 0; }
+.carte-produit p { color: var(--doux); margin: 0; flex: 1; }
+.carte-produit .bouton { align-self: flex-start; }
+.pastille { font-family: "Inter", sans-serif; font-size: .75rem; font-weight: 600; color: var(--fond);
+  background: var(--neon); border-radius: 999px; padding: 2px 10px; vertical-align: middle; margin-left: 6px; }
+@media (max-width: 820px) { .trio { grid-template-columns: 1fr; } }
+.logo-produit { width: 100%; max-width: 300px; height: auto; }
+.titre-tableau { text-align: center; font-size: 1.5rem; margin: 6px 0 12px; }
+.tableau-defile { overflow-x: auto; margin: 0 0 26px; }
+.comparatif { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--carte);
+  border: 1px solid var(--bord); border-radius: var(--rayon); overflow: hidden; font-size: .95rem; }
+.comparatif th, .comparatif td { padding: 12px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--bord); }
+.comparatif tbody tr:last-child th, .comparatif tbody tr:last-child td { border-bottom: 0; }
+.comparatif thead th.tg { color: var(--neon); font-family: "Rajdhani", "Inter", sans-serif; font-size: 1.15rem; }
+.comparatif tbody th { color: var(--texte); width: 22%; font-weight: 600; }
+.comparatif td { color: var(--doux); width: 39%; }
+.parcours-mobile { display: none; list-style: none; padding: 0; margin: 0 0 26px; }
+.parcours-mobile li { background: var(--carte); border: 1px solid var(--bord); border-left: 4px solid var(--c);
+  border-radius: 12px; padding: 12px 14px; margin: 0 0 10px; color: var(--doux); }
+.parcours-mobile li b { color: var(--c); display: block; font-family: "Rajdhani", "Inter", sans-serif; font-size: 1.1rem; }
+@media (max-width: 820px) { .triangle { display: none; } .parcours-mobile { display: block; } }
+@media (max-width: 820px) {
+  .comparatif thead { display: none; }
+  .comparatif, .comparatif tbody, .comparatif tr, .comparatif th, .comparatif td { display: block; width: 100%; }
+  .comparatif tbody th { border-bottom: 0; padding-bottom: 4px; color: var(--or); width: 100%; }
+  .comparatif td { width: 100%; }
+  .comparatif td { padding-top: 6px; }
+  .comparatif td::before { content: attr(data-label); display: block; color: var(--neon); font-weight: 600; font-size: .85rem; }
+}
+
+/* Le calculateur en images : 3 colonnes, le tableau de bord seul au milieu */
+.galerie-calc { columns: 3; column-gap: 18px; }
+.galerie-calc figure { margin: 0 0 18px; break-inside: avoid; }
+.galerie-calc figcaption { padding: 0 12px 12px; }
+@media (max-width: 900px) { .galerie-calc { columns: 2; } }
+@media (max-width: 560px) {
+  .galerie-calc { columns: 1; }
+  .galerie-calc .haute { max-width: 340px; margin-inline: auto; }
+}
